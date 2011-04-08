@@ -28,15 +28,15 @@ myWorkspaces  =
     [ wrapBitmap "xbm8x8/fox.xbm"
     , wrapBitmap "xbm8x8/bug_02.xbm"
     , wrapBitmap "xbm8x8/dish.xbm"
-    , wrapBitmap "xbm8x8/fs_02.xbm)"
-    , wrapBitmap "xbm8x8/scorpio.xbm)"
-    , wrapBitmap "xbm8x8/shroom.xbm)"
-    , wrapBitmap "xbm8x8/usb.xbm)"
-    , wrapBitmap "xbm8x8/cat.xbm)"
-    , wrapBitmap "xbm8x8/diskette.xbm)"
+    , wrapBitmap "xbm8x8/fs_02.xbm"
+    , wrapBitmap "xbm8x8/scorpio.xbm"
+    , wrapBitmap "xbm8x8/shroom.xbm"
+    , wrapBitmap "xbm8x8/usb.xbm"
+    , wrapBitmap "xbm8x8/cat.xbm"
+    , wrapBitmap "xbm8x8/diskette.xbm"
     ]
     where
-        wrapBitmap bitmap = "^i(/home/arnold/.icons/" ++ bitmap ++ ")"
+        wrapBitmap bitmap = "^i(/home/arnold/.dzen/" ++ bitmap ++ ")"
 
 myDzenPP h      = defaultPP
     { ppCurrent = dzenColor "#ffaf5f" "" . pad

@@ -9,7 +9,7 @@ LOWBAT=25
 BAT_PATH="/sys/class/power_supply/BAT0"
 BAT_FULL=$( cat $BAT_PATH/energy_full )
 BAT_NOW=$( cat $BAT_PATH/energy_now )
-BAT_PREBAR='^i(/home/arnold/.icons/xbm8x8/bat_full_02.xbm)'
+BAT_PREBAR='^i(/home/arnold/.dzen/xbm8x8/bat_full_02.xbm)'
 
 let perc=(100*$BAT_NOW)/$BAT_FULL
 
@@ -21,7 +21,7 @@ MEM_FREE=$( cat $MEM_PATH | grep -i memfree | awk '{print $2}' )
 MEM_CACHED=$( cat $MEM_PATH | grep -i -m 1 cached | awk '{print $2}' )
 MEM_USED=$(( $MEM_TOTAL-($MEM_FREE+$MEM_CACHED) ))
 MEM_PERC=$(( ($MEM_USED*100)/$MEM_TOTAL ))
-MEM_PREBAR='^i(/home/arnold/.icons/xbm8x8/mem.xbm)'
+MEM_PREBAR='^i(/home/arnold/.dzen/xbm8x8/mem.xbm)'
 
 while :; do
 
