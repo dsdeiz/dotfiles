@@ -36,4 +36,4 @@ DATE=$( date +"%a, %b %_d %l:%M %p" )
 echo "$MEM_PREBAR $MEM_PERC% $MEM_METER $BAT_PREBAR $perc% $BAT_METER    $DATE"
 
 sleep 10
-done | dzen2 -h 14 -w 410 -p -ta r -x 956 -fg '#a0a0a0' -bg black -fn "Terminus-9"
+done | dzen2 -h 14 -w 400 -p -ta r -x 966 -fg '#a0a0a0' -bg black -fn "Terminus-9"
