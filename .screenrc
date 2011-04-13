@@ -1,0 +1,18 @@
+# no annoying audible bell, please
+vbell on
+
+# don't display the copyright page
+startup_message off
+
+# Screen Tips
+backtick 1 5 5 true
+termcapinfo rxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;\007'
+hardstatus string "screen (%n: %t)"
+caption string "%{= dR} %-Lw%50>%{= dG}%n%f* %{= dW}%t%{= dR}%+Lw%<"
+
+bind f eval "caption splitonly"
+bind F eval "caption always"
+
+screen -t irssi irssi -c irc.freenode.net
+screen -t ncmpcpp ncmpcpp
+screen -t arch ssh arch
