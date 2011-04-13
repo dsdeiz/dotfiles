@@ -1,3 +1,3 @@
 # Custom aliases.
-alias drush='/home/arnold/drush/drush'
+alias drush='$HOME/drush/drush'
 alias twidgecheck='(twidge lsrecent -asu; twidge lsreplies -asu) | less'

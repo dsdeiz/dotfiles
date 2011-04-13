@@ -7,12 +7,12 @@ URG_COL='#ff4747'
 LOWBAT=25
 
 BAT_PATH="/sys/class/power_supply/BAT0"
-BAT_PREBAR='^i(/home/arnold/.dzen/xbm8x8/bat_full_02.xbm)'
+BAT_PREBAR='^i($HOME/.dzen/xbm8x8/bat_full_02.xbm)'
 
 HIGHMEM=90
 
 MEM_PATH='/proc/meminfo'
-MEM_PREBAR='^i(/home/arnold/.dzen/xbm8x8/mem.xbm)'
+MEM_PREBAR='^i($HOME/.dzen/xbm8x8/mem.xbm)'
 
 while :; do
     BAT_FULL=$( cat $BAT_PATH/energy_full )
