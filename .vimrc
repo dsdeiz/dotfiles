@@ -3,7 +3,7 @@
 colorscheme neverland-darker
 syntax on
 
-filetype plugin indent on
+filetype plugin on
 
 set backspace=indent,eol,start
 set autochdir
