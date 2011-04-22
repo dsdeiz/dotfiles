@@ -8,12 +8,14 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.IM
 import Data.Ratio ((%))
 import XMonad.Layout.Grid
+import XMonad.Util.Scratchpad
+import qualified XMonad.StackSet as W
 
 -- XMonad
 main = do
     dzen <- spawnPipe myStatusBar
     xmonad $ defaultConfig
-        { manageHook              = manageDocks <+> manageHook defaultConfig
+        { manageHook              = manageDocks <+> manageHook defaultConfig <+> manageScratchPad
         , layoutHook              = myLayoutHook
         , logHook                 = dynamicLogWithPP $ myDzenPP dzen
 
@@ -26,6 +28,7 @@ main = do
         } `additionalKeys`
         [ ((mod4Mask .|. shiftMask, xK_s), spawn "sleep 0.2; scrot -s")
         , ((mod4Mask, xK_s), spawn "scrot")
+        , ((mod4Mask, xK_u), scratchpadSpawnActionTerminal "urxvt")
         , ((0, 0x1008ff13), spawn "amixer sset Master 5+")
         , ((0, 0x1008ff11), spawn "amixer sset Master 5-")
         ]
@@ -62,3 +65,10 @@ myLayoutHook      = smartBorders $ avoidStruts $ tiled ||| Mirror tiled ||| Full
         ratio     = 14/25
         delta     = 3/100
         gridIM    = withIM (1%7) (Or (Role "MainWindow") (Role "buddy_list")) Grid
+
+manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
+    where
+        h        = 0.50       -- terminal height, 50%
+        w        = 0.50       -- terminal width, 50%
+        t        = 0.25   -- distance from top edge, 90%
+        l        = 0.25   -- distance from left edge, 0%
