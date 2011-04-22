@@ -98,6 +98,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+PS1='[ ${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\W\[\033[00m\] ] >>> '
+
 # Custom environment variables
 PATH="$PATH:$HOME/.cabal/bin"
 CDPATH=".:$HOME:/var/www:/var/lib/mpd"
