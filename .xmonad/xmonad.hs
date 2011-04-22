@@ -52,11 +52,13 @@ myWorkspaces  =
 
 myDzenPP h      = defaultPP
     { ppCurrent = dzenColor "#ffaf5f" "" . pad
-    , ppHidden  = pad
+    , ppHidden  = pad . noScratchPad
     , ppOutput  = hPutStrLn h
     , ppUrgent  = pad
     , ppWsSep   = ""
     }
+    where
+        noScratchPad ws = if ws == "NSP" then "" else ws
 
 myLayoutHook      = smartBorders $ avoidStruts $ tiled ||| Mirror tiled ||| Full ||| gridIM
     where
@@ -68,7 +70,7 @@ myLayoutHook      = smartBorders $ avoidStruts $ tiled ||| Mirror tiled ||| Full
 
 manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     where
-        h        = 0.50       -- terminal height, 50%
-        w        = 0.50       -- terminal width, 50%
+        h        = 0.50   -- terminal height, 50%
+        w        = 0.50   -- terminal width, 50%
         t        = 0.25   -- distance from top edge, 90%
         l        = 0.25   -- distance from left edge, 0%
