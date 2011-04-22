@@ -13,6 +13,9 @@ caption string "%{= dR} %-Lw%50>%{= dG}%n%f* %{= dW}%t%{= dR}%+Lw%<"
 bind f eval "caption splitonly"
 bind F eval "caption always"
 
+bindkey "^[Od" prev  # change window with ctrl-left
+bindkey "^[Oc" next  # change window with ctrl-right
+
 screen -t irssi irssi -c irc.freenode.net
 screen -t ncmpcpp ncmpcpp
 screen -t arch ssh arch

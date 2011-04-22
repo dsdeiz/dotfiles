@@ -30,7 +30,7 @@ main = do
         , ((0, 0x1008ff11), spawn "amixer sset Master 5-")
         ]
 
-myStatusBar   = "dzen2 -fn 'Terminus-9' -bg '#000000' -fg '#a0a0a0' -h 14 -ta l -w 846"
+myStatusBar   = "dzen2 -fn 'Envy Code R-10' -bg '#000000' -fg '#a0a0a0' -h 16 -ta l -w 846"
 myTerminal    = "urxvt"
 
 myWorkspaces  =
