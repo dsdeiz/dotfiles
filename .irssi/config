@@ -259,5 +259,6 @@ statusbar = {
 settings = {
   core = { real_name = "dsdeiz"; user_name = "dsdeiz"; nick = "dsdeiz"; };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { theme = "default"; };
 };
 keyboard = ( { key = "meta-c"; id = "command"; data = "wc "; } );

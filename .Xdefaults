@@ -2,17 +2,24 @@
 ! URxvt Settings
 ! ---------------------------------------------------------
 
-URxvt*font: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
+URxvt*font: xft:Monaco:size=7.5
+URxvt*boldFont: xft:Monaco:size=7.5
 URxvt*background: #000000
 URxvt*foreground: #a0a0a0
 
-URxvt*transparent: true
+URxvt*transparent: false
 URxvt*tintColor: #000000
 URxvt*shading: 4
 URxvt*scrollBar: false
 
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:   hintslight
+
 URxvt*perl-ext-common:  default,matcher
-URxvt*urlLauncher:      /usr/bin/chromium-browser
+URxvt*urlLauncher:      /usr/bin/google-chrome
 URxvt*matcher.button:   1 
 
 ! Black (not tango) + DarkGrey

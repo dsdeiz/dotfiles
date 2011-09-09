@@ -36,6 +36,7 @@ set tabstop=2
 
 set ignorecase
 set autoindent
+set smartindent
 
 set number
 set nohlsearch
