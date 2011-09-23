@@ -103,3 +103,5 @@ PS1='[ ${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\W\[\033[00m\] ] >>> '
 # Custom environment variables
 PATH="$PATH:$HOME/.cabal/bin"
 CDPATH=".:$HOME:/var/www:/var/lib/mpd:/mnt:/media"
+
+$HOME/.scripts/pacman.sh

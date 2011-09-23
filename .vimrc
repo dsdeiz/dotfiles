@@ -4,6 +4,7 @@ colorscheme neverland-darker
 syntax on
 
 filetype plugin on
+filetype indent on
 
 set backspace=indent,eol,start
 set autochdir
@@ -36,7 +37,6 @@ set tabstop=2
 
 set ignorecase
 set autoindent
-set smartindent
 
 set number
 set nohlsearch
@@ -71,15 +71,14 @@ au FileType vim set foldmethod=marker
 
 " Drupal *.module and *.install files.
 augroup module
-  autocmd BufRead,BufNewFile *.module set filetype=php
-  autocmd BufRead,BufNewFile *.install set filetype=php
-  autocmd BufRead,BufNewFile *.inc set filetype=php
-  autocmd BufRead,BufNewFile *.theme set filetype=php
+  autocmd BufRead,BufNewFile *.module set filetype=php.drupal
+  autocmd BufRead,BufNewFile *.install set filetype=php.drupal
+  autocmd BufRead,BufNewFile *.inc set filetype=php.drupal
+  autocmd BufRead,BufNewFile *.theme set filetype=php.drupal
 augroup END
 
 " For python files.
-autocmd FileType python set tabstop=4|set shiftwidth=4|set softtabstop=4
-autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python set tabstop=4 shiftwidth=4 softtabstop=4
 
 " For haskell files.
 autocmd FileType haskell set tabstop=4 shiftwidth=4 softtabstop=4
