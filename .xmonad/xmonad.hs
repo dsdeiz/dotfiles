@@ -34,7 +34,7 @@ main = do
         , ((0, 0x1008ff11), spawn "amixer -q sset Master 5-")
         ]
 
-myStatusBar   = "dzen2 -fn 'Monaco-7.5' -bg '#000000' -fg '#a0a0a0' -h 14 -ta l -w 846"
+myStatusBar   = "dzen2 -fn 'lokaltog:size=12' -bg '#000000' -fg '#a0a0a0' -h 14 -ta l -w 846"
 myTerminal    = "urxvt"
 
 myWorkspaces  =

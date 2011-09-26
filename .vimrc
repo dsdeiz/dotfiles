@@ -1,6 +1,6 @@
 " Basic settings {{{
 
-colorscheme neverland-darker
+colorscheme distinguished
 syntax on
 
 filetype plugin on
@@ -98,5 +98,11 @@ hi SpecialKey ctermfg=233
 " Plugin settings {{{
 
 let g:php_folding=1
+
+" }}}
+
+" Drupal helpers {{{
+
+inoremap \fn <C-R>=expand("%:t:r")<CR>
 
 " }}}

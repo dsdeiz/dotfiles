@@ -2,21 +2,24 @@
 ! URxvt Settings
 ! ---------------------------------------------------------
 
-URxvt*font: xft:Monaco:size=7.5
-URxvt*boldFont: xft:Monaco:size=7.5
+URxvt*font: xft:lokaltog:size=12
+URxvt*boldFont: xft:lokaltog:bold:size=12
 URxvt*background: #000000
 URxvt*foreground: #a0a0a0
 
-URxvt*transparent: false
 URxvt*tintColor: #000000
-URxvt*shading: 4
+URxvt*transparent: true
+URxvt*shading: 40
 URxvt*scrollBar: false
+URxvt*termName: rxvt-256color
 
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hintstyle:   hintslight
+Xft.autohint:             0
+Xft.lcdfilter:            lcddefault
+Xft.hintstyle:            hintfull
+Xft.hinting:              1
+Xft.antialias:            1
+Xft.dpi:                  96
+Xft.rgba:                 rgb
 
 URxvt*perl-ext-common:  default,matcher
 URxvt*urlLauncher:      /usr/bin/google-chrome
