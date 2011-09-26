@@ -2,8 +2,7 @@
 ! URxvt Settings
 ! ---------------------------------------------------------
 
-URxvt*font: xft:lokaltog:size=12
-URxvt*boldFont: xft:lokaltog:bold:size=12
+URxvt*font: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
 URxvt*background: #000000
 URxvt*foreground: #a0a0a0
 
