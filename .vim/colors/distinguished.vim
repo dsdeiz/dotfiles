@@ -11,7 +11,7 @@
 
 	let g:colors_name = 'distinguished'
 
-	if &t_Co != 256 || has('gui_running')
+	if &t_Co != 256
 		echoe 'The ' . g:colors_name . ' color scheme requires a 256-color terminal'
 
 		finish

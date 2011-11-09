@@ -84,7 +84,7 @@ mpd_music_dir = "/var/lib/mpd/music"
 #
 ## delay after playlist highlighting will be disabled (0 = don't disable)
 #
-#playlist_disable_highlight_delay = "5"
+playlist_disable_highlight_delay = "2"
 #
 ## defines how long various messages are supposed to be visible
 #
@@ -172,15 +172,15 @@ mpd_music_dir = "/var/lib/mpd/music"
 ## text attributes listed above.
 ##
 #
-#now_playing_prefix = "$b"
+now_playing_prefix = "$b»» "
 #
-#now_playing_suffix = "$/b"
+now_playing_suffix = "$/b"
 #
 #browser_playlist_prefix = "$2playlist$9 "
 #
-#selected_item_prefix = "$6"
+selected_item_prefix = "$8"
 #
-#selected_item_suffix = "$9"
+selected_item_suffix = "$9"
 #
 ## colors are not supported for below variable
 #
@@ -257,7 +257,7 @@ playlist_display_mode = "columns" (classic/columns)
 #
 #centered_cursor = "no"
 #
-#progressbar_look = "=>"
+progressbar_look = "=|"
 #
 #default_place_to_search_in = "database" (database/playlist)
 #
@@ -273,13 +273,13 @@ user_interface = "alternative" (classic/alternative)
 #
 #default_tag_editor_pattern = "%n - %t"
 #
-#header_visibility = "yes"
+header_visibility = "no"
 #
 #statusbar_visibility = "yes"
 #
 #header_text_scrolling = "yes"
 #
-#fancy_scrolling = "yes"
+fancy_scrolling = "yes"
 #
 #cyclic_scrolling = "no"
 #

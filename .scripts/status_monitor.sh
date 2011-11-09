@@ -32,7 +32,7 @@ while :; do
     if [ $MEM_PERC -gt $HIGHMEM ]; then GFG=$URG_COL; fi
     MEM_METER=$( echo $MEM_PERC | gdbar -h 10 -w 80 -fg $GFG -bg $GBG -ss 1 -s o )
 
-    DATE=$( date +"%a, %b %_d %l:%M %p" )
+    DATE=$( date +"%a, %b %_d %l:%M %P" )
 
     echo "$MEM_PREBAR $MEM_PERC% $MEM_METER $BAT_PREBAR $perc% $BAT_METER    $DATE"
 

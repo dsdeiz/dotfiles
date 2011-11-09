@@ -2,21 +2,19 @@
 ! URxvt Settings
 ! ---------------------------------------------------------
 
-URxvt*font: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
-URxvt*background: #000000
-URxvt*foreground: #a0a0a0
+URxvt*font: xft:Luxi Mono:style=Regular:size=8.5
+URxvt*boldFont: xft:Luxi Mono:style=Bold:size=8.5
 
-URxvt*tintColor: #000000
-URxvt*transparent: true
+URxvt*transparent: 1
 URxvt*shading: 40
 URxvt*scrollBar: false
 URxvt*termName: rxvt-256color
 
-Xft.autohint:             0
-Xft.lcdfilter:            lcddefault
-Xft.hintstyle:            hintfull
+Xft.autohint:             1
+Xft.lcdfilter:            lcdlight
+Xft.hintstyle:            hintslight
 Xft.hinting:              1
-Xft.antialias:            1
+Xft.antialias:            0
 Xft.dpi:                  96
 Xft.rgba:                 rgb
 
@@ -24,27 +22,40 @@ URxvt*perl-ext-common:  default,matcher
 URxvt*urlLauncher:      /usr/bin/google-chrome
 URxvt*matcher.button:   1 
 
-! Black (not tango) + DarkGrey
-URxvt*color0:  #000000
-URxvt*color8:  #555753
-! DarkRed + Red
-URxvt*color1:  #ff6565
-URxvt*color9:  #ff8d8d
-! DarkGreen + Green
-URxvt*color2:  #93d44f
-URxvt*color10: #c8e7a8
-! DarkYellow + Yellow
-URxvt*color3:  #eab93d
-URxvt*color11: #ffc123
-! DarkBlue + Blue
-URxvt*color4:  #204a87
-URxvt*color12: #3465a4
-! DarkMangenta + Mangenta
-URxvt*color5:  #ce5c00
-URxvt*color13: #f57900
-!DarkCyan + Cyan (both not tango)
-URxvt*color6:  #89b6e2
-URxvt*color14: #46a4ff
-! LightGrey + White
-URxvt*color7:  #cccccc
-URxvt*color15: #ffffff
+!Technobass - Foreground/Background
+URxvt*foreground: #b4b4b4
+URxvt*background: #121212
+
+!Technobass
+! -- black
+URxvt*color0: #000000
+! -- red
+URxvt*color1: #ff8888
+! -- green
+URxvt*color2:  #80852d
+! -- yellow
+URxvt*color3: #ffaa55
+! -- blue
+URxvt*color4: #82b8f2
+! -- purple
+URxvt*color5: #ad7fa8
+! -- cyan
+URxvt*color6: #6b9b8b
+! -- white
+URxvt*color7: #babdb6
+! -- bright-black
+URxvt*color8: #555753
+! -- bright-red
+URxvt*color9: #e5505f
+! -- bright-green
+URxvt*color10: #b7e234
+! -- bright-yellow
+URxvt*color11: #e8621d
+! -- bright-blue
+URxvt*color12:  #0088cc
+! -- bright-purple
+URxvt*color13: #cb99e1
+! -- bright-cyan
+URxvt*color14: #34E2E2
+! -- bright-white
+URxvt*color15: #e9e9e9

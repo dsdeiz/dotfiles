@@ -1,6 +1,7 @@
 " Basic settings {{{
 
-colorscheme distinguished
+set t_Co=256
+colorscheme neverland2-darker
 syntax on
 
 filetype plugin on
@@ -11,7 +12,6 @@ set autochdir
 set nocompatible
 
 set vb t_vb=
-set t_Co=256
 
 set sessionoptions-=options
 set matchpairs+=<:>
@@ -26,7 +26,7 @@ set fileformat=unix
 
 set formatoptions=qrowcb
 
-set laststatus=2
+set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 set list
 set listchars=tab:>-,trail:-
 
@@ -53,7 +53,7 @@ set completeopt-=preview
 
 set foldenable
 set foldmethod=syntax
-set foldlevel=1
+set foldlevel=99
 set foldcolumn=0
 
 " }}}
@@ -77,6 +77,8 @@ augroup module
   autocmd BufRead,BufNewFile *.theme set filetype=php.drupal
 augroup END
 
+autocmd BufRead,BufNewFile *.tpl.php set filetype=php.xhtml
+
 " For python files.
 autocmd FileType python set tabstop=4 shiftwidth=4 softtabstop=4
 
@@ -92,6 +94,12 @@ hi Normal ctermbg=NONE
 hi Folded cterm=NONE
 hi NonText ctermbg=NONE
 hi SpecialKey ctermfg=233
+
+" }}}
+
+" Buffers {{{
+
+nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " }}}
 
