@@ -24,6 +24,7 @@ main = do
 
         , focusFollowsMouse       = False
         , focusedBorderColor      = "#0066ff"
+        , borderWidth             = 2
         , modMask                 = mod4Mask
         , normalBorderColor       = "#000"
         } `additionalKeys`
@@ -34,7 +35,7 @@ main = do
         , ((0, 0x1008ff11), spawn "amixer -q sset Master 5-")
         ]
 
-myStatusBar   = "dzen2 -fn 'Terminus-7.5' -bg '#000000' -fg '#a0a0a0' -h 14 -ta l -w 846"
+myStatusBar   = "dzen2 -fn 'bitocra' -bg '#000000' -fg '#a0a0a0' -h 14 -ta l -w 830"
 myTerminal    = "urxvt"
 
 myWorkspaces  =
@@ -57,6 +58,7 @@ myDzenPP h      = defaultPP
     , ppOutput  = hPutStrLn h
     , ppUrgent  = pad
     , ppWsSep   = ""
+    , ppLayout  = dzenColor "#b7e234" ""
     }
     where
         noScratchPad ws = if ws == "NSP" then "" else ws

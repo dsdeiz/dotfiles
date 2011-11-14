@@ -1,7 +1,7 @@
 " Basic settings {{{
 
 set t_Co=256
-colorscheme neverland2-darker
+colorscheme dante
 syntax on
 
 filetype plugin on
@@ -90,10 +90,10 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Hilight settings {{{
 
-hi Normal ctermbg=NONE
-hi Folded cterm=NONE
-hi NonText ctermbg=NONE
-hi SpecialKey ctermfg=233
+" hi Normal ctermbg=NONE
+" hi Folded cterm=NONE
+" hi NonText ctermbg=NONE
+" SpecialKey ctermfg=233
 
 " }}}
 
