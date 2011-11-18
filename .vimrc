@@ -1,4 +1,6 @@
 " Basic settings {{{
+set nocompatible
+call pathogen#infect()
 
 set t_Co=256
 colorscheme molokai
@@ -10,7 +12,6 @@ filetype indent on
 
 set backspace=indent,eol,start
 set autochdir
-set nocompatible
 
 set vb t_vb=
 
@@ -27,7 +28,10 @@ set fileformat=unix
 
 set formatoptions=qrowcb
 
-set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set laststatus=2
 set list
 set listchars=tab:>-,trail:-
 
@@ -107,6 +111,9 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 " Plugin settings {{{
 
 let g:php_folding=1
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=1
+let g:syntastic_auto_loc_list=2
 
 " }}}
 
