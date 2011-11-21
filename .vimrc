@@ -120,14 +120,14 @@ let g:syntastic_auto_loc_list=2
 
 let NERDTreeDirArrows=1
 let NERDTreeMouseMode=3
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 map <F10> :NERDTree<CR>
+map <Leader>r :NERDTreeFind<CR>
 
 " }}}
 
 " Drupal helpers {{{
 
-inoremap \fn <C-R>=expand("%:t:r")<CR>
+inoremap <Leader>fn <C-R>=expand("%:t:r")<CR>
 
 " }}}
