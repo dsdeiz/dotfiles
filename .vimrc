@@ -68,6 +68,8 @@ set foldcolumn=0
 imap jj <esc>
 imap <s-tab> <c-x><c-o>
 
+let mapleader=","
+
 " }}}
 
 " Autocommand settings {{{
@@ -111,9 +113,16 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 " Plugin settings {{{
 
 let g:php_folding=1
+
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=2
+
+let NERDTreeDirArrows=1
+let NERDTreeMouseMode=3
+let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+map <Leader>n :NERDTreeToggle<CR>
+map <F10> :NERDTree<CR>
 
 " }}}
 
