@@ -30,13 +30,14 @@ main = do
         } `additionalKeys`
         [ ((mod4Mask .|. shiftMask, xK_s), spawn "sleep 0.2; scrot -s")
         , ((mod4Mask, xK_s), spawn "scrot")
-        , ((mod4Mask, xK_u), scratchpadSpawnActionTerminal "urxvt")
+        , ((mod4Mask, xK_u), scratchpadSpawnActionTerminal "urxvtc")
+        , ((mod4Mask, xK_e), spawn "urxvtc -e vim")
         , ((0, 0x1008ff13), spawn "amixer -q sset Master 5+")
         , ((0, 0x1008ff11), spawn "amixer -q sset Master 5-")
         ]
 
-myStatusBar   = "dzen2 -fn 'bitocra' -bg '#000000' -fg '#a0a0a0' -h 14 -ta l -w 820"
-myTerminal    = "urxvt"
+myStatusBar   = "dzen2 -fn 'standard 07_57 caps-6' -bg '#000000' -fg '#a0a0a0' -h 14 -ta l -w 780"
+myTerminal    = "urxvtc"
 
 myWorkspaces  =
     [ wrapBitmap "xbm8x8/fox.xbm"

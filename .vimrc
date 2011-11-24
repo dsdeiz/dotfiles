@@ -28,9 +28,9 @@ set fileformat=unix
 
 set formatoptions=qrowcb
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 set laststatus=2
 set list
 set listchars=tab:>-,trail:-
@@ -123,6 +123,8 @@ let NERDTreeMouseMode=3
 map <Leader>n :NERDTreeToggle<CR>
 map <F10> :NERDTree<CR>
 map <Leader>r :NERDTreeFind<CR>
+
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " }}}
 
