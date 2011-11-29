@@ -2,8 +2,8 @@
 ! URxvt Settings
 ! ---------------------------------------------------------
 
-URxvt*font: xft:Monaco:style=Regular:size=7.5
-URxvt*boldFont: xft:Monaco:style=Regular:size=7.5
+URxvt*font: xft:smoothansi
+URxvt*boldFont: xft:smoothansi
 
 URxvt*transparent: 1
 URxvt*shading: 40

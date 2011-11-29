@@ -97,10 +97,10 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Hilight settings {{{
 
-hi Normal ctermbg=NONE
-hi Folded cterm=NONE
-hi NonText ctermbg=NONE
-hi SpecialKey ctermfg=233
+" hi Normal ctermbg=NONE
+" hi Folded cterm=NONE
+" hi NonText ctermbg=NONE
+" hi SpecialKey ctermfg=233
 
 " }}}
 
@@ -111,8 +111,6 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 " }}}
 
 " Plugin settings {{{
-
-let g:php_folding=1
 
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1

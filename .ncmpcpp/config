@@ -172,7 +172,7 @@ playlist_disable_highlight_delay = "2"
 ## text attributes listed above.
 ##
 #
-now_playing_prefix = "$b»» "
+now_playing_prefix = "$b>> "
 #
 now_playing_suffix = "$/b"
 #
