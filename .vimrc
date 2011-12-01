@@ -3,7 +3,7 @@ set nocompatible
 call pathogen#infect()
 
 set t_Co=256
-colorscheme molokai
+colorscheme neverland-darker
 syntax on
 
 filetype on

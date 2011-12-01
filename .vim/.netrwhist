@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/var/www/sportco.local/sites/default/modules'
+let g:netrw_dirhist_2='/var/www/sportco.local/sites/default'
+let g:netrw_dirhist_3='/var/www/sportco.local/sites'
+let g:netrw_dirhist_4='/var/www/sportco.local/sites/all'
+let g:netrw_dirhist_5='/var/www/sportco.local/sites/all/modules'
+let g:netrw_dirhist_6='/var/www/sportco.local/sites/all/modules/ubercart'
+let g:netrw_dirhist_7='/var/www/sportco.local/sites/all/modules/ubercart/uc_cart'
+let g:netrw_dirhist_8='/var/www/sportco.local/sites/all/modules/ubercart'
+let g:netrw_dirhist_9='/var/www/sportco.local/sites/all/modules/ubercart/uc_attribute'
