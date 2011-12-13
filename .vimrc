@@ -3,7 +3,7 @@ set nocompatible
 call pathogen#infect()
 
 set t_Co=256
-colorscheme neverland-darker
+colorscheme distinguished
 syntax on
 
 filetype on
@@ -33,7 +33,7 @@ set formatoptions=qrowcb
 " set statusline+=%*
 set laststatus=2
 set list
-set listchars=tab:>-,trail:-
+set listchars=tab:▸-,trail:-
 
 set shiftwidth=2
 set expandtab
@@ -76,14 +76,6 @@ let mapleader=","
 
 au FileType vim set foldmethod=marker
 
-" Drupal *.module and *.install files.
-augroup module
-  autocmd BufRead,BufNewFile *.module set filetype=php.drupal
-  autocmd BufRead,BufNewFile *.install set filetype=php.drupal
-  autocmd BufRead,BufNewFile *.inc set filetype=php.drupal
-  autocmd BufRead,BufNewFile *.theme set filetype=php.drupal
-augroup END
-
 autocmd BufRead,BufNewFile *.tpl.php set filetype=php.xhtml
 
 " For python files.
@@ -97,7 +89,8 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Hilight settings {{{
 
-" hi Normal ctermbg=NONE
+hi Normal ctermbg=NONE
+hi CursorLine cterm=NONE
 " hi Folded cterm=NONE
 " hi NonText ctermbg=NONE
 " hi SpecialKey ctermfg=233
@@ -123,6 +116,10 @@ map <F10> :NERDTree<CR>
 map <Leader>r :NERDTreeFind<CR>
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+nnoremap <silent> <F9> :TagbarToggle<CR>
+
+let g:UltiSnipsExpandTrigger="<c-\\>"
 
 " }}}
 

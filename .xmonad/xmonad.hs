@@ -31,7 +31,7 @@ main = do
         [ ((mod4Mask .|. shiftMask, xK_s), spawn "sleep 0.2; scrot -s")
         , ((mod4Mask, xK_s), spawn "scrot")
         , ((mod4Mask, xK_u), scratchpadSpawnActionTerminal "urxvtc")
-        , ((mod4Mask, xK_e), spawn "gvim")
+        , ((mod4Mask, xK_e), spawn "urxvtc -e 'vim'")
         , ((0, 0x1008ff13), spawn "amixer -q sset Master 5+")
         , ((0, 0x1008ff11), spawn "amixer -q sset Master 5-")
         ]
