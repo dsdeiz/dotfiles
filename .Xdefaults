@@ -3,7 +3,7 @@
 ! ---------------------------------------------------------
 
 URxvt*font: xft:Monaco:size=7.5
-URxvt*boldFont: xft:Monaco:size=7.5
+URxvt*boldFont: xft:Monaco:style=Bold:size=7.5
 
 URxvt*transparent: 1
 URxvt*shading: 2

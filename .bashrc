@@ -103,5 +103,6 @@ PS1='\[\033[0;32m\]\u\[\033[00m\] [ ${debian_chroot:+($debian_chroot)}\[\033[01;
 # Custom environment variables
 PATH="$PATH:$HOME/.cabal/bin"
 CDPATH=".:$HOME:/var/www:/var/lib/mpd:/mnt:/media"
+EDITOR="vim"
 
 fortune

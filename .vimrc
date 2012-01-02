@@ -15,7 +15,7 @@ set autochdir
 
 set vb t_vb=
 
-set sessionoptions-=options
+" set sessionoptions-=options
 set matchpairs+=<:>
 set mouse=a
 
@@ -92,7 +92,7 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 hi Normal ctermbg=NONE
 hi CursorLine cterm=NONE
 " hi Folded cterm=NONE
-" hi NonText ctermbg=NONE
+hi NonText ctermbg=NONE
 " hi SpecialKey ctermfg=233
 
 " }}}
@@ -120,6 +120,13 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nnoremap <silent> <F9> :TagbarToggle<CR>
 
 let g:UltiSnipsExpandTrigger="<c-\\>"
+
+" }}}
+
+" Sessions {{{
+
+nmap SQ <ESC>:mksession! ~/.vim/Session.vim<CR>:wqa<CR>
+" autocmd VimEnter * so ~/.vim/Session.vim
 
 " }}}
 
