@@ -1,4 +1,4 @@
-" Author: Kim Silkebækken <kim.silkebaekken+vim@gmail.com>
+" Author: Kim SilkebÃ¦kken <kim.silkebaekken+vim@gmail.com>
 " Source repository: https://github.com/Lokaltog/vim-distinguished
 
 " Initialization {{{
@@ -11,7 +11,7 @@
 
 	let g:colors_name = 'distinguished'
 
-	if &t_Co != 256
+	if &t_Co != 256 || has('gui_running')
 		echoe 'The ' . g:colors_name . ' color scheme requires a 256-color terminal'
 
 		finish

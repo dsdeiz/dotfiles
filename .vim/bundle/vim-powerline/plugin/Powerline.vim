@@ -11,35 +11,39 @@
 	let g:Powerline_loaded = 1
 " }}}
 " Set default options {{{
-	function! s:InitOptions(options) " {{{
-		for [key, value] in items(a:options)
-			if ! exists('g:Powerline_' . key)
-				exec printf('let g:Powerline_%s = %s', key, string(value))
-			endif
-		endfor
-	endfunction " }}}
-	call s:InitOptions({
-	\   'theme'    : 'distinguished'
-	\ , 'symbols'  : 'compatible'
-	\ , 'cachefile': '/tmp/Powerline.cache'
-	\ })
+	for [s:key, s:value] in items({
+		\   'theme'        : 'distinguished'
+		\ , 'colorscheme'  : 'distinguished'
+		\ , 'symbols'      : 'compatible'
+		\ , 'cache_enabled': 1
+		\ })
+
+		if ! exists('g:Powerline_' . s:key)
+			exec printf('let g:Powerline_%s = %s', s:key, string(s:value))
+		endif
+	endfor
+
+	if ! exists('g:Powerline_cache_file')
+		exec 'let g:Powerline_cache_file = '. string(printf('%s/Powerline_%s_%s_%s.cache'
+			\ , simplify(expand('<sfile>:p:h') .'/..')
+			\ , g:Powerline_theme
+			\ , g:Powerline_colorscheme
+			\ , g:Powerline_symbols
+			\ ))
+	endif
 " }}}
 " Autocommands {{{
 	augroup Powerline
 		autocmd!
 
-		" Initialize when opening vim and re-initialize when changing color scheme
-		" Most colorschemes run 'hi clear', so we need to recreate the colors
-		au ColorScheme,VimEnter *
-			\ call Pl#Load() | call Pl#Powerline('current')
+		" Reload statuslines when changing color scheme
+		au ColorScheme *
+			\ call Pl#Load()
 
-		au BufEnter,BufWinEnter,WinEnter,CmdwinEnter,CursorHold,BufWritePost,InsertLeave *
-			\ call Pl#Powerline('current')
+		au BufEnter,WinEnter,FileType,BufUnload *
+			\ call Pl#UpdateStatusline(1)
 
-		au BufLeave,BufWinLeave,WinLeave,CmdwinLeave *
-			\ call Pl#Powerline('noncurrent')
-
-		au InsertEnter,CursorHoldI *
-			\ call Pl#Powerline('insert')
+		au BufLeave,WinLeave *
+			\ call Pl#UpdateStatusline(0)
 	augroup END
 " }}}

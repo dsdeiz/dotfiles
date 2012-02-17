@@ -1,7 +1,7 @@
 " Vim Color File
 " Name:       bubblegum.vim
 " Version:    0.1
-" Maintainer: baskerville <nihilhill@gmail.com>
+" Maintainer: baskerville <nihilhill *at* gmail *dot* com>
 "
 " Based on xoria256.
 
@@ -18,118 +18,129 @@ let g:colors_name="bubblegum"
 " preferred groups
 " (see `:h w18`)
 "
-hi Normal          ctermfg=248    ctermbg=235    cterm=none
-hi Comment         ctermfg=243
+hi Normal          ctermfg=248    ctermbg=235    cterm=none    guifg=#A8A8A8    guibg=#262626    gui=none
+hi Comment         ctermfg=243    guifg=#767676
 
 " yellow
-hi Constant        ctermfg=180
-hi String          ctermfg=180
-hi Character       ctermfg=142
-hi Number          ctermfg=179
-hi Boolean         ctermfg=144
-hi Float           ctermfg=179
+hi Constant        ctermfg=186    guifg=#D7D787
+hi String          ctermfg=187    guifg=#D7D7AF
+hi Character       ctermfg=187    guifg=#D7D7AF
+hi Number          ctermfg=179    guifg=#D7AF5F
+hi Boolean         ctermfg=144    guifg=#AFAF87
+hi Float           ctermfg=179    guifg=#D7AF5F
 
 " pink
-hi Identifier      ctermfg=181
-hi Function        ctermfg=182
+hi Identifier      ctermfg=182    guifg=#D7AFD7
+hi Function        ctermfg=182    guifg=#D7AFD7
 
 " blue
-hi Statement       ctermfg=110
-hi Conditional     ctermfg=110
-hi Repeat          ctermfg=110
-hi Label           ctermfg=110
-hi Operator        ctermfg=110
-hi Keyword         ctermfg=110
-hi Exception       ctermfg=110
+hi Statement       ctermfg=110    guifg=#87AFD7
+hi Conditional     ctermfg=110    guifg=#87AFD7
+hi Repeat          ctermfg=110    guifg=#87AFD7
+hi Label           ctermfg=110    guifg=#87AFD7
+hi Operator        ctermfg=110    guifg=#87AFD7
+hi Keyword         ctermfg=110    guifg=#87AFD7
+hi Exception       ctermfg=110    guifg=#87AFD7
 
 " green
-hi PreProc         ctermfg=108
-hi Include         ctermfg=108
-hi Define          ctermfg=108
-hi Macro           ctermfg=108
-hi PreCondit       ctermfg=108
+hi PreProc         ctermfg=150    guifg=#AFD787
+hi Include         ctermfg=150    guifg=#AFD787
+hi Define          ctermfg=150    guifg=#AFD787
+hi Macro           ctermfg=150    guifg=#AFD787
+hi PreCondit       ctermfg=150    guifg=#AFD787
 
 " purple
-hi Type            ctermfg=146
-hi StorageClass    ctermfg=146
-hi Structure       ctermfg=146
-hi Typedef         ctermfg=146
+hi Type            ctermfg=146    guifg=#AFAFD7
+hi StorageClass    ctermfg=146    guifg=#AFAFD7
+hi Structure       ctermfg=146    guifg=#AFAFD7
+hi Typedef         ctermfg=146    guifg=#AFAFD7
 
 " red
-hi Special         ctermfg=174
-hi SpecialChar     ctermfg=174
-hi Tag             ctermfg=174
-hi Delimiter       ctermfg=174
-hi SpecialComment  ctermfg=174
-hi Debug           ctermfg=174
+hi Special         ctermfg=174    guifg=#D78787
+hi SpecialChar     ctermfg=174    guifg=#D78787
+hi Tag             ctermfg=174    guifg=#D78787
+hi Delimiter       ctermfg=174    guifg=#D78787
+hi SpecialComment  ctermfg=174    guifg=#D78787
+hi Debug           ctermfg=174    guifg=#D78787
 
-hi Underlined      ctermfg=fg
-hi Ignore          ctermfg=236
-hi Error           ctermfg=231    ctermbg=167
-hi Todo            ctermfg=139    ctermbg=bg     cterm=none
+hi Underlined      ctermfg=fg    guifg=fg
+hi Ignore          ctermfg=bg    guifg=bg
+hi Error           ctermfg=231    ctermbg=167    guifg=#FFFFFF    guibg=#D75F5F
+hi Todo            ctermfg=189    ctermbg=bg     cterm=none    guifg=#D7D7FF    guibg=bg    gui=none
 
 "
 " minor groups
 "
-hi StatusLine      ctermfg=fg     ctermbg=236    cterm=none
-hi StatusLineNC    ctermfg=243    ctermbg=236    cterm=none
-hi Pmenu           ctermfg=fg     ctermbg=236
-hi PmenuSel        ctermfg=231    ctermbg=243
-hi PmenuSbar       ctermfg=231    ctermbg=243
-hi WildMenu        ctermfg=71     ctermbg=236    cterm=none
-hi Visual          ctermfg=fg     ctermbg=bg     cterm=reverse
-hi VertSplit       ctermfg=243    ctermbg=236    cterm=none
-hi LineNr          ctermfg=243
+hi StatusLine      ctermfg=fg     ctermbg=236    cterm=none    guifg=fg    guibg=#303030    gui=none
+hi StatusLineNC    ctermfg=243    ctermbg=236    cterm=none    guifg=#767676    guibg=#303030    gui=none
+hi TabLine         ctermfg=fg     ctermbg=236    cterm=none    guifg=fg    guibg=#303030    gui=none
+hi TabLineSel      ctermfg=252    ctermbg=237    cterm=none    guifg=#D0D0D0    guibg=#3A3A3A    gui=none
+hi TabLineFill     ctermfg=fg     ctermbg=236    cterm=none    guifg=fg    guibg=#303030    gui=none
 
-hi Title           ctermfg=109
-hi SpecialKey      ctermfg=136
-hi NonText         ctermfg=243
-hi MatchParen      ctermfg=16     ctermbg=72
-hi Directory       ctermfg=103
+hi Pmenu           ctermfg=fg     ctermbg=236    guifg=fg    guibg=#303030
+hi PmenuSel        ctermfg=231    ctermbg=243    guifg=#FFFFFF    guibg=#767676
+hi PmenuSbar       ctermfg=231    ctermbg=243    guifg=#FFFFFF    guibg=#767676
+hi WildMenu        ctermfg=71     ctermbg=236    cterm=none    guifg=#5FAF5F    guibg=#303030    gui=none
 
-hi ErrorMsg        ctermfg=210    ctermbg=bg
-hi WarningMsg      ctermfg=140
-hi MoreMsg         ctermfg=72
-hi ModeMsg         ctermfg=210
+hi Visual          ctermfg=bg     ctermbg=117    guifg=bg    guibg=#87D7FF
+hi VisualNOS       ctermfg=bg     ctermbg=116    guifg=bg    guibg=#87D7D7
+hi VertSplit       ctermfg=243    ctermbg=236    cterm=none    guifg=#767676    guibg=#303030    gui=none
+hi LineNr          ctermfg=243    ctermbg=236    guifg=#767676    guibg=#303030
 
-hi Search          ctermfg=16     ctermbg=179     cterm=none
-hi IncSearch       ctermfg=231    ctermbg=168     cterm=none
-hi Question        ctermfg=38
+hi Title           ctermfg=109    guifg=#87AFAF
+hi SpecialKey      ctermfg=114    guifg=#87D787
+hi NonText         ctermfg=243    guifg=#767676
+hi MatchParen      ctermfg=16     ctermbg=72    guifg=#000000    guibg=#5FAF87
+hi Directory       ctermfg=103    guifg=#8787AF
 
-hi Folded          ctermfg=231    ctermbg=243
-hi FoldColumn      ctermfg=231    ctermbg=243
-hi SignColumn      ctermfg=231    ctermbg=243
-hi ColorColumn     ctermfg=16     ctermbg=243
+hi ErrorMsg        ctermfg=210    ctermbg=bg    guifg=#FF8787    guibg=bg
+hi WarningMsg      ctermfg=140    guifg=#AF87D7
+hi MoreMsg         ctermfg=72    guifg=#5FAF87
+hi ModeMsg         ctermfg=222    guifg=#FFD787
 
-hi CursorColumn    ctermbg=236    cterm=none
-hi CursorLine      ctermbg=236    cterm=none
+hi Search          ctermfg=16     ctermbg=179     cterm=none    guifg=#000000    guibg=#D7AF5F    gui=none
+hi IncSearch       ctermfg=231    ctermbg=168     cterm=none    guifg=#FFFFFF    guibg=#D75F87    gui=none
+hi Question        ctermfg=38    guifg=#00AFD7
 
-hi vimFold         ctermfg=243
-hi vimCommentTitle ctermfg=fg
-hi helpHyperTextJump ctermfg=74
+hi Folded          ctermfg=243    ctermbg=bg    guifg=#767676    guibg=bg
+hi FoldColumn      ctermfg=79     ctermbg=236    guifg=#5FD7AF    guibg=#303030
+hi SignColumn      ctermfg=79     ctermbg=236    guifg=#5FD7AF    guibg=#303030
+hi ColorColumn     ctermfg=79     ctermbg=236    guifg=#5FD7AF    guibg=#303030
 
-hi htmlTag         ctermfg=147
-hi htmlEndTag      ctermfg=147
-hi htmlTagName     ctermfg=175
-hi htmlString      ctermfg=144
+hi CursorColumn    ctermbg=236    cterm=none    guibg=#303030    gui=none
+hi CursorLine      ctermbg=236    cterm=none    guibg=#303030    gui=none
 
-hi diffFile        ctermfg=243
-hi diffLine        ctermfg=243
-hi diffAdded       ctermfg=107
-hi diffRemoved     ctermfg=175
-hi diffChanged     ctermfg=179
+hi vimFold         ctermfg=243    guifg=#767676
+hi vimCommentTitle ctermfg=fg    guifg=fg
+hi helpHyperTextJump ctermfg=74    guifg=#5FAFD7
 
-hi diffAdd         ctermfg=16     ctermbg=149
-hi diffDelete      ctermfg=231    ctermbg=fg
-hi diffText        ctermfg=16     ctermbg=216
-hi diffChange      ctermfg=16     ctermbg=210
-hi diffOldLine     ctermfg=104
+hi htmlTag         ctermfg=147    guifg=#AFAFFF
+hi htmlEndTag      ctermfg=147    guifg=#AFAFFF
+hi htmlTagName     ctermfg=175    guifg=#D787AF
+hi htmlString      ctermfg=144    guifg=#AFAF87
 
-hi SpellBad        ctermfg=210    ctermbg=bg      cterm=underline
-hi SpellCap        ctermfg=174    ctermbg=bg      cterm=underline
-hi SpellRare       ctermfg=181    ctermbg=bg      cterm=underline
-hi SpellLocal      ctermfg=180    ctermbg=bg      cterm=underline
+hi diffFile        ctermfg=243    guifg=#767676
+hi diffLine        ctermfg=243    guifg=#767676
+hi diffAdded       ctermfg=107    guifg=#87AF5F
+hi diffRemoved     ctermfg=175    guifg=#D787AF
+hi diffChanged     ctermfg=179    guifg=#D7AF5F
 
-hi mkdCode         ctermfg=243
-hi mkdURL          ctermfg=111
-hi mkdLink         ctermfg=181
+hi diffAdd         ctermfg=16     ctermbg=149    guifg=#000000    guibg=#AFD75F
+hi diffDelete      ctermfg=231    ctermbg=fg    guifg=#FFFFFF    guibg=fg
+hi diffText        ctermfg=16     ctermbg=211    guifg=#000000    guibg=#FF87AF
+hi diffChange      ctermfg=16     ctermbg=217    guifg=#000000    guibg=#FFAFAF
+hi diffOldLine     ctermfg=104    guifg=#8787D7
+
+hi SpellBad        ctermfg=210    ctermbg=bg      cterm=underline    guifg=#FF8787    guibg=bg    gui=underline
+hi SpellCap        ctermfg=174    ctermbg=bg      cterm=underline    guifg=#D78787    guibg=bg    gui=underline
+hi SpellRare       ctermfg=181    ctermbg=bg      cterm=underline    guifg=#D7AFAF    guibg=bg    gui=underline
+hi SpellLocal      ctermfg=180    ctermbg=bg      cterm=underline    guifg=#D7AF87    guibg=bg    gui=underline
+
+hi mkdCode         ctermfg=243    guifg=#767676
+hi mkdURL          ctermfg=111    guifg=#87AFFF
+hi mkdLink         ctermfg=181    guifg=#D7AFAF
+
+hi def link mailSubject Title
+hi def link mailSignature Comment
+hi def link mailQuoted2 mailQuoted1
+hi def link perlSharpBang Comment

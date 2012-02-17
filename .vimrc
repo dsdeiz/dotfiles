@@ -3,7 +3,7 @@ set nocompatible
 call pathogen#infect()
 
 set t_Co=256
-colorscheme distinguished
+colorscheme xoria256
 syntax on
 
 filetype on
@@ -16,7 +16,6 @@ set autochdir
 set vb t_vb=
 
 " set sessionoptions-=options
-set matchpairs+=<:>
 set mouse=a
 
 set fileformats=unix,dos
@@ -33,7 +32,7 @@ set formatoptions=qrowcb
 " set statusline+=%*
 set laststatus=2
 set list
-set listchars=tab:▸-,trail:-
+set listchars=tab:»\ ,trail:·
 
 set shiftwidth=2
 set expandtab
@@ -68,6 +67,9 @@ set foldcolumn=0
 imap jj <esc>
 imap <s-tab> <c-x><c-o>
 
+" nnoremap j gj
+" nnoremap k gk
+
 let mapleader=","
 
 " }}}
@@ -89,10 +91,11 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Hilight settings {{{
 
-hi Normal ctermbg=NONE
-hi CursorLine cterm=NONE
+" hi Normal ctermbg=NONE
+" hi CursorLine cterm=NONE
 " hi Folded cterm=NONE
-hi NonText ctermbg=NONE
+" Annoying tildes on NERDTree
+hi NonText ctermbg=NONE ctermfg=0
 " hi SpecialKey ctermfg=233
 
 " }}}
@@ -105,21 +108,26 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " Plugin settings {{{
 
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=1
-let g:syntastic_auto_loc_list=2
+let syntastic_enable_signs=1
+let syntastic_auto_jump=1
+let syntastic_auto_loc_list=2
 
 let NERDTreeDirArrows=1
 let NERDTreeMouseMode=3
+let NERDChristmasTree=1
 map <Leader>n :NERDTreeToggle<CR>
 map <F10> :NERDTree<CR>
 map <Leader>r :NERDTreeFind<CR>
 
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let ackprg="ack-grep -H --nocolor --nogroup --column"
 
 nnoremap <silent> <F9> :TagbarToggle<CR>
 
-let g:UltiSnipsExpandTrigger="<c-\\>"
+let UltiSnipsExpandTrigger="<c-\\>"
+
+let Powerline_symbols='fancy'
+
+let delimitMate_matchpairs = "(:),[:],{:}"
 
 " }}}
 
@@ -135,3 +143,9 @@ nmap SQ <ESC>:mksession! ~/.vim/Session.vim<CR>:wqa<CR>
 inoremap <Leader>fn <C-R>=expand("%:t:r")<CR>
 
 " }}}
+
+fu! Create_post(str)
+  exec ':e ' . strftime('%F') . '-' . a:str . '.md'
+endfu
+
+command! -nargs=1 CreatePost call Create_post(<f-args>)

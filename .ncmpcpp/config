@@ -138,7 +138,7 @@ playlist_disable_highlight_delay = "2"
 ## Note: colors can be nested.
 ##
 #
-#song_list_format = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
+song_list_format = "$1 %n │ $5%a$1 │ $8%t $7(%l)$1 $R$6%b $7(%y)$1 $9"
 #
 #song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
 #
@@ -172,9 +172,9 @@ playlist_disable_highlight_delay = "2"
 ## text attributes listed above.
 ##
 #
-now_playing_prefix = "$b>> "
+# now_playing_prefix = "$b>> "
 #
-now_playing_suffix = "$/b"
+# now_playing_suffix = "$/b"
 #
 #browser_playlist_prefix = "$2playlist$9 "
 #
@@ -222,7 +222,7 @@ selected_item_suffix = "$9"
 ##   not available.
 ##
 #
-#song_columns_list_format = "(7f)[green]{l} (25)[cyan]{a} (40)[]{t|f} (30)[red]{b}"
+song_columns_list_format = " (5)[black]{n} (6)[magenta]{lr} (35)[blue]{t} (30)[cyan]{a} (20)[green]{bEr} (4)[white]{yE}"
 #
 ##### various settings #####
 #
@@ -241,7 +241,7 @@ selected_item_suffix = "$9"
 #
 #playlist_separate_albums = "no"
 #
-playlist_display_mode = "columns" (classic/columns)
+playlist_display_mode = "classic" (classic/columns)
 #
 #browser_display_mode = "classic" (classic/columns)
 #
