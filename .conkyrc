@@ -4,4 +4,4 @@ update_interval 1
 total_run_times 0
 
 TEXT
-^fg(\#505050)[ ^fg(\#b7e234)^i(/home/arnold/.dzen/xbm8x8/bat_full_01.xbm) ^fg(\#a0a0a0)${battery_percent BAT0}% ^fg(\#505050)] ^fg(\#505050)[ ^fg(\#f0f0f0)${time %a %b %d %I:%M %P} ^fg(\#505050)] 
+^bg(\#00a000)^fg(\#ffffff) ^i(/home/arnold/.dzen/xbm8x8/bat_full_01.xbm) ${battery_percent BAT0}% ^bg(\#00007f)^fg(\#ffffff) ${time %a %b %d %I:%M %P} 

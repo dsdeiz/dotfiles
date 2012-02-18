@@ -5,7 +5,7 @@
 URxvt*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 URxvt*boldFont: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
 
-URxvt*transparent: 1
+URxvt*transparent: 0
 URxvt*shading: 5
 URxvt*scrollBar: false
 URxvt*termName: rxvt-256color
@@ -22,23 +22,29 @@ URxvt*perl-ext-common:  default,matcher
 URxvt*urlLauncher:      /usr/bin/google-chrome
 URxvt*matcher.button:   1 
 
-! Molokai theme
-URxvt*background: #101010
-URxvt*foreground: #d0d0d0
-URxvt*cursorColor: #d0d0d0
-URxvt*color0: #101010
-URxvt*color1: #960050
-URxvt*color2: #66aa11
-URxvt*color3: #c47f2c
-URxvt*color4: #30309b
-URxvt*color5: #7e40a5
-URxvt*color6: #3579a8
-URxvt*color7: #9999aa
-URxvt*color8: #303030
-URxvt*color9: #ff0090
-URxvt*color10: #80ff00
-URxvt*color11: #ffba68
-URxvt*color12: #5f5fee
-URxvt*color13: #bb88dd
-URxvt*color14: #4eb4fa
-URxvt*color15: #d0d0d0
+URxvt*foreground:            #dddddd
+URxvt*background:           #151515
+!black
+URxvt*color0:                   #393939
+URxvt*color8:                   #474747
+!red
+URxvt*color1:                   #da4939
+URxvt*color9:                   #ff6c5c
+!green
+URxvt*color2:                   #519f50
+URxvt*color10:                 #a5c261
+!yellow
+URxvt*color3:                   #cc7833
+URxvt*color11:                  #bc9458
+!blue
+URxvt*color4:                   #6d9cbe
+URxvt*color12:                 #d0d0ff
+!magenta
+URxvt*color5:                   #9f5079
+URxvt*color13:                 #a761c2
+!cyan
+URxvt*color6:                   #435d75
+URxvt*color14:                 #6e98a4
+!white
+URxvt*color7:                   #dddddd
+URxvt*color15:                 #dddddd

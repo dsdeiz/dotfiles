@@ -57,7 +57,7 @@ set completeopt-=preview
 
 set foldenable
 set foldmethod=syntax
-set foldlevel=99
+set foldlevel=2
 set foldcolumn=0
 
 " }}}
@@ -67,8 +67,8 @@ set foldcolumn=0
 imap jj <esc>
 imap <s-tab> <c-x><c-o>
 
-" nnoremap j gj
-" nnoremap k gk
+nnoremap j gj
+nnoremap k gk
 
 let mapleader=","
 
@@ -79,6 +79,13 @@ let mapleader=","
 au FileType vim set foldmethod=marker
 
 autocmd BufRead,BufNewFile *.tpl.php set filetype=php.xhtml
+autocmd BufRead,BufNewFile *.module set filetype=php
+autocmd BufRead,BufNewFile *.install set filetype=php
+autocmd BufRead,BufNewFile *.inc set filetype=php
+autocmd BufRead,BufNewFile *.profile set filetype=php
+autocmd BufRead,BufNewFile *.theme set filetype=php
+autocmd BufRead,BufNewFile *.engine set filetype=php
+autocmd BufRead,BufNewFile *.test set filetype=php
 
 " For python files.
 autocmd FileType python set tabstop=4 shiftwidth=4 softtabstop=4
@@ -127,7 +134,9 @@ let UltiSnipsExpandTrigger="<c-\\>"
 
 let Powerline_symbols='fancy'
 
-let delimitMate_matchpairs = "(:),[:],{:}"
+let delimitMate_matchpairs="(:),[:],{:}"
+
+let php_folding=2
 
 " }}}
 

@@ -41,7 +41,7 @@ main = do
         , ((0, 0x1008ff11), spawn "amixer -q sset Master 5-")
         ]
 
-myStatusBar   = "dzen2 -fn 'bitocra' -bg '#101010' -fg '#a0a0a0' -h 18 -ta l -w 780 -y 1366"
+myStatusBar   = "dzen2 -fn 'cure' -bg '#cccccc' -fg '#000000' -h 18 -ta l -w 780 -y 1366"
 myTerminal    = "urxvtc"
 
 myWorkspaces  =
@@ -59,12 +59,12 @@ myWorkspaces  =
         wrapBitmap bitmap = "^i(/home/arnold/.dzen/" ++ bitmap ++ ")"
 
 myDzenPP h      = defaultPP
-    { ppCurrent = dzenColor "#ffaf5f" "" . pad
+    { ppCurrent = dzenColor "#ffffff" "#00a000" . pad
     , ppHidden  = pad . noScratchPad
     , ppOutput  = hPutStrLn h
     , ppUrgent  = pad
     , ppWsSep   = ""
-    , ppLayout  = dzenColor "#b7e234" ""
+    , ppLayout  = dzenColor "#ff0000" ""
     }
     where
         noScratchPad ws = if ws == "NSP" then "" else ws
