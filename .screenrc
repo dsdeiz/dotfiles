@@ -18,4 +18,4 @@ bindkey "^[Oc" next  # change window with ctrl-right
 
 screen -t irssi irssi -c irc.freenode.net
 screen -t ncmpcpp ncmpcpp
-screen -t arch ssh arch
+# screen -t arch ssh arch

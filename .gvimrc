@@ -1,4 +1,5 @@
-colorscheme my_autumnleaf_bold
+let g:inkpot_black_background=1
+colo inkpot
 
 set guifont=Monaco\ 7.5
 set guioptions=Aci

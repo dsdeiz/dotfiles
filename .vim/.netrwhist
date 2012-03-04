@@ -1,4 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/var/www/mine.local/ci/application'
-let g:netrw_dirhist_2='/var/www/mine.local/ci/application/views'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/var/www/mine.local/d6/sites/all/modules/examples'
+let g:netrw_dirhist_2='/var/www/mine.local/d6/sites/all/modules/examples/node_example'
+let g:netrw_dirhist_3='/var/www/mine.local/d6/sites/all/modules/examples'
+let g:netrw_dirhist_4='/var/www/mine.local/d6/sites/all/modules'
+let g:netrw_dirhist_5='/var/www/mine.local/d6/sites/all/modules/securepages'
+let g:netrw_dirhist_6='/var/www/mine.local/d6/sites/all/modules'
+let g:netrw_dirhist_7='/var/www/mine.local/d6/sites/all/modules/admin_menu'
+let g:netrw_dirhist_8='/var/www/mine.local/d6/sites/all/modules'
+let g:netrw_dirhist_9='/var/www/mine.local/d6/sites/all/modules/devel'

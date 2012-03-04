@@ -12,6 +12,7 @@ import qualified XMonad.StackSet as W
 import XMonad.Prompt
 import XMonad.Prompt.Shell
 import XMonad.Util.NamedScratchpad
+import XMonad.Layout.SimpleFloat
 
 -- XMonad
 main = do
@@ -35,13 +36,13 @@ main = do
         , ((mod4Mask, xK_i), namedScratchpadAction myScratchPads "htop")
         , ((mod4Mask, xK_u), namedScratchpadAction myScratchPads "terminal")
         , ((mod4Mask .|. shiftMask, xK_u), namedScratchpadAction myScratchPads "scratchpad")
-        , ((mod4Mask, xK_e), spawn "urxvtc -e 'vim'")
+        , ((mod4Mask, xK_e), spawn "urxvtc -e vim")
         , ((mod4Mask .|. shiftMask, xK_p), shellPrompt myXPConfig)
         , ((0, 0x1008ff13), spawn "amixer -q sset Master 5+")
         , ((0, 0x1008ff11), spawn "amixer -q sset Master 5-")
         ]
 
-myStatusBar   = "dzen2 -fn 'cure' -bg '#cccccc' -fg '#000000' -h 18 -ta l -w 780 -y 1366"
+myStatusBar   = "dzen2 -fn 'bitocra' -bg '#101010' -fg '#a0a0a0' -h 18 -ta l -w 780 -y 1366"
 myTerminal    = "urxvtc"
 
 myWorkspaces  =
@@ -59,17 +60,17 @@ myWorkspaces  =
         wrapBitmap bitmap = "^i(/home/arnold/.dzen/" ++ bitmap ++ ")"
 
 myDzenPP h      = defaultPP
-    { ppCurrent = dzenColor "#ffffff" "#00a000" . pad
+    { ppCurrent = dzenColor "#ffaf5f" "" . pad
     , ppHidden  = pad . noScratchPad
     , ppOutput  = hPutStrLn h
     , ppUrgent  = pad
     , ppWsSep   = ""
-    , ppLayout  = dzenColor "#ff0000" ""
+    , ppLayout  = dzenColor "#b7e234" ""
     }
     where
         noScratchPad ws = if ws == "NSP" then "" else ws
 
-myLayoutHook      = smartBorders $ avoidStruts $ tiled ||| Mirror tiled ||| Full ||| gridIM
+myLayoutHook      = smartBorders $ avoidStruts $ tiled ||| Mirror tiled ||| Full ||| gridIM ||| simpleFloat
     where
         tiled     = Tall nmaster delta ratio
         nmaster   = 1
@@ -82,11 +83,11 @@ myXPConfig = defaultXPConfig
     , bgColor  = "#000000"
     , bgHLight = "cyan"
     , fgHLight = "#FFFFFF"
-    , font     = "xft:Monaco:size=7.5"
+    , font     = "xft:bitocra"
     }
 
 myScratchPads =
     [ NS "scratchpad" "urxvtc -name scratchpad" (resource =? "scratchpad") (customFloating $ W.RationalRect 0 0 1 0.3)
-    , NS "terminal" "urxvtc -name terminal" (resource =? "terminal") (customFloating $ W.RationalRect 0.25 0.25 0.5 0.5)
+    , NS "terminal" "urxvtc -name terminal" (resource =? "terminal") (customFloating $ W.RationalRect 0 0.5 1 0.5)
     , NS "htop" "urxvtc -name htop -e htop" (resource =? "htop") (customFloating $ W.RationalRect 0.25 0.25 0.5 0.5)
     ]

@@ -2,10 +2,10 @@
 ! URxvt Settings
 ! ---------------------------------------------------------
 
-URxvt*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt*boldFont: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt*font: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
+URxvt*boldFont: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
 
-URxvt*transparent: 0
+URxvt*transparent: 1
 URxvt*shading: 5
 URxvt*scrollBar: false
 URxvt*termName: rxvt-256color

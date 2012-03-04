@@ -13,10 +13,11 @@ xsetroot -cursor_name left_ptr
 xset -b
 
 urxvtd -q -o -f
-$HOME/.dropbox-dist/dropboxd &
+# $HOME/.dropbox-dist/dropboxd &
 
 # wbdrawer &
 # exec startfluxbox
 # exec ck-launch-session startxfce4
 exec xmonad
 # exec ck-launch-session /usr/bin/jwm
+# exec openbox-session
