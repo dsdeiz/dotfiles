@@ -144,8 +144,6 @@ let php_folding=2
 
 set ssop-=options
 set ssop-=buffers
-nmap SQ <ESC>:mksession! ~/.vim/session.vim<CR>:wqa<CR>
-" autocmd VimEnter * so ~/.vim/Session.vim
 
 " }}}
 
