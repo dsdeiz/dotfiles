@@ -97,9 +97,7 @@ autocmd BufRead,BufNewFile *.profile set filetype=php
 autocmd BufRead,BufNewFile *.theme set filetype=php
 autocmd BufRead,BufNewFile *.engine set filetype=php
 autocmd BufRead,BufNewFile *.test set filetype=php
-autocmd BufEnter * lcd %:p:h
 
-autocmd VimLeave * NERDTreeClose
 autocmd VimLeave * mks! ~/.vim/session.vim
 
 " For python files.
@@ -133,18 +131,6 @@ nnoremap <Leader>l :buffers<CR>:buffer<Space>
 let syntastic_enable_signs=1
 let syntastic_auto_jump=1
 let syntastic_auto_loc_list=2
-
-let NERDTreeDirArrows=1
-let NERDTreeMouseMode=3
-let NERDChristmasTree=1
-" Allow 'traditional' way of file navigation
-let NERDTreeHijackNetrw=0
-" Set working directory when invoking NERDTree
-let NERDTreeChDirMode=1
-map <Leader>n :NERDTreeToggle<CR>
-map <F10> :NERDTree<CR>
-map <Leader>m :NERDTreeFromBookmark<space>
-map <Leader>r :NERDTreeFind<CR>
 
 let ackprg="ack-grep -H --nocolor --nogroup --column"
 
