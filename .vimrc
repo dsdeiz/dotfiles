@@ -18,7 +18,6 @@ syntax on
 filetype plugin indent on
 
 set backspace=indent,eol,start
-set autochdir
 
 set vb t_vb=
 
@@ -31,6 +30,8 @@ set wildignore=*.png,*.jpg,*.jpeg,*.gif,*.swp,*.swo,sites/default/files/**,.git
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/temp
+
+set hidden
 
 " }}}
 
@@ -111,7 +112,7 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Hilight settings {{{
 
-" hi Normal ctermbg=NONE
+hi Normal ctermbg=NONE
 " hi CursorLine cterm=NONE
 " hi Folded cterm=NONE
 " Annoying tildes on NERDTree
@@ -131,6 +132,18 @@ nnoremap <Leader>l :buffers<CR>:buffer<Space>
 let syntastic_enable_signs=1
 let syntastic_auto_jump=1
 let syntastic_auto_loc_list=2
+
+let NERDTreeDirArrows=1
+let NERDTreeMouseMode=3
+let NERDChristmasTree=1
+" Allow 'traditional' way of file navigation
+let NERDTreeHijackNetrw=0
+" Set working directory when invoking NERDTree
+let NERDTreeChDirMode=1
+map <Leader>n :NERDTreeToggle<CR>
+map <F10> :NERDTree<CR>
+map <Leader>m :NERDTreeFromBookmark<space>
+map <Leader>r :NERDTreeFind<CR>
 
 let ackprg="ack-grep -H --nocolor --nogroup --column"
 
@@ -160,6 +173,7 @@ endfu
 fu! SetProject(project)
   let project_path="/var/www/" . a:project . ".local/"
   exec ':cd ' . project_path
+  exec ':set path=' . getcwd() . '/**'
   exec ':set tags+=' . project_path . "tags"
 endfu
 

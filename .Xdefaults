@@ -6,7 +6,7 @@ URxvt*font: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
 URxvt*boldFont: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
 
 URxvt*transparent: 1
-URxvt*shading: 5
+URxvt*shading: 8
 URxvt*scrollBar: false
 URxvt*termName: rxvt-256color
 URxvt*cursorBlink: 1
