@@ -5,13 +5,13 @@ call pathogen#infect()
 set t_Co=256
 
 if !has('gui_running')
-  colorscheme distinguished
   let Powerline_symbols='compatible'
 else
   let Powerline_symbols='fancy'
 endif
 
 set background=dark
+colorscheme molokai
 
 syntax on
 
@@ -74,7 +74,6 @@ set foldcolumn=0
 " Keybind settings {{{
 
 imap jj <esc>
-imap <s-tab> <c-x><c-o>
 
 nnoremap j gj
 nnoremap k gk
@@ -88,8 +87,6 @@ let maplocalleader=","
 
 " Autocommand settings {{{
 
-au FileType vim set foldmethod=marker
-
 autocmd BufRead,BufNewFile *.tpl.php set filetype=php.xhtml
 autocmd BufRead,BufNewFile *.module set filetype=php
 autocmd BufRead,BufNewFile *.install set filetype=php
@@ -99,6 +96,7 @@ autocmd BufRead,BufNewFile *.theme set filetype=php
 autocmd BufRead,BufNewFile *.engine set filetype=php
 autocmd BufRead,BufNewFile *.test set filetype=php
 
+autocmd VimLeave * NERDTreeClose
 autocmd VimLeave * mks! ~/.vim/session.vim
 
 " For python files.
@@ -112,12 +110,13 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Hilight settings {{{
 
-hi Normal ctermbg=NONE
+" hi Normal ctermbg=NONE
 " hi CursorLine cterm=NONE
 " hi Folded cterm=NONE
 " Annoying tildes on NERDTree
-hi NonText ctermbg=NONE ctermfg=0
+" hi NonText ctermbg=NONE ctermfg=0
 " hi SpecialKey ctermfg=233
+" hi CursorLine term=NONE cterm=NONE
 
 " }}}
 
@@ -139,15 +138,19 @@ let NERDChristmasTree=1
 " Allow 'traditional' way of file navigation
 let NERDTreeHijackNetrw=0
 " Set working directory when invoking NERDTree
-let NERDTreeChDirMode=1
+let NERDTreeChDirMode=2
 map <Leader>n :NERDTreeToggle<CR>
 map <F10> :NERDTree<CR>
 map <Leader>m :NERDTreeFromBookmark<space>
 map <Leader>r :NERDTreeFind<CR>
 
-let ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 nnoremap <silent> <F9> :TagbarToggle<CR>
+
+let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabContextDefaultCompletionType = '<c-n>'
+let g:SuperTabLongestEnhanced = 1
 
 let php_folding=2
 
@@ -157,6 +160,8 @@ let php_folding=2
 
 set ssop-=options
 set ssop-=buffers
+set ssop-=help
+set ssop-=blank
 
 " }}}
 
@@ -179,3 +184,5 @@ endfu
 
 command! -nargs=1 CreatePost call CreatePost(<f-args>)
 command! -nargs=1 SetProject call SetProject(<f-args>)
+
+" vim: foldmethod=marker

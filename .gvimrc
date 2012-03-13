@@ -1,5 +1,4 @@
-let g:inkpot_black_background=1
-colo inkpot
+colo my_dante
 
 set guifont=Monaco\ 7.5
 set guioptions=Aci
@@ -9,3 +8,5 @@ set guioptions=Aci
 " hi NonText guibg=NONE guifg=black
 " hi Normal guibg=black
 " hi LineNr gui=NONE
+
+" vim: foldmethod=marker

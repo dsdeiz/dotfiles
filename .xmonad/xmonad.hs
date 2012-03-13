@@ -36,7 +36,7 @@ main = do
         , ((mod4Mask, xK_i), namedScratchpadAction myScratchPads "htop")
         , ((mod4Mask, xK_u), namedScratchpadAction myScratchPads "terminal")
         , ((mod4Mask .|. shiftMask, xK_u), namedScratchpadAction myScratchPads "scratchpad")
-        , ((mod4Mask, xK_e), spawn "urxvtc -e vim")
+        , ((mod4Mask, xK_e), spawn "urxvtc -name Vim -e vim")
         , ((mod4Mask .|. shiftMask, xK_p), shellPrompt myXPConfig)
         , ((0, 0x1008ff13), spawn "amixer -q sset Master 5+")
         , ((0, 0x1008ff11), spawn "amixer -q sset Master 5-")

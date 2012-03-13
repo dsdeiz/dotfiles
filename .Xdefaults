@@ -6,7 +6,7 @@ URxvt*font: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
 URxvt*boldFont: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
 
 URxvt*transparent: 1
-URxvt*shading: 8
+URxvt*shading: 4
 URxvt*scrollBar: false
 URxvt*termName: rxvt-256color
 URxvt*cursorBlink: 1
@@ -48,3 +48,12 @@ URxvt*color14:                 #6e98a4
 !white
 URxvt*color7:                   #dddddd
 URxvt*color15:                 #dddddd
+
+! ---------------------------------------------------------
+! Vim Settings
+! ---------------------------------------------------------
+
+Vim*font: xft:Monaco:size=7.5
+Vim*boldFont: xft:Monaco:bold:size=7.5
+Vim*transparent: 1
+

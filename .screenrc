@@ -8,7 +8,7 @@ startup_message off
 backtick 1 5 5 true
 hardstatus string "screen (%n: %t)"
 caption string "%{= dR} %-Lw%50>%{= dG}%n%f* %{= dW}%t%{= dR}%+Lw%<"
-term rxvt-256color
+term rxvt
 
 bind f eval "caption splitonly"
 bind F eval "caption always"
