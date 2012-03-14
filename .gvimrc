@@ -1,4 +1,4 @@
-colo my_dante
+colo delek
 
 set guifont=Monaco\ 7.5
 set guioptions=Aci

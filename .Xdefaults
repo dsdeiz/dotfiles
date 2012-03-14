@@ -54,6 +54,6 @@ URxvt*color15:                 #dddddd
 ! ---------------------------------------------------------
 
 Vim*font: xft:Monaco:size=7.5
-Vim*boldFont: xft:Monaco:size=7.5
+Vim*boldFont: xft:Monaco:bold:size=7.5
 Vim*transparent: 1
 

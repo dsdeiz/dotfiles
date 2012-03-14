@@ -110,7 +110,7 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Hilight settings {{{
 
-" hi Normal ctermbg=NONE
+" hi Normal ctermbg=White
 " hi CursorLine cterm=NONE
 " hi Folded cterm=NONE
 " Annoying tildes on NERDTree
