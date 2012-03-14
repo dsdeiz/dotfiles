@@ -12,11 +12,7 @@ URxvt*termName: rxvt-256color
 URxvt*cursorBlink: 1
 URxvt*cursorColor: #e8621d
 
-Xft.autohint:             1
-Xft.lcdfilter:            lcdlight
-Xft.hintstyle:            hintslight
-Xft.hinting:              1
-Xft.antialias:            0
+URxvt.urgentOnBell: 1
 
 URxvt*perl-ext-common:  default,matcher
 URxvt*urlLauncher:      /usr/bin/google-chrome
@@ -56,4 +52,14 @@ URxvt*color15:                 #dddddd
 Vim*font: xft:Monaco:size=7.5
 Vim*boldFont: xft:Monaco:bold:size=7.5
 Vim*transparent: 1
+
+! ---------------------------------------------------------
+! Xft Settings
+! ---------------------------------------------------------
+
+Xft.autohint:             1
+Xft.lcdfilter:            lcdlight
+Xft.hintstyle:            hintslight
+Xft.hinting:              1
+Xft.antialias:            0
 

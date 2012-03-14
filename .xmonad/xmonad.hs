@@ -13,11 +13,12 @@ import XMonad.Prompt
 import XMonad.Prompt.Shell
 import XMonad.Util.NamedScratchpad
 import XMonad.Layout.SimpleFloat
+import XMonad.Hooks.UrgencyHook
 
 -- XMonad
 main = do
     dzen <- spawnPipe myStatusBar
-    xmonad $ defaultConfig
+    xmonad $ withUrgencyHook NoUrgencyHook $ defaultConfig
         { manageHook              = manageDocks <+> manageHook defaultConfig <+> namedScratchpadManageHook myScratchPads
         , layoutHook              = myLayoutHook
         , logHook                 = dynamicLogWithPP $ myDzenPP dzen
@@ -63,7 +64,7 @@ myDzenPP h      = defaultPP
     { ppCurrent = dzenColor "#ffaf5f" "" . pad
     , ppHidden  = pad . noScratchPad
     , ppOutput  = hPutStrLn h
-    , ppUrgent  = pad
+    , ppUrgent  = dzenColor "#cc0000" ""
     , ppWsSep   = ""
     , ppLayout  = dzenColor "#b7e234" ""
     }

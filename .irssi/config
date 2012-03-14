@@ -271,6 +271,7 @@ settings = {
     theme = "xchat2";
     window_check_level_first = "yes";
     window_default_level = "ALL -JOINS -PARTS -QUITS";
+    beep_msg_level = "MSGS NOTICES INVITES DCC DCCMSGS HILIGHT";
   };
 };
 keyboard = ( { key = "meta-c"; id = "command"; data = "wc "; } );
