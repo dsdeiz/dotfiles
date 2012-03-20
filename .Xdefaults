@@ -6,7 +6,7 @@ URxvt*font: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
 URxvt*boldFont: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
 
 URxvt*transparent: 1
-URxvt*shading: 4
+URxvt*shading: 8
 URxvt*scrollBar: false
 URxvt*termName: rxvt-256color
 URxvt*cursorBlink: 1
@@ -49,9 +49,7 @@ URxvt*color15:                 #dddddd
 ! Vim Settings
 ! ---------------------------------------------------------
 
-Vim*font: xft:Monaco:size=7.5
-Vim*boldFont: xft:Monaco:bold:size=7.5
-Vim*transparent: 1
+Vim*transparent: 0
 
 ! ---------------------------------------------------------
 ! Xft Settings
@@ -60,6 +58,6 @@ Vim*transparent: 1
 Xft.autohint:             1
 Xft.lcdfilter:            lcdlight
 Xft.hintstyle:            hintslight
-Xft.hinting:              1
+Xft.hinting:              0
 Xft.antialias:            0
 

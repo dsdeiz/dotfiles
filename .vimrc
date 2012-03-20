@@ -4,14 +4,14 @@ call pathogen#infect()
 
 set t_Co=256
 
+set background=dark
 if !has('gui_running')
+  colorscheme distinguished
   let Powerline_symbols='compatible'
 else
   let Powerline_symbols='fancy'
 endif
 
-set background=dark
-colorscheme molokai
 
 syntax on
 
@@ -49,7 +49,6 @@ set softtabstop=2
 set tabstop=2
 
 set ignorecase
-" set autoindent
 
 set number
 set nohlsearch
@@ -59,6 +58,7 @@ set ruler
 set mousehide
 set nocul
 set completeopt-=preview
+set textwidth=80
 
 " }}}
 
@@ -98,6 +98,8 @@ autocmd BufRead,BufNewFile *.test set filetype=php
 
 autocmd VimLeave * NERDTreeClose
 autocmd VimLeave * mks! ~/.vim/session.vim
+
+autocmd BufRead * call DisablePlugins()
 
 " For python files.
 autocmd FileType python set tabstop=4 shiftwidth=4 softtabstop=4
@@ -170,6 +172,12 @@ set ssop-=blank
 inoremap <Leader>fn <C-R>=expand("%:t:r")<CR>
 
 " }}}
+
+fu DisablePlugins()
+  if line('$') > 700
+    let g:loaded_syntastic = 1
+  endif
+endfu
 
 fu! CreatePost(str)
   exec ':e ' . strftime('%F') . '-' . a:str . '.md'

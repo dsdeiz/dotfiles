@@ -1,6 +1,7 @@
-colo delek
+set background=light
+colo earendel
 
-set guifont=Monaco\ 7.5
+set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
 set guioptions=Aci
 
 " hi Title gui=NONE
