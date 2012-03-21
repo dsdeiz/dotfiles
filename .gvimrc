@@ -1,8 +1,10 @@
 set background=light
-colo earendel
+colo rdark
 
-set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
-set guioptions=Aci
+let NERDTreeDirArrows=1
+
+set guifont=Monaco\ 9
+set guioptions=AciTm
 
 " hi Title gui=NONE
 " hi CursorLine guibg=gray5
