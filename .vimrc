@@ -12,7 +12,6 @@ else
   let Powerline_symbols='fancy'
 endif
 
-
 syntax on
 
 filetype plugin indent on
@@ -95,6 +94,8 @@ autocmd BufRead,BufNewFile *.profile set filetype=php
 autocmd BufRead,BufNewFile *.theme set filetype=php
 autocmd BufRead,BufNewFile *.engine set filetype=php
 autocmd BufRead,BufNewFile *.test set filetype=php
+
+autocmd FileType php let b:delimitMate_matchpairs="(:),[:],{:}""
 
 autocmd VimLeave * NERDTreeClose
 autocmd VimLeave * mks! ~/.vim/session.vim

@@ -16,48 +16,51 @@ URxvt.urgentOnBell: 1
 
 URxvt*perl-ext-common:  default,matcher
 URxvt*urlLauncher:      /usr/bin/google-chrome
-URxvt*matcher.button:   1 
+URxvt*matcher.button:   1
 
-URxvt*foreground:            #dddddd
-URxvt*background:           #151515
-!black
-URxvt*color0:                   #393939
-URxvt*color8:                   #474747
-!red
-URxvt*color1:                   #da4939
-URxvt*color9:                   #ff6c5c
-!green
-URxvt*color2:                   #519f50
-URxvt*color10:                 #a5c261
-!yellow
-URxvt*color3:                   #cc7833
-URxvt*color11:                  #bc9458
-!blue
-URxvt*color4:                   #6d9cbe
-URxvt*color12:                 #d0d0ff
-!magenta
-URxvt*color5:                   #9f5079
-URxvt*color13:                 #a761c2
-!cyan
-URxvt*color6:                   #435d75
-URxvt*color14:                 #6e98a4
-!white
-URxvt*color7:                   #dddddd
-URxvt*color15:                 #dddddd
+URxvt*background: #000000
+URxvt*foreground: #ffffff
+! Black
+URxvt*color0 : #000000
+URxvt*color8 : #555753
+! Red
+URxvt*color1 : #bf2d00
+URxvt*color9 : #dd4010
+! Green
+URxvt*color2 : #5b9f1e
+URxvt*color10: #93d44f
+! Yellow
+URxvt*color3 : #eab93d
+URxvt*color11: #ffc123
+! Blue
+URxvt*color4 : #204a87
+URxvt*color12: #3465a4
+! Magenta
+URxvt*color5 : #d6156c
+URxvt*color13: #fe4365
+! Cyan
+URxvt*color6 : #619bd7
+URxvt*color14: #89b6e2
+! White
+URxvt*color7 : #ffffff
+URxvt*color15: #dddddd
 
 ! ---------------------------------------------------------
 ! Vim Settings
 ! ---------------------------------------------------------
 
+# Vim*font: xft:Envy Code R:pixelsize=13
+# Vim*boldFont: xft:Envy Code R:bold:pixelsize=13
 Vim*transparent: 0
 
 ! ---------------------------------------------------------
 ! Xft Settings
 ! ---------------------------------------------------------
 
-Xft.autohint:             1
-Xft.lcdfilter:            lcdlight
+Xft.autohint:             0
+Xft.lcdfilter:            lcddefault
 Xft.hintstyle:            hintslight
-Xft.hinting:              0
-Xft.antialias:            0
+Xft.hinting:              1
+Xft.rgba:                 rgb
+Xft.antialias:            1
 

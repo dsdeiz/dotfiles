@@ -105,6 +105,7 @@ PATH="$PATH:$HOME/.cabal/bin:/var/lib/gems/1.8/bin"
 CDPATH=".:$HOME:/var/www:/var/lib/mpd:/mnt:/media"
 EDITOR="vim"
 PATH="/usr/local/lib/cw:$PATH"
+PROMPT_COMMAND="history -n; history -a"
 
 . /usr/share/autojump/autojump.sh
 

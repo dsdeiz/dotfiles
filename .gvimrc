@@ -1,10 +1,9 @@
-set background=light
-colo rdark
+colo my_dante
 
 let NERDTreeDirArrows=1
 
-set guifont=Monaco\ 9
-set guioptions=AciTm
+set guifont=Monaco\ 7.5
+set guioptions=Aci
 
 " hi Title gui=NONE
 " hi CursorLine guibg=gray5
