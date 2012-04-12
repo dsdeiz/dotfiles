@@ -43,7 +43,7 @@ main = do
         , ((0, 0x1008ff11), spawn "amixer -q sset Master 5-")
         ]
 
-myStatusBar   = "dzen2 -fn 'bitocra' -bg '#101010' -fg '#a0a0a0' -h 18 -ta l -w 780 -y 1366"
+myStatusBar   = "dzen2 -fn 'Terminus-8' -bg '#101010' -fg '#a0a0a0' -h 18 -ta l -w 780 -y 1366"
 myTerminal    = "urxvtc"
 
 myWorkspaces  =
@@ -84,7 +84,7 @@ myXPConfig = defaultXPConfig
     , bgColor  = "#000000"
     , bgHLight = "cyan"
     , fgHLight = "#FFFFFF"
-    , font     = "xft:bitocra"
+    , font     = "xft:Terminus:size=8"
     }
 
 myScratchPads =

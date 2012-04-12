@@ -4,14 +4,14 @@ call pathogen#infect()
 
 set t_Co=256
 
-set background=dark
 if !has('gui_running')
-  colorscheme distinguished
+  colorscheme wombat256
   let Powerline_symbols='compatible'
 else
   let Powerline_symbols='fancy'
 endif
 
+set background=dark
 syntax on
 
 filetype plugin indent on
@@ -113,7 +113,7 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Hilight settings {{{
 
-" hi Normal ctermbg=White
+" hi Normal ctermbg=NONE
 " hi CursorLine cterm=NONE
 " hi Folded cterm=NONE
 " Annoying tildes on NERDTree
@@ -183,13 +183,11 @@ fu! CreatePost(str)
 endfu
 
 fu! SetProject(project)
-  let project_path="/var/www/" . a:project . ".local/"
-  exec ':cd ' . project_path
-  exec ':set path=' . getcwd() . '/**'
-  exec ':set tags+=' . project_path . "tags"
+  exec ':cd ' . a:project
+  exec ':set tags+=' . a:project . "tags"
 endfu
 
 command! -nargs=1 CreatePost call CreatePost(<f-args>)
-command! -nargs=1 SetProject call SetProject(<f-args>)
+command! -complete=dir -nargs=1 SetProject call SetProject(<f-args>)
 
 " vim: foldmethod=marker

@@ -1,4 +1,5 @@
-colo my_dante
+set background=light
+colo my_railscasts
 
 let NERDTreeDirArrows=1
 

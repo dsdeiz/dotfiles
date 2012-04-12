@@ -6,7 +6,7 @@ URxvt*font: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
 URxvt*boldFont: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
 
 URxvt*transparent: 1
-URxvt*shading: 8
+URxvt*shading: 4
 URxvt*scrollBar: false
 URxvt*termName: rxvt-256color
 URxvt*cursorBlink: 1
@@ -51,7 +51,7 @@ URxvt*color15: #dddddd
 
 # Vim*font: xft:Envy Code R:pixelsize=13
 # Vim*boldFont: xft:Envy Code R:bold:pixelsize=13
-Vim*transparent: 0
+# Vim*transparent: 0
 
 ! ---------------------------------------------------------
 ! Xft Settings
