@@ -156,8 +156,6 @@ let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabContextDefaultCompletionType = '<c-n>'
 let g:SuperTabLongestEnhanced = 1
 
-let php_folding=2
-
 " }}}
 
 " Sessions {{{
