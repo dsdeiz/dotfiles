@@ -85,18 +85,21 @@ let maplocalleader=","
 " Load session
 nmap <Leader>ls :so $HOME/.vim/session.vim<CR>
 
+" Set project
+nmap <Leader>sp :SetProject<Space>
+
 " }}}
 
 " Autocommand settings {{{
 
-autocmd BufRead,BufNewFile *.tpl.php set filetype=drupal.php
-autocmd BufRead,BufNewFile *.module set filetype=drupal.php
-autocmd BufRead,BufNewFile *.install set filetype=drupal.php
-autocmd BufRead,BufNewFile *.inc set filetype=drupal.php
-autocmd BufRead,BufNewFile *.profile set filetype=drupal.php
-autocmd BufRead,BufNewFile *.theme set filetype=drupal.php
-autocmd BufRead,BufNewFile *.engine set filetype=drupal.php
-autocmd BufRead,BufNewFile *.test set filetype=drupal.php
+autocmd BufRead,BufNewFile *.tpl.php set filetype=php.drupal
+autocmd BufRead,BufNewFile *.module set filetype=php.drupal
+autocmd BufRead,BufNewFile *.install set filetype=php.drupal
+autocmd BufRead,BufNewFile *.inc set filetype=php.drupal
+autocmd BufRead,BufNewFile *.profile set filetype=php.drupal
+autocmd BufRead,BufNewFile *.theme set filetype=php.drupal
+autocmd BufRead,BufNewFile *.engine set filetype=php.drupal
+autocmd BufRead,BufNewFile *.test set filetype=php.drupal
 
 autocmd FileType php let b:delimitMate_matchpairs="(:),[:],{:}""
 
