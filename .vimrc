@@ -194,7 +194,4 @@ endfu
 command! -nargs=1 CreatePost call CreatePost(<f-args>)
 command! -complete=dir -nargs=1 SetProject call SetProject(<f-args>)
 
-" foo some changes foo
-" changes foo changes
-
 " vim: foldmethod=marker
