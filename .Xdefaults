@@ -2,8 +2,8 @@
 ! URxvt Settings
 ! ---------------------------------------------------------
 
-URxvt*font: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
-URxvt*boldFont: -*-terminus-*-*-*--*-*-*-*-*-*-*-*
+URxvt*font: xft:Monaco:size=7.5
+URxvt*boldFont: xft:Monaco:size=7.5
 
 URxvt*transparent: 1
 URxvt*shading: 4

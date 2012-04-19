@@ -1,5 +1,5 @@
-set background=light
-colo my_railscasts
+set background=dark
+colo my_twilight
 
 let NERDTreeDirArrows=1
 

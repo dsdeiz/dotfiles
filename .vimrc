@@ -5,7 +5,7 @@ call pathogen#infect()
 set t_Co=256
 
 if !has('gui_running')
-  colorscheme wombat256
+  colorscheme lucius
   let Powerline_symbols='compatible'
 else
   let Powerline_symbols='fancy'
@@ -91,15 +91,6 @@ nmap <Leader>sp :SetProject<Space>
 " }}}
 
 " Autocommand settings {{{
-
-autocmd BufRead,BufNewFile *.tpl.php set filetype=php.drupal
-autocmd BufRead,BufNewFile *.module set filetype=php.drupal
-autocmd BufRead,BufNewFile *.install set filetype=php.drupal
-autocmd BufRead,BufNewFile *.inc set filetype=php.drupal
-autocmd BufRead,BufNewFile *.profile set filetype=php.drupal
-autocmd BufRead,BufNewFile *.theme set filetype=php.drupal
-autocmd BufRead,BufNewFile *.engine set filetype=php.drupal
-autocmd BufRead,BufNewFile *.test set filetype=php.drupal
 
 autocmd FileType php let b:delimitMate_matchpairs="(:),[:],{:}""
 
