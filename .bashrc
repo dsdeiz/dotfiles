@@ -98,7 +98,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PS1='\[\033[0;32m\]\u\[\033[00m\] [ ${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\W\[\033[00m\] ] \[\033[0;31m\]▸\[\033[00m\] '
+PS1='\[\033[0;32m\]\u\[\033[00m\] [ ${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\W\[\033[00m\] ] $(parse_git_branch) \[\033[0;31m\]▸\[\033[00m\] '
 
 # Custom environment variables
 PATH="$PATH:$HOME/.cabal/bin:/var/lib/gems/1.8/bin"
@@ -109,3 +109,11 @@ PATH="/usr/local/lib/cw:$PATH"
 . /usr/share/autojump/autojump.sh
 
 fortune
+
+function drushalias {
+  drush -l $1 site-alias @self | sed "s/self/$1/"
+}
+
+function parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[ \1 ]/'
+}

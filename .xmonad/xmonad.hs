@@ -31,20 +31,30 @@ main = do
         , borderWidth             = 2
         , modMask                 = mod4Mask
         , normalBorderColor       = "#000"
-        } `additionalKeys`
-        [ ((mod4Mask .|. shiftMask, xK_s), spawn "sleep 0.2; scrot -s")
-        , ((mod4Mask, xK_s), spawn "scrot")
-        , ((mod4Mask, xK_i), namedScratchpadAction myScratchPads "htop")
-        , ((mod4Mask, xK_u), namedScratchpadAction myScratchPads "terminal")
-        , ((mod4Mask .|. shiftMask, xK_u), namedScratchpadAction myScratchPads "scratchpad")
-        , ((mod4Mask, xK_e), spawn "urxvtc -name Vim -e vim")
-        , ((mod4Mask .|. shiftMask, xK_p), shellPrompt myXPConfig)
-        , ((0, 0x1008ff13), spawn "amixer -q sset Master 5+")
-        , ((0, 0x1008ff11), spawn "amixer -q sset Master 5-")
-        ]
+        } `additionalKeys` myKeys
 
 myStatusBar   = "dzen2 -fn 'Terminus-8' -bg '#101010' -fg '#a0a0a0' -h 18 -ta l -w 780 -y 1366"
 myTerminal    = "urxvtc"
+
+myKeys =
+    [ ((mod4Mask .|. shiftMask, xK_s), spawn "sleep 0.2; scrot -s")
+    , ((mod4Mask, xK_s), spawn "scrot")
+    , ((mod4Mask, xK_i), namedScratchpadAction myScratchPads "htop")
+    , ((mod4Mask, xK_u), namedScratchpadAction myScratchPads "terminal")
+    , ((mod4Mask .|. shiftMask, xK_u), namedScratchpadAction myScratchPads "scratchpad")
+    -- , ((mod4Mask, xK_e), spawn "urxvtc -name Vim -e vim")
+    , ((mod4Mask .|. shiftMask, xK_p), shellPrompt myXPConfig)
+    , ((0, 0x1008ff13), spawn "amixer -q sset Master 5+")
+    , ((0, 0x1008ff11), spawn "amixer -q sset Master 5-")
+    ]
+    ++
+    [((m .|. mod4Mask, k), windows $ f i) -- Replace 'mod1Mask' with your mod key of choice.
+        | (i, k) <- zip myWorkspaces [xK_1 .. xK_9]
+        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
+    ++
+    [((m .|. mod4Mask, key), screenWorkspace sc >>= flip whenJust (windows . f)) -- Replace 'mod1Mask' with your mod key of choice.
+        | (key, sc) <- zip [xK_w, xK_e, xK_r] [1,0,2] -- was [0..] *** change to match your screen order ***
+        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 myWorkspaces  =
     [ wrapBitmap "xbm8x8/fox.xbm"
