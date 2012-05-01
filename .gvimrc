@@ -1,5 +1,5 @@
 set background=dark
-colo my_twilight
+colo symfony
 
 let NERDTreeDirArrows=1
 
