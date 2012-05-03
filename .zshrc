@@ -42,4 +42,6 @@ zstyle ':omz:module:prompt' theme 'sorin'
 source "$OMZ/init.zsh"
 
 # Customize to your needs...
-
+cdpath=(/var/www)
+alias drush='~/.drush/drush'
+alias drupaltags='ctags --langmap=php:.engine.inc.module.theme.php --php-kinds=cdfi --languages=php --recurse'

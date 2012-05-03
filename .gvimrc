@@ -1,5 +1,5 @@
 set background=dark
-colo symfony
+colo neverland2-darker
 
 let NERDTreeDirArrows=1
 
