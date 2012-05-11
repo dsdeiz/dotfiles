@@ -1,5 +1,5 @@
 set background=dark
-colo neverland2-darker
+colo my_railscasts
 
 let NERDTreeDirArrows=1
 

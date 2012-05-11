@@ -1,3 +1,4 @@
+xrandr --output LVDS1 --auto --left-of VGA1 --auto
 sh ~/.fehbg &
 
 # ~/bin/status_monitor.sh &
@@ -13,12 +14,12 @@ xsetroot -cursor_name left_ptr
 xset -b
 
 urxvtd -q -o -f
+xscreensaver -no-splash &
 # $HOME/.dropbox-dist/dropboxd &
 
 # wbdrawer &
 # exec startfluxbox
 # exec ck-launch-session startxfce4
-xrandr --output LVDS1 --auto --left-of VGA1 --auto
 exec xmonad
 # exec ck-launch-session /usr/bin/jwm
 # exec openbox-session

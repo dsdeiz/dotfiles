@@ -1,0 +1,60 @@
+set nocompatible
+let &rtp = substitute(&rtp, '\.vim\>', '.vim-debugger', 'g')
+
+call pathogen#infect()
+colo slate
+syntax on
+filetype plugin indent on
+
+set mouse=a
+
+set fileformats=unix,dos
+set fileformat=unix
+
+set wildignore=*.png,*.jpg,*.jpeg,*.gif,*.swp,*.swo,sites/default/files/**,.git
+
+imap jj <esc>
+
+nnoremap j gj
+nnoremap k gk
+
+map Y y$
+
+let mapleader=","
+let maplocalleader=","
+
+" Set project
+nmap <Leader>sp :SetProject<Space>
+
+set nobackup
+set nowritebackup
+
+set formatoptions=qrowcb
+
+set laststatus=2
+set list
+set listchars=tab:»\ ,trail:·
+
+set shiftwidth=2
+set expandtab
+set softtabstop=2
+set tabstop=2
+
+set ignorecase
+
+set number
+set nohlsearch
+set incsearch
+set showcmd
+set ruler
+set mousehide
+set nocul
+set completeopt-=preview
+set textwidth=80
+
+fu! SetProject(project)
+  exec ':cd ' . a:project
+  exec ':set tags+=' . a:project . "tags"
+endfu
+
+command! -complete=dir -nargs=1 SetProject call SetProject(<f-args>)

@@ -5,7 +5,7 @@ call pathogen#infect()
 set t_Co=256
 
 if !has('gui_running')
-  colorscheme lucius
+  colorscheme slate
   let Powerline_symbols='compatible'
 else
   let Powerline_symbols='fancy'
