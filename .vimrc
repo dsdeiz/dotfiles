@@ -126,10 +126,6 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Plugin settings {{{
 
-let syntastic_enable_signs=1
-let syntastic_auto_jump=1
-let syntastic_auto_loc_list=2
-
 " let NERDTreeDirArrows=1
 let NERDTreeMouseMode=3
 let NERDChristmasTree=1
