@@ -31,7 +31,7 @@ zstyle ':omz:module:terminal' auto-title 'yes'
 
 # Set the Oh My Zsh modules to load (browse modules).
 zstyle ':omz:load' omodule 'environment' 'terminal' 'editor' 'completion' \
-  'history' 'directory' 'spectrum' 'alias' 'utility' 'prompt' 'git' 'archive' 'syntax-highlighting'
+  'history' 'directory' 'spectrum' 'alias' 'utility' 'prompt' 'git' 'archive' 'syntax-highlighting' 'rsync'
 
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
@@ -47,3 +47,4 @@ export PATH="$PATH:$HOME/bin:$HOME/.cabal/bin:/var/lib/gems/1.8/bin"
 alias drush='~/.drush/drush'
 alias drupaltags='ctags --langmap=php:.engine.inc.module.theme.php --php-kinds=cdfi --languages=php --recurse'
 alias vim-debugger="vim -u $HOME/.vimrc-debugger"
+alias wget="wget -c"

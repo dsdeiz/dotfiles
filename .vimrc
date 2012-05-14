@@ -5,7 +5,7 @@ call pathogen#infect()
 set t_Co=256
 
 if !has('gui_running')
-  colorscheme slate
+  colorscheme vividchalk
   let Powerline_symbols='compatible'
 else
   let Powerline_symbols='fancy'
@@ -126,6 +126,8 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Plugin settings {{{
 
+let g:debuggerBreatAtEntry=0
+
 " let NERDTreeDirArrows=1
 let NERDTreeMouseMode=3
 let NERDChristmasTree=1
@@ -140,7 +142,7 @@ map <Leader>r :NERDTreeFind<CR>
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-nnoremap <silent> <F9> :TagbarToggle<CR>
+nnoremap <Leader>t :TagbarToggle<CR>
 
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabContextDefaultCompletionType = '<c-n>'

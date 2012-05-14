@@ -1,5 +1,5 @@
 set background=dark
-colo my_railscasts
+colo my_molokai
 
 let NERDTreeDirArrows=1
 

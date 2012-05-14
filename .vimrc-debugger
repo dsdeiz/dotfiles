@@ -52,6 +52,8 @@ set nocul
 set completeopt-=preview
 set textwidth=80
 
+let g:debuggerBreatAtEntry=0
+
 fu! SetProject(project)
   exec ':cd ' . a:project
   exec ':set tags+=' . a:project . "tags"
