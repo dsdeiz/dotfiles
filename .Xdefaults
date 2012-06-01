@@ -49,15 +49,15 @@ URxvt*color15: #dddddd
 ! Vim Settings
 ! ---------------------------------------------------------
 
-# Vim*font: xft:Envy Code R:pixelsize=13
-# Vim*boldFont: xft:Envy Code R:bold:pixelsize=13
+Vim*font: xft:Monaco:size=10pt
+Vim*boldFont: xft:Monaco:bold:size=10pt
 # Vim*transparent: 0
 
 ! ---------------------------------------------------------
 ! Xft Settings
 ! ---------------------------------------------------------
 
-Xft.autohint:             0
+Xft.autohint:             1
 Xft.lcdfilter:            lcddefault
 Xft.hintstyle:            hintslight
 Xft.hinting:              1

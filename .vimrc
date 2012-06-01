@@ -5,7 +5,7 @@ call pathogen#infect()
 set t_Co=256
 
 if !has('gui_running')
-  colorscheme vividchalk
+  colorscheme my_molokai
   let Powerline_symbols='compatible'
 else
   let Powerline_symbols='fancy'
@@ -98,9 +98,6 @@ autocmd VimLeave * NERDTreeClose
 autocmd VimLeave * mks! ~/.vim/session.vim
 
 autocmd BufRead * call DisablePlugins()
-
-" For python files.
-autocmd FileType python set tabstop=4 shiftwidth=4 softtabstop=4
 
 " For haskell files.
 autocmd FileType haskell set tabstop=4 shiftwidth=4 softtabstop=4
