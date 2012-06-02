@@ -1,9 +1,9 @@
 set background=light
-colo my_railscasts
+colo symfony
 
 let NERDTreeDirArrows=1
 
-set guifont=Monaco\ 7.5
+set guifont=Menlo\ for\ Powerline\ 8
 set guioptions=Aci
 
 " hi Title gui=NONE
