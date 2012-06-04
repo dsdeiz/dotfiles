@@ -4,15 +4,16 @@ call pathogen#infect()
 
 set t_Co=256
 
+set background=dark
+syntax on
+
 if !has('gui_running')
-  colorscheme my_molokai
+  let g:inkpot_black_background=1
+  colorscheme inkpot
   let Powerline_symbols='compatible'
 else
   let Powerline_symbols='fancy'
 endif
-
-set background=dark
-syntax on
 
 filetype plugin indent on
 
@@ -107,7 +108,7 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Hilight settings {{{
 
-" hi Normal ctermbg=NONE
+hi Normal ctermbg=NONE
 " hi CursorLine cterm=NONE
 " hi Folded cterm=NONE
 " Annoying tildes on NERDTree

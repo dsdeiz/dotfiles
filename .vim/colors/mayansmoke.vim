@@ -91,7 +91,7 @@ hi DiffText     guifg=black             guibg=LightCyan1        gui=NONE
 hi Directory    guifg=#1600FF           guibg=bg                gui=NONE
 hi ErrorMsg     guifg=Red2              guibg=NONE              gui=NONE
 hi FoldColumn   guifg=SteelBlue4        guibg=LightYellow2      gui=bold
-hi Folded       guifg=SteelBlue4        guibg=Gainsboro      gui=italic
+hi Folded       guifg=SteelBlue4        guibg=Gainsboro      gui=NONE
 if hlexists('MayanSmokeSearch')
     hi link IncSearch MayanSmokeSearch
     hi link Search MayanSmokeSearch
@@ -138,8 +138,8 @@ hi SpellCap     guisp=Blue                                      gui=undercurl
 hi SpellLocal   guisp=DarkCyan                                  gui=undercurl
 hi SpellRare    guisp=Magenta                                   gui=undercurl
 hi StatusLine   guifg=#FFFEEE           guibg=#557788     gui=NONE
-" hi StatusLineNC guifg=#EAE6E2           guibg=LightSteelBlue3    gui=italic
-hi StatusLineNC guifg=#F4F4EE           guibg=#99aabb    gui=italic
+" hi StatusLineNC guifg=#EAE6E2           guibg=LightSteelBlue3    gui=NONE
+hi StatusLineNC guifg=#F4F4EE           guibg=#99aabb    gui=NONE
 hi TabLine      guifg=fg                guibg=LightGrey         gui=underline
 hi TabLineFill  guifg=fg                guibg=bg                gui=reverse
 hi TabLineSel   guifg=fg                guibg=bg                gui=bold
@@ -246,8 +246,8 @@ hi WildMenu     ctermfg=16              ctermbg=117             cterm=NONE
 "       Debug          debugging statements
 "   *Error          any erroneous construct
 "   *Todo           anything that needs extra attention
-" hi Comment      guifg=#A2B5CD         guibg=NONE      gui=italic
-hi Comment      guifg=#96AAC2         guibg=NONE      gui=italic
+" hi Comment      guifg=#A2B5CD         guibg=NONE      gui=NONE
+hi Comment      guifg=#96AAC2         guibg=NONE      gui=NONE
 hi Constant     guifg=DarkOrange        guibg=NONE      gui=NONE
     hi String   guifg=Aquamarine4       guibg=NONE      gui=NONE
     hi Boolean  guifg=IndianRed4        guibg=NONE      gui=NONE
@@ -266,7 +266,7 @@ hi Todo         guifg=tan4              guibg=NONE      gui=underline
 "  Vim {{{2
 " -----------------------------------------------------------------------------
 hi VimError         guifg=red            guibg=Black   gui=bold
-hi VimCommentTitle  guifg=DarkSlateGray4 guibg=bg      gui=bold,italic
+hi VimCommentTitle  guifg=DarkSlateGray4 guibg=bg      gui=bold,NONE
 " 2}}}
 
 " QuickFix {{{2
@@ -276,7 +276,7 @@ hi VimCommentTitle  guifg=DarkSlateGray4 guibg=bg      gui=bold,italic
 " syn match qfSeparator "|" nextgroup=qfLineNr contained
 " syn match qfLineNr    "[^|]*" contained contains=qfError
 " syn match qfError     "error" contained
-hi qfFileName  guifg=LightSkyBlue4     guibg=NONE      gui=italic
+hi qfFileName  guifg=LightSkyBlue4     guibg=NONE      gui=NONE
 hi qfLineNr    guifg=coral             guibg=NONE      gui=bold
 hi qfError     guifg=red               guibg=NONE      gui=bold
 " 2}}}
@@ -302,7 +302,7 @@ hi link diffCommon      Constant
 hi diffRemoved          guifg=#BB0000           guibg=NONE      gui=NONE
 hi diffChanged          guifg=DarkSeaGreen      guibg=NONE      gui=NONE
 hi diffAdded            guifg=#00AA00           guibg=NONE      gui=NONE
-hi diffLine             guifg=thistle4          guibg=NONE      gui=italic
+hi diffLine             guifg=thistle4          guibg=NONE      gui=NONE
 hi link diffSubname     diffLine
 hi link diffComment     Comment
 " 2}}}

@@ -1,4 +1,7 @@
 setl shiftwidth=4
-setl noexpandtab
+setl expandtab
 setl softtabstop=4
-setl tabstop=4
+setl tabstop=8
+hi BadWhitespace guibg=red
+
+match BadWhitespace /\s\+$/

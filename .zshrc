@@ -46,5 +46,3 @@ cdpath=(/var/www)
 export PATH="$PATH:$HOME/bin:$HOME/.cabal/bin:/var/lib/gems/1.8/bin"
 alias drush='~/.drush/drush'
 alias drupaltags='ctags --langmap=php:.engine.inc.module.theme.php --php-kinds=cdfi --languages=php --recurse'
-alias vim-debugger="vim -u $HOME/.vimrc-debugger"
-alias wget="wget -c"

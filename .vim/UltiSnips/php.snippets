@@ -4,3 +4,55 @@ $${1:array} = array(
   ${2:$key} => ${3:$value},
 );${4}
 endsnippet
+
+snippet php "php"
+<?php
+${1}
+endsnippet
+
+snippet wh "wh"
+while (${1:/* condition */}) {
+  {2:// Code here...}
+}
+endsnippet
+
+snippet if "if"
+if (${1:/* condition */}) {
+  ${2:// Code here...}
+}
+endsnippet
+
+snippet else "else"
+else {
+  ${1:// Code here...}
+}
+
+snippet elseif "elseif"
+elseif (${1:/* condition */}) {
+  ${2:// Code here here...}
+}
+endsnippet
+
+snippet switch "switch"
+switch ($${1:variable}) {
+  ${2:// Code here...}
+}
+endsnippet
+
+snippet case "case"
+case ${1:value}:
+  ${2:// code...}
+  break;${3}
+endsnippet
+
+snippet for "for" !
+for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
+  ${4: // code...}
+}
+endsnippet
+
+snippet foreach "foreach"
+foreach ($${1:variable} as $${2:key}) {
+  ${3:// code...}
+}
+endsnippet
