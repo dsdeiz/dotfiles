@@ -1,5 +1,5 @@
 set background=dark
-colo my_railscasts
+colo ir_black
 
 let NERDTreeDirArrows=1
 
@@ -11,9 +11,6 @@ set guioptions=Aci
 " hi NonText guibg=NONE guifg=black
 " hi Normal guibg=black
 " hi LineNr gui=NONE
-
-" For blackboard colorscheme
-hi SpecialKey guibg=#0D1021
 
 " Hilight trailing whitespace
 hi BadWhitespace guibg=red

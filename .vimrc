@@ -12,7 +12,8 @@ if !has('gui_running')
   colorscheme inkpot
   let Powerline_symbols='compatible'
 else
-  let Powerline_symbols='fancy'
+  " Temporarily disable this for Anonymous Pro font
+  " let Powerline_symbols='fancy'
 endif
 
 filetype plugin indent on
