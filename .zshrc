@@ -53,8 +53,6 @@ zstyle ':omz:module:prompt' theme 'sorin'
 source "$OMZ/init.zsh"
 
 # Customize to your needs...
-cdpath=(/var/www)
-export PATH="$PATH:$HOME/bin:$HOME/.cabal/bin:/var/lib/gems/1.8/bin"
 
 # Drupal aliases
 alias drush="$HOME/.drush/drush"
