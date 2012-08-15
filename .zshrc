@@ -5,9 +5,6 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-# Set the path to Oh My Zsh.
-export OMZ="$HOME/.oh-my-zsh"
-
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':omz:module:editor' keymap 'emacs'
 
@@ -30,8 +27,22 @@ zstyle ':omz:module:terminal' auto-title 'yes'
 # zstyle ':omz:load' zfunction 'zargs' 'zmv'
 
 # Set the Oh My Zsh modules to load (browse modules).
-zstyle ':omz:load' omodule 'environment' 'terminal' 'editor' 'completion' \
-  'history' 'directory' 'spectrum' 'alias' 'utility' 'prompt' 'git' 'archive' 'syntax-highlighting' 'rsync' 'history-substring-search'
+# The order matters.
+zstyle ':omz:load' omodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'prompt' \
+  'git' \
+  'archive' \
+  'syntax-highlighting' \
+  'rsync' \
+  'history-substring-search'
 
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
@@ -48,4 +59,3 @@ export PATH="$PATH:$HOME/bin:$HOME/.cabal/bin:/var/lib/gems/1.8/bin"
 # Drupal aliases
 alias drush="$HOME/.drush/drush"
 alias drupaltags='ctags --langmap=php:.engine.inc.module.theme.php --php-kinds=cdfi --languages=php --recurse'
-alias drupalmodules='git foreach git pull'

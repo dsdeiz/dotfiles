@@ -31,14 +31,13 @@ set hidden
 
 " GUI vs Terminal version {{{
 
+colorscheme my_molokai
 if has('gui_running')
-  colorscheme my_molokai
-  set guifont=Monaco\ 7.5
+  set guifont=Envy\ Code\ R\ 10
   let NERDTreeDirArrows=1
   let Powerline_symbols='fancy'
   set guioptions=Aci
 else
-  colorscheme my_molokai
   let Powerline_symbols='compatible'
 endif
 
