@@ -31,3 +31,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/sorin-ionescu/prezto.git
+[submodule ".vim/bundle/vim-molokai"]
+	path = .vim/bundle/vim-molokai
+	url = https://github.com/tomasr/molokai.git
