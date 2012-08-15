@@ -1,36 +1,36 @@
-[submodule ".vim/bundle/ack"]
-	path = .vim/bundle/ack
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule ".vim/bundle/delimitMate"]
-	path = .vim/bundle/delimitMate
+[submodule "vim/bundle/delimitMate"]
+	path = vim/bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/vim-powerline"]
-	path = .vim/bundle/vim-powerline
+[submodule "vim/bundle/vim-powerline"]
+	path = vim/bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
-[submodule ".vim/bundle/ultisnips"]
-	path = .vim/bundle/ultisnips
+[submodule "vim/bundle/ultisnips"]
+	path = vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
-[submodule ".vim/bundle/vim-matchit"]
-	path = .vim/bundle/vim-matchit
+[submodule "vim/bundle/vim-matchit"]
+	path = vim/bundle/vim-matchit
 	url = https://github.com/tsaleh/vim-matchit.git
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/tabular"]
-	path = .vim/bundle/tabular
+[submodule "vim/bundle/tabular"]
+	path = vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
+[submodule "vim/bundle/tagbar"]
+	path = vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule ".vim/bundle/ctrlp"]
-	path = .vim/bundle/ctrlp
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
 	url = https://github.com/sorin-ionescu/prezto.git
-[submodule ".vim/bundle/vim-molokai"]
-	path = .vim/bundle/vim-molokai
+[submodule "vim/bundle/vim-molokai"]
+	path = vim/bundle/vim-molokai
 	url = https://github.com/tomasr/molokai.git
