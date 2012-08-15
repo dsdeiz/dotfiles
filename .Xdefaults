@@ -18,33 +18,32 @@ URxvt*perl-ext-common:  default,matcher
 URxvt*urlLauncher:      /usr/bin/google-chrome
 URxvt*matcher.button:   1
 
-! IR_Black
-URxvt*background:   #000000
-URxvt*foreground:   #DCDCCC
-! black
-URxvt*color0:       #4E4E4E
-URxvt*color8:       #7C7C7C
-!red
-URxvt*color1:       #FF6C60
-URxvt*color9:       #FFB6B0
-!green
-URxvt*color2:       #A8FF60
-URxvt*color10:      #CEFFAB
-!yellow
-URxvt*color3:       #FFFFB6
-URxvt*color11:      #FFFFCB
-!blue
-URxvt*color4:       #96CBFE
-URxvt*color12:      #FFFFCB
-!magenta
-URxvt*color5:       #FF73FD
-URxvt*color13:      #FF9CFE
-!cyan
-URxvt*color6:       #C6C5FE
-URxvt*color14:      #DFDFFE
-!white
-URxvt*color7:       #EEEEEE
-URxvt*color15:      #FFFFFF
+URxvt*background: #000000
+URxvt*foreground: #ffffff
+! Black
+URxvt*color0 : #000000
+URxvt*color8 : #555753
+! Red
+URxvt*color1 : #bf2d00
+URxvt*color9 : #dd4010
+! Green
+URxvt*color2 : #5b9f1e
+URxvt*color10: #93d44f
+! Yellow
+URxvt*color3 : #eab93d
+URxvt*color11: #ffc123
+! Blue
+URxvt*color4 : #204a87
+URxvt*color12: #3465a4
+! Magenta
+URxvt*color5 : #d6156c
+URxvt*color13: #fe4365
+! Cyan
+URxvt*color6 : #619bd7
+URxvt*color14: #89b6e2
+! White
+URxvt*color7 : #ffffff
+URxvt*color15: #dddddd
 
 ! ---------------------------------------------------------
 ! Vim Settings

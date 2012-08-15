@@ -8,3 +8,39 @@ endsnippet
 snippet t "Drupal t()" !
 t(${1})
 endsnippet
+
+snippet hook_menu "hook_menu()"
+/**
+ * Implements hook_menu().
+ */
+function `!v Filename()`_menu() {
+  $items['${1}'] = array(
+  );
+
+  return $items;
+}
+
+endsnippet
+
+snippet hook_form_alter "hook_form_alter()"
+/**
+ * Implements hook_form_alter().
+ */
+function `!v Filename()`_form_alter(&$form, &$form_state, $form_id) {
+  ${1:// Code here...}
+}
+
+endsnippet
+
+snippet hook_block "hook_block()"
+/**
+ * Implements hook_block_info().
+ */
+function `!v Filename()`_block_info() {
+  $blocks['${1}'] = array(
+  );
+
+  return $blocks;
+}
+
+endsnippet

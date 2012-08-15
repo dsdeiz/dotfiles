@@ -7,15 +7,6 @@ set t_Co=256
 set background=dark
 syntax on
 
-if !has('gui_running')
-  let g:inkpot_black_background=1
-  colorscheme inkpot
-  let Powerline_symbols='compatible'
-else
-  " Temporarily disable this for Anonymous Pro font
-  " let Powerline_symbols='fancy'
-endif
-
 filetype plugin indent on
 
 set backspace=indent,eol,start
@@ -27,12 +18,29 @@ set mouse=a
 set fileformats=unix,dos
 set fileformat=unix
 
+set wildmenu
+set wildmode=list:longest,full
 set wildignore=*.png,*.jpg,*.jpeg,*.gif,*.swp,*.swo,sites/default/files/**,.git
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/temp
 
 set hidden
+
+" }}}
+
+" GUI vs Terminal version {{{
+
+if has('gui_running')
+  colorscheme my_molokai
+  set guifont=Monaco\ 7.5
+  let NERDTreeDirArrows=1
+  let Powerline_symbols='fancy'
+  set guioptions=Aci
+else
+  colorscheme my_molokai
+  let Powerline_symbols='compatible'
+endif
 
 " }}}
 
@@ -67,14 +75,15 @@ set textwidth=80
 
 set foldenable
 set foldmethod=syntax
-set foldlevel=2
+set foldlevel=99
 set foldcolumn=0
 
 " }}}
 
 " Keybind settings {{{
 
-imap jj <esc>
+inoremap jj <esc>
+cnoremap jj <esc>
 
 nnoremap j gj
 nnoremap k gk
@@ -87,9 +96,6 @@ let maplocalleader=","
 " Load session
 nmap <Leader>ls :so $HOME/.vim/session.vim<CR>
 
-" Set project
-nmap <Leader>sp :SetProject<Space>
-
 " }}}
 
 " Autocommand settings {{{
@@ -99,8 +105,6 @@ autocmd FileType php let b:delimitMate_matchpairs="(:),[:],{:}""
 autocmd VimLeave * NERDTreeClose
 autocmd VimLeave * mks! ~/.vim/session.vim
 
-autocmd BufRead * call DisablePlugins()
-
 " For haskell files.
 autocmd FileType haskell set tabstop=4 shiftwidth=4 softtabstop=4
 autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
@@ -109,11 +113,15 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Hilight settings {{{
 
+" Hilight trailing whitespace
+hi BadWhitespace guibg=red
+match BadWhitespace /\s\+$/
+
 hi Normal ctermbg=NONE
 " hi CursorLine cterm=NONE
 " hi Folded cterm=NONE
 " Annoying tildes on NERDTree
-" hi NonText ctermbg=NONE ctermfg=0
+hi NonText ctermbg=NONE ctermfg=0
 " hi SpecialKey ctermfg=233
 " hi CursorLine term=NONE cterm=NONE
 
@@ -143,10 +151,6 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 nnoremap <Leader>t :TagbarToggle<CR>
 
-let g:SuperTabDefaultCompletionType = 'context'
-let g:SuperTabContextDefaultCompletionType = '<c-n>'
-let g:SuperTabLongestEnhanced = 1
-
 " }}}
 
 " Sessions {{{
@@ -163,23 +167,5 @@ set ssop-=blank
 inoremap <Leader>fn <C-R>=expand("%:t:r")<CR>
 
 " }}}
-
-fu DisablePlugins()
-  if line('$') > 700
-    let g:loaded_syntastic = 1
-  endif
-endfu
-
-fu! CreatePost(str)
-  exec ':e ' . strftime('%F') . '-' . a:str . '.md'
-endfu
-
-fu! SetProject(project)
-  exec ':cd ' . a:project
-  exec ':set tags+=' . a:project . "tags"
-endfu
-
-command! -nargs=1 CreatePost call CreatePost(<f-args>)
-command! -complete=dir -nargs=1 SetProject call SetProject(<f-args>)
 
 " vim: foldmethod=marker

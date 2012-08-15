@@ -44,5 +44,8 @@ source "$OMZ/init.zsh"
 # Customize to your needs...
 cdpath=(/var/www)
 export PATH="$PATH:$HOME/bin:$HOME/.cabal/bin:/var/lib/gems/1.8/bin"
-alias drush='~/.drush/drush'
+
+# Drupal aliases
+alias drush="$HOME/.drush/drush"
 alias drupaltags='ctags --langmap=php:.engine.inc.module.theme.php --php-kinds=cdfi --languages=php --recurse'
+alias drupalmodules='git foreach git pull'
