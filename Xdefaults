@@ -2,11 +2,11 @@
 ! URxvt Settings
 ! ---------------------------------------------------------
 
-URxvt.font: xft:Monaco:size=7.5
-URxvt.boldFont: xft:Monaco:size=7.5
+URxvt.font: xft:Tamsyn:pixelsize=14
+URxvt.boldFont: xft:Tamsyn:bold:pixelsize=14
 
 URxvt*transparent: 1
-URxvt*shading: 10
+URxvt*shading: 24
 URxvt*scrollBar: false
 URxvt*termName: rxvt-256color
 URxvt*cursorBlink: 1

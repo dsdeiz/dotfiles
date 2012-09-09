@@ -34,3 +34,21 @@
 [submodule "vim/bundle/vim-molokai"]
 	path = vim/bundle/vim-molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "vim/bundle/vim-gummybears"]
+	path = vim/bundle/vim-gummybears
+	url = https://github.com/jelera/vim-gummybears-colorscheme.git
+[submodule "vim/bundle/vim-jade"]
+	path = vim/bundle/vim-jade
+	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "vim/bundle/vim-distinguished"]
+	path = vim/bundle/vim-distinguished
+	url = https://github.com/Lokaltog/vim-distinguished.git
+[submodule "vim/bundle/vim-coffee-script"]
+	path = vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/vim-vividchalk"]
+	path = vim/bundle/vim-vividchalk
+	url = https://github.com/tpope/vim-vividchalk.git
+[submodule "vim/bundle/vim-xdebug"]
+	path = vim/bundle/vim-xdebug
+	url = https://github.com/ludovicPelle/vim-xdebug.git
