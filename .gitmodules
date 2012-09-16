@@ -28,8 +28,8 @@
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
+[submodule "zprezto"]
+	path = zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
 [submodule "vim/bundle/vim-molokai"]
 	path = vim/bundle/vim-molokai
