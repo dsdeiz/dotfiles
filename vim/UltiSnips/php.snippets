@@ -1,7 +1,7 @@
 # PHP snippets overrides
 snippet array "array" !
-$${1:array} = array(
-  ${2:$key} => ${3:$value},
+$${1} = array(
+  ${2}
 );${4}
 endsnippet
 
@@ -11,48 +11,57 @@ ${1}
 endsnippet
 
 snippet wh "wh"
-while (${1:/* condition */}) {
-  {2:// Code here...}
+while (${1}) {
+  ${2}
 }
 endsnippet
 
 snippet if "if"
-if (${1:/* condition */}) {
-  ${2:// Code here...}
+if (${1}) {
+  ${2}
 }
 endsnippet
 
 snippet else "else"
 else {
-  ${1:// Code here...}
+  ${1}
 }
 
 snippet elseif "elseif"
-elseif (${1:/* condition */}) {
-  ${2:// Code here here...}
+elseif (${1}) {
+  ${2}
 }
 endsnippet
 
 snippet switch "switch"
-switch ($${1:variable}) {
-  ${2:// Code here...}
+switch ($${1}) {
+  ${2}
 }
 endsnippet
 
 snippet case "case"
 case ${1:value}:
-  ${2:// code...}
+  ${2}
   break;${3}
 endsnippet
 
 snippet for "for" !
-for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
-  ${4: // code...}
+for ($${2:i} = 0; $$2 < ${1}; $$2${3:++}) {
+  ${4}
 }
 endsnippet
 
 snippet foreach "foreach"
-foreach ($${1:variable} as $${2:key}) {
-  ${3:// code...}
+foreach ($${1} as $${2}) {
+  ${3}
+}
+endsnippet
+
+snippet function "function"
+/**
+ * ${1}
+ */
+function ${2}(${3}) {
+  ${4}
 }
 endsnippet

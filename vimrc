@@ -33,7 +33,7 @@ set hidden
 
 colo molokai
 if has('gui_running')
-  set guifont=Tamsyn\ 10
+  set guifont=Monaco\ 7.5
   let NERDTreeDirArrows=1
   let Powerline_symbols='fancy'
   set guioptions=Aci
@@ -67,6 +67,8 @@ set mousehide
 set nocul
 set completeopt-=preview
 set textwidth=80
+
+set so=5
 
 " }}}
 
@@ -149,6 +151,13 @@ map <Leader>r :NERDTreeFind<CR>
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 nnoremap <Leader>t :TagbarToggle<CR>
+
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabular /=<CR>
+nmap <Leader>a: :Tabularize /:<CR>
+vmap <Leader>a: :Tabularize /:<CR>
+nmap <Leader>a> :Tabularize /=><CR>
+vmap <Leader>a> :Tabularize /=><CR>
 
 " }}}
 

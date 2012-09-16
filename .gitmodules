@@ -52,3 +52,6 @@
 [submodule "vim/bundle/vim-xdebug"]
 	path = vim/bundle/vim-xdebug
 	url = https://github.com/ludovicPelle/vim-xdebug.git
+[submodule "vim/bundle/Vim-PHP-Stuff"]
+	path = vim/bundle/Vim-PHP-Stuff
+	url = https://github.com/paulyg/Vim-PHP-Stuff.git
