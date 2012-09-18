@@ -55,3 +55,6 @@
 [submodule "vim/bundle/Vim-PHP-Stuff"]
 	path = vim/bundle/Vim-PHP-Stuff
 	url = https://github.com/paulyg/Vim-PHP-Stuff.git
+[submodule "vim/bundle/vim-twilight"]
+	path = vim/bundle/vim-twilight
+	url = https://github.com/vim-scripts/twilight.git

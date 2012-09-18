@@ -37,6 +37,7 @@ if has('gui_running')
   let NERDTreeDirArrows=1
   let Powerline_symbols='fancy'
   set guioptions=Aci
+  color twilight
 else
   let Powerline_symbols='compatible'
 endif
@@ -152,8 +153,8 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 nnoremap <Leader>t :TagbarToggle<CR>
 
-nmap <Leader>a= :Tabularize /=<CR>
-vmap <Leader>a= :Tabular /=<CR>
+nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
 nmap <Leader>a: :Tabularize /:<CR>
 vmap <Leader>a: :Tabularize /:<CR>
 nmap <Leader>a> :Tabularize /=><CR>

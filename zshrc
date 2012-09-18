@@ -14,4 +14,4 @@ fi
 
 # Drupal aliases
 alias drush="$HOME/.drush/drush"
-alias drupaltags='ctags --langmap=php:.engine.inc.module.theme.php --php-kinds=cdfi --languages=php --recurse'
+alias drupaltags='ctags --langmap=php:.engine.inc.module.theme.php.test --php-kinds=cdfi --languages=php --recurse'
