@@ -31,13 +31,13 @@ set hidden
 
 " GUI vs Terminal version {{{
 
-colo molokai
+colo badwolf
 if has('gui_running')
+  colo badwolf
   set guifont=Monaco\ 7.5
   let NERDTreeDirArrows=1
   let Powerline_symbols='fancy'
   set guioptions=Aci
-  color twilight
 else
   let Powerline_symbols='compatible'
 endif
@@ -46,7 +46,7 @@ endif
 
 " Layout settings {{{
 
-set formatoptions=qrowcb
+" set formatoptions=qrowcb
 
 set laststatus=2
 set list
@@ -120,11 +120,11 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 hi BadWhitespace guibg=red
 match BadWhitespace /\s\+$/
 
-hi Normal ctermbg=NONE
+" hi Normal ctermbg=NONE
 " hi CursorLine cterm=NONE
 " hi Folded cterm=NONE
 " Annoying tildes on NERDTree
-hi NonText ctermbg=NONE ctermfg=0
+" hi NonText ctermbg=NONE ctermfg=0
 " hi SpecialKey ctermfg=233
 " hi CursorLine term=NONE cterm=NONE
 
@@ -153,6 +153,8 @@ map <Leader>r :NERDTreeFind<CR>
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 nnoremap <Leader>t :TagbarToggle<CR>
+
+let g:NERDSpaceDelims=1
 
 nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
 vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>

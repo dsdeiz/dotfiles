@@ -98,7 +98,7 @@ myXPConfig = defaultXPConfig
     }
 
 myScratchPads =
-    [ NS "scratchpad" "urxvtc -name scratchpad" (resource =? "scratchpad") (customFloating $ W.RationalRect 0 0 1 0.3)
+    [ NS "scratchpad" "urxvtc -name scratchpad" (resource =? "scratchpad") (customFloating $ W.RationalRect 0 0 1 0.5)
     , NS "terminal" "urxvtc -name terminal" (resource =? "terminal") (customFloating $ W.RationalRect 0 0.5 1 0.5)
     , NS "htop" "urxvtc -name htop -e htop" (resource =? "htop") (customFloating $ W.RationalRect 0.25 0.25 0.5 0.5)
     ]

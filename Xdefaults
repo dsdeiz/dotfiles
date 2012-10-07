@@ -2,11 +2,11 @@
 ! URxvt Settings
 ! ---------------------------------------------------------
 
-URxvt.font: xft:Monaco:size=7.5
-URxvt.boldFont: xft:Monaco:bold:size=7.5
+URxvt.font: -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+URxvt.boldFont: -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
 
 URxvt*transparent: 1
-URxvt*shading: 24
+URxvt*shading: 10
 URxvt*scrollBar: false
 URxvt*termName: rxvt-256color
 URxvt*cursorBlink: 1
@@ -49,9 +49,9 @@ URxvt*color15: #dddddd
 ! Vim Settings
 ! ---------------------------------------------------------
 
-Vim*font: xft:Monaco:size=10pt
-Vim*boldFont: xft:Monaco:bold:size=10pt
-# Vim*transparent: 0
+Vim*font: xft:Monaco:size=7.5
+Vim*boldFont: xft:Monaco:bold:size=7.5
+Vim*transparent: 0
 
 ! ---------------------------------------------------------
 ! Xft Settings

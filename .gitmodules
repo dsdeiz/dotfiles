@@ -58,3 +58,15 @@
 [submodule "vim/bundle/vim-twilight"]
 	path = vim/bundle/vim-twilight
 	url = https://github.com/vim-scripts/twilight.git
+[submodule "vim/bundle/neverland-vim-theme"]
+	path = vim/bundle/neverland-vim-theme
+	url = https://github.com/trapd00r/neverland-vim-theme.git
+[submodule "vim/bundle/vim-badwolf"]
+	path = vim/bundle/vim-badwolf
+	url = https://github.com/sjl/badwolf.git
+[submodule "vim/bundle/vim-jellybeans"]
+	path = vim/bundle/vim-jellybeans
+	url = https://github.com/nanotech/jellybeans.vim.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git

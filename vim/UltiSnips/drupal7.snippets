@@ -17,7 +17,7 @@ snippet hook_block_info "hook_block_info"
 /**
  * Implements hook_block_info().
  */
-function `!v Filename()`_block() {
+function `!v Filename()`_block_info() {
   $blocks['${1}'] = array(
     ${2}
   );
@@ -1041,6 +1041,314 @@ snippet hook_field_access "hook_field_access"
  * Implements hook_field_access().
  */
 function `!v Filename()`_field_access($op, $field, $entity_type, $entity, $account) {
+  ${1}
+}
+
+endsnippet
+
+# modules/field_ui/field_ui.api.php
+
+snippet hook_field_settings_form "hook_field_settings_form"
+/**
+ * Implements hook_field_settings_form().
+ */
+function `!v Filename()`_field_settings_form($field, $instance, $has_data) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_field_instance_settings_form "hook_field_instance_settings_form"
+/**
+ * Implements hook_field_instance_settings_form().
+ */
+function `!v Filename()`_field_instance_settings_form($field, $instance) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_field_widget_settings_form "hook_field_widget_settings_form"
+/**
+ * Implements hook_field_widget_settings_form().
+ */
+function `!v Filename()`_field_widget_settings_form($field, $instance) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_field_formatter_settings_form "hook_field_formatter_settings_form"
+/**
+ * Implements hook_field_formatter_settings_form().
+ */
+function `!v Filename()`_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_field_formatter_settings_summary "hook_field_formatter_settings_summary"
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function `!v Filename()`_field_formatter_settings_summary($field, $instance, $view_mode) {
+  ${1}
+}
+
+endsnippet
+
+# modules/file/file.api.php
+
+snippet hook_file_download_access "hook_file_download_access"
+/**
+ * Implements hook_file_download_access().
+ */
+function `!v Filename()`_file_download_access($file_item, $entity_type, $entity) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_file_download_access_alter "hook_file_download_access_alter"
+/**
+ * Implements hook_file_download_access_alter().
+ */
+function `!v Filename()`_file_download_access_alter(&$grants, $file_item, $entity_type, $entity) {
+  ${1}
+}
+
+endsnippet
+
+# modules/filter/filter.api.php
+
+snippet hook_filter_info "hook_filter_info"
+/**
+ * Implements hook_filter_info().
+ */
+function `!v Filename()`_filter_info() {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_filter_info_alter "hook_filter_info_alter"
+/**
+ * Implements hook_filter_info_alter().
+ */
+function `!v Filename()`_filter_info_alter(&$info) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_filter_FILTER_settings "hook_filter_FILTER_settings"
+/**
+ * Implements hook_filter_FILTER_settings().
+ */
+function `!v Filename()`_filter_${1}_settings($form, &$form_state, $filter, $format, $defaults, $filters) {
+  ${2}
+}
+
+endsnippet
+
+snippet hook_filter_FILTER_prepare "hook_filter_FILTER_prepare"
+/**
+ * Implements hook_filter_FILTER_prepare().
+ */
+function `!v Filename()`_filter_${1}_prepare($text, $filter, $format, $langcode, $cache, $cache_id) {
+  ${2}
+}
+
+endsnippet
+
+snippet hook_filter_FILTER_process "hook_filter_FILTER_process"
+/**
+ * Implements hook_filter_FILTER_process().
+ */
+function `!v Filename()`_filter_${1}_process($text, $filter, $format, $langcode, $cache, $cache_id) {
+  ${2}
+}
+
+endsnippet
+
+snippet hook_filter_FILTER_tips "hook_filter_FILTER_tips"
+/**
+ * Implements hook_filter_FILTER_tips().
+ */
+function `!v Filename()`_filter_${1}_tips($filter, $format, $long) {
+  ${2}
+}
+
+endsnippet
+
+snippet hook_filter_format_insert "hook_filter_format_insert"
+/**
+ * Implements hook_filter_format_insert().
+ */
+function `!v Filename()`_filter_format_insert($format) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_filter_format_update "hook_filter_format_update"
+/**
+ * Implements hook_filter_format_update().
+ */
+function `!v Filename()`_filter_format_update($format) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_filter_format_disable "hook_filter_format_disable"
+/**
+ * Implements hook_filter_format_disable().
+ */
+function `!v Filename()`_filter_format_disable($format) {
+  ${1}
+}
+
+endsnippet
+
+# modules/image/image.api.php
+
+snippet hook_image_effect_info "hook_image_effect_info"
+/**
+ * Implements hook_image_effect_info().
+ */
+function `!v Filename()`_image_effect_info() {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_effect_info_alter "hook_image_effect_info_alter"
+/**
+ * Implements hook_image_effect_info_alter().
+ */
+function `!v Filename()`_image_effect_info_alter(&$effects) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_style_save "hook_image_style_save"
+/**
+ * Implements hook_image_style_save().
+ */
+function `!v Filename()`_image_style_save($style) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_style_delete "hook_image_style_delete"
+/**
+ * Implements hook_image_style_delete().
+ */
+function `!v Filename()`_image_style_delete($style) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_style_flush "hook_image_style_flush"
+/**
+ * Implements hook_image_style_flush().
+ */
+function `!v Filename()`_image_style_flush($style) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_styles_alter "hook_image_styles_alter"
+/**
+ * Implements hook_image_styles_alter().
+ */
+function `!v Filename()`_image_styles_alter(&$styles) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_default_styles "hook_image_default_styles"
+/**
+ * Implements hook_image_default_styles().
+ */
+function `!v Filename()`_image_default_styles() {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_effect_info "hook_image_effect_info"
+/**
+ * Implements hook_image_effect_info().
+ */
+function `!v Filename()`_image_effect_info() {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_effect_info_alter "hook_image_effect_info_alter"
+/**
+ * Implements hook_image_effect_info_alter().
+ */
+function `!v Filename()`_image_effect_info_alter(&$effects) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_style_save "hook_image_style_save"
+/**
+ * Implements hook_image_style_save().
+ */
+function `!v Filename()`_image_style_save($style) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_style_delete "hook_image_style_delete"
+/**
+ * Implements hook_image_style_delete().
+ */
+function `!v Filename()`_image_style_delete($style) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_style_flush "hook_image_style_flush"
+/**
+ * Implements hook_image_style_flush().
+ */
+function `!v Filename()`_image_style_flush($style) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_styles_alter "hook_image_styles_alter"
+/**
+ * Implements hook_image_styles_alter().
+ */
+function `!v Filename()`_image_styles_alter(&$styles) {
+  ${1}
+}
+
+endsnippet
+
+snippet hook_image_default_styles "hook_image_default_styles"
+/**
+ * Implements hook_image_default_styles().
+ */
+function `!v Filename()`_image_default_styles() {
   ${1}
 }
 
