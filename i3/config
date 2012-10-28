@@ -16,9 +16,11 @@ bindsym $mod+Shift+R restart
 
 bindsym $mod+Shift+E exit
 
+bindsym $mod+m exec urxvtc -name Vim -e vim
+
 focus_follows_mouse no
 
-workspace_auto_back_and_forth yes
+# workspace_auto_back_and_forth yes
 
 # Layouts
 
@@ -45,6 +47,13 @@ bindsym $mod+Shift+K move up
 bindsym $mod+Shift+L move right
 
 bindsym $mod+f fullscreen
+
+# Colors
+
+client.focused          #13354a #13354a #ffffff #2e9ef4
+client.focused_inactive #56676b #56676b #ffffff #484e50
+client.unfocused        #1b1d1e #1b1d1e #a0a0a0 #292d2e
+client.urgent           #f92672 #f92672 #ffffff #900000
 
 # Containers
 
@@ -111,6 +120,13 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         font -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+
+        colors {
+                focused_workspace #13354a #13354a #ffffff
+                active_workspace #56676b #56676b #ffffff
+                inactive_workspace #1b1d1e #1b1d1e #a0a0a0
+                urgent_workspace #f92672 #f92672 #ffffff
+        }
 }
 
 # Audio
@@ -127,3 +143,7 @@ for_window [instance="scratchpad"] move scratchpad
 exec urxvtc -name htop -e htop
 bindsym $mod+i [instance="htop"] scratchpad show
 for_window [instance="htop"] move scratchpad
+
+exec urxvtc -name my-terminal
+bindsym $mod+shift+U [instance="my-terminal"] scratchpad show
+for_window [instance="my-terminal"] move scratchpad

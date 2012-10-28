@@ -70,3 +70,18 @@
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/scss-syntax"]
+	path = vim/bundle/scss-syntax
+	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "vim/bundle/vim-candycode"]
+	path = vim/bundle/vim-candycode
+	url = https://github.com/vim-scripts/candycode.vim.git
+[submodule "vim/bundle/wombat256"]
+	path = vim/bundle/wombat256
+	url = https://github.com/vim-scripts/wombat256.vim.git
+[submodule "vim/bundle/jellyx-vim"]
+	path = vim/bundle/jellyx-vim
+	url = https://github.com/guns/jellyx.vim.git
+[submodule "vim/bundle/vim-haskell"]
+	path = vim/bundle/vim-haskell
+	url = https://github.com/vim-scripts/haskell.vim.git

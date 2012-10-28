@@ -2,65 +2,73 @@
 ! URxvt Settings
 ! ---------------------------------------------------------
 
-URxvt.font: -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
-URxvt.boldFont: -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+URxvt.font: xft:Termsyn:pixelsize=14
+URxvt.boldFont: xft:Termsyn:pixelsize=14
 
 URxvt*transparent: 1
-URxvt*shading: 10
+URxvt*shading: 6
 URxvt*scrollBar: false
 URxvt*termName: rxvt-256color
 URxvt*cursorBlink: 1
-URxvt*cursorColor: #e8621d
+! URxvt*cursorColor: #e8621d
 
 URxvt.urgentOnBell: 1
 
 URxvt*perl-ext-common:  default,matcher
-URxvt*urlLauncher:      /usr/bin/google-chrome
+URxvt*urlLauncher:      /usr/bin/chromium-browser
 URxvt*matcher.button:   1
 
-URxvt*background: #000000
-URxvt*foreground: #ffffff
-! Black
-URxvt*color0 : #000000
-URxvt*color8 : #555753
-! Red
-URxvt*color1 : #bf2d00
-URxvt*color9 : #dd4010
-! Green
-URxvt*color2 : #5b9f1e
-URxvt*color10: #93d44f
-! Yellow
-URxvt*color3 : #eab93d
-URxvt*color11: #ffc123
-! Blue
-URxvt*color4 : #204a87
-URxvt*color12: #3465a4
-! Magenta
-URxvt*color5 : #d6156c
-URxvt*color13: #fe4365
-! Cyan
-URxvt*color6 : #619bd7
-URxvt*color14: #89b6e2
-! White
-URxvt*color7 : #ffffff
-URxvt*color15: #dddddd
+urxvt*cursorColor:      #fd971f
+
+! terminal colours
+*foreground:#a0a0a0
+*background:#1b1d1e
+
+!black
+*color0:    #1b1d1e
+*color8:    #505354
+!red
+*color1:    #f92672
+*color9:    #ff5995
+!green
+*color2:    #82b414
+*color10:   #b6e354
+!yellow
+*color3:    #fd971f
+*color11:   #feed6c
+!blue
+*color4:    #56c2d6
+*color12:   #8cedff
+!magenta
+*color5:    #8c54fe
+*color13:   #9e6ffe
+!cyan
+*color6:    #465457
+*color14:   #899ca1
+*color6:    #56676b
+*color14:   #899ca1
+!white
+*color7:    #ccccc6
+*color15:   #f8f8f2
+*color7:    #bfbfba
+*color15:   #ebebe5
+*color7:    #aaaaaa
+*color15:   #ffffff
 
 ! ---------------------------------------------------------
 ! Vim Settings
 ! ---------------------------------------------------------
 
-Vim*font: xft:Monaco:size=7.5
-Vim*boldFont: xft:Monaco:bold:size=7.5
-Vim*transparent: 0
+! Vim*font: xft:Lucida Sans Typewriter:size=10
+! Vim*boldFont: xft:Lucida Sans Typewriter:size=10
+! Vim*transparent: 1
 
 ! ---------------------------------------------------------
 ! Xft Settings
 ! ---------------------------------------------------------
 
-Xft.autohint:             1
-Xft.lcdfilter:            lcddefault
-Xft.hintstyle:            hintslight
-Xft.hinting:              1
-Xft.rgba:                 rgb
-Xft.antialias:            1
-
+! Xft.dpi:        96
+! Xft.antialias:  true
+! Xft.rgba:       rgb
+! Xft.hinting:    true
+! Xft.hintstyle:  hintslight

@@ -31,12 +31,12 @@ set hidden
 
 " GUI vs Terminal version {{{
 
-colo badwolf
+colorscheme wombat256mod
 if has('gui_running')
-  colo badwolf
+  colorscheme neverland2-darker
   set guifont=Monaco\ 7.5
   let NERDTreeDirArrows=1
-  let Powerline_symbols='fancy'
+  " let Powerline_symbols='fancy'
   set guioptions=Aci
 else
   let Powerline_symbols='compatible'
@@ -46,7 +46,7 @@ endif
 
 " Layout settings {{{
 
-" set formatoptions=qrowcb
+" set formatoptions=tcroq
 
 set laststatus=2
 set list
@@ -67,7 +67,12 @@ set showcmd
 set ruler
 set mousehide
 set nocul
+set complete-=i
+set complete-=b
+set complete-=u
+set complete-=w
 set completeopt-=preview
+set path=.,,**
 set textwidth=80
 
 set so=5
@@ -85,6 +90,9 @@ set foldcolumn=0
 
 " Keybind settings {{{
 
+let mapleader=","
+let maplocalleader=","
+
 inoremap jj <esc>
 cnoremap jj <esc>
 
@@ -93,8 +101,7 @@ nnoremap k gk
 
 map Y y$
 
-let mapleader=","
-let maplocalleader=","
+nnoremap <Leader>cd :cd /var/www<Enter>:cd
 
 " Load session
 nmap <Leader>ls :so $HOME/.vim/session.vim<CR>
@@ -120,11 +127,11 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 hi BadWhitespace guibg=red
 match BadWhitespace /\s\+$/
 
-" hi Normal ctermbg=NONE
+hi Normal ctermbg=NONE
 " hi CursorLine cterm=NONE
 " hi Folded cterm=NONE
 " Annoying tildes on NERDTree
-" hi NonText ctermbg=NONE ctermfg=0
+hi NonText ctermbg=NONE ctermfg=0
 " hi SpecialKey ctermfg=233
 " hi CursorLine term=NONE cterm=NONE
 
@@ -160,6 +167,8 @@ nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
 vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
 nmap <Leader>a: :Tabularize /:<CR>
 vmap <Leader>a: :Tabularize /:<CR>
+nmap <Leader>az: :Tabularize /:\zs<CR>
+vmap <Leader>az: :Tabularize /:\zs<CR>
 nmap <Leader>a> :Tabularize /=><CR>
 vmap <Leader>a> :Tabularize /=><CR>
 
@@ -176,7 +185,7 @@ set ssop-=blank
 
 " Drupal helpers {{{
 
-inoremap <Leader>fn <C-R>=expand("%:t:r")<CR>
+inoremap <Leader>fn <C-R>=expand("%:t:r:r")<CR>
 
 " }}}
 

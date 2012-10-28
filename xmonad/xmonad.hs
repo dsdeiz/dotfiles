@@ -90,7 +90,7 @@ myLayoutHook      = smartBorders $ avoidStruts $ tiled ||| Mirror tiled ||| Full
         gridIM    = withIM (1%7) (Or (Role "MainWindow") (Role "buddy_list")) Grid
 
 myXPConfig = defaultXPConfig
-    { fgColor   = "#FFFFFF"
+    { fgColor  = "#FFFFFF"
     , bgColor  = "#000000"
     , bgHLight = "cyan"
     , fgHLight = "#FFFFFF"
