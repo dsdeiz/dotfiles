@@ -1,5 +1,6 @@
 xrandr --output LVDS1 --auto --left-of VGA1 --auto
 sh ~/.fehbg &
+xrdb -merge ~/.Xresources
 
 # ~/bin/status_monitor.sh &
 

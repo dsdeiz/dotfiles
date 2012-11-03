@@ -2,61 +2,67 @@
 ! URxvt Settings
 ! ---------------------------------------------------------
 
-URxvt.font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt.boldFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-! URxvt.font: xft:Monaco:size=7.5
-! URxvt.boldFont: xft:Monaco:size=7.5:style=bold
+! URxvt.font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+! URxvt.boldFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.font: xft:Monaco:size=7.5
+URxvt.boldFont: xft:Monaco:size=7.5:style=bold
 
-URxvt*transparent: 1
-URxvt*shading: 20
-URxvt*scrollBar: false
-URxvt*termName: rxvt-256color
-URxvt*cursorBlink: 1
+! URxvt.transparent: 1
+URxvt.shading: 20
+URxvt.scrollBar: false
+URxvt.termName: rxvt-256color
+URxvt.cursorBlink: 1
 ! URxvt*cursorColor: #e8621d
 
 URxvt.urgentOnBell: 1
 
-URxvt*perl-ext-common:  default,matcher
-URxvt*urlLauncher:      /usr/bin/chromium-browser
-URxvt*matcher.button:   1
+URxvt.perl-ext-common:  default,matcher
+URxvt.urlLauncher:      /usr/bin/chromium-browser
+URxvt.matcher.button:   1
 
-urxvt*cursorColor:      #fd971f
+URxvt*cursorColor:      #fd971f
 
-! terminal colours
-! *foreground:#a0a0a0
-*foreground:#ffffff
-*background:#1b1d1e
+! ---------------------------------------------------------
+! Terminal Colors
+! ---------------------------------------------------------
 
-!black
-*color0:    #1b1d1e
-*color8:    #505354
-!red
-*color1:    #f92672
-*color9:    #ff5995
-!green
-*color2:    #82b414
-*color10:   #b6e354
-!yellow
-*color3:    #fd971f
-*color11:   #feed6c
-!blue
-*color4:    #56c2d6
-*color12:   #8cedff
-!magenta
-*color5:    #8c54fe
-*color13:   #9e6ffe
-!cyan
-*color6:    #465457
-*color14:   #899ca1
-*color6:    #56676b
-*color14:   #899ca1
-!white
-*color7:    #ccccc6
-*color15:   #f8f8f2
-*color7:    #bfbfba
-*color15:   #ebebe5
-*color7:    #aaaaaa
-*color15:   #ffffff
+! http://dotshare.it/dots/232/
+
+URxvt.background: #151515
+URxvt.foreground: #e8e8d3
+
+! Black
+URxvt.color0:  #1a1a1a
+URxvt.color8:  #404040
+
+! Red
+URxvt.color1:  #d75f5f
+URxvt.color9:  #EA8484
+
+! Green
+URxvt.color2:  #87af5f
+URxvt.color10: #C7F09F
+
+! Yellow
+URxvt.color3:  #ffaf5f
+URxvt.color11: #FFCC9A
+
+! Blue
+URxvt.color4:  #87afd7
+URxvt.color12: #a5caef
+
+! Magenta
+URxvt.color5:  #8787af
+URxvt.color13: #A6A6DE
+
+! Cyan
+URxvt.color6:  #5f8787
+URxvt.color14: #69b2b2
+
+! White
+URxvt.color7:  #808080
+URxvt.color15: #d7d7d7
+
 
 ! ---------------------------------------------------------
 ! Vim Settings
