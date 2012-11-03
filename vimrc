@@ -1,6 +1,5 @@
 " Basic settings {{{
 set nocompatible
-filetype plugin off
 call pathogen#infect()
 
 set t_Co=256
@@ -141,34 +140,51 @@ hi NonText ctermbg=NONE ctermfg=0
 
 " Plugin settings {{{
 
-let g:debuggerBreatAtEntry=0
+  " NERDTree {{{
 
-" let NERDTreeDirArrows=1
-let NERDTreeMouseMode=3
-let NERDChristmasTree=1
-" Allow 'traditional' way of file navigation
-let NERDTreeHijackNetrw=0
-" Set working directory when invoking NERDTree
-let NERDTreeChDirMode=2
-map <Leader>n :NERDTreeToggle<CR>
-map <F10> :NERDTree<CR>
-map <Leader>m :NERDTreeFromBookmark<space>
-map <Leader>r :NERDTreeFind<CR>
+  let NERDTreeDirArrows=1
+  let NERDTreeMouseMode=3
+  let NERDChristmasTree=1
+  let NERDTreeHijackNetrw=0 " Allow 'traditional' way of file navigation
+  let NERDTreeChDirMode=2 " Set working directory when invoking NERDTree
 
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+  map <Leader>n :NERDTreeToggle<CR>
+  map <F10> :NERDTree<CR>
+  map <Leader>m :NERDTreeFromBookmark<space>
+  map <Leader>r :NERDTreeFind<CR>
 
-nnoremap <Leader>t :TagbarToggle<CR>
+  " }}}
 
-let g:NERDSpaceDelims=1
+  " Ack {{{
 
-nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
-vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
-nmap <Leader>a: :Tabularize /:<CR>
-vmap <Leader>a: :Tabularize /:<CR>
-nmap <Leader>az: :Tabularize /:\zs<CR>
-vmap <Leader>az: :Tabularize /:\zs<CR>
-nmap <Leader>a> :Tabularize /=><CR>
-vmap <Leader>a> :Tabularize /=><CR>
+  let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+  " }}}
+
+  " Tagbar {{{
+
+  nnoremap <Leader>t :TagbarToggle<CR>
+
+  " }}}
+
+  " NERDCommenter {{{
+
+  let g:NERDSpaceDelims=1
+
+  " }}}
+
+  " Tabularize {{{
+
+  nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+  vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+  nmap <Leader>a: :Tabularize /:<CR>
+  vmap <Leader>a: :Tabularize /:<CR>
+  nmap <Leader>az: :Tabularize /:\zs<CR>
+  vmap <Leader>az: :Tabularize /:\zs<CR>
+  nmap <Leader>a> :Tabularize /=><CR>
+  vmap <Leader>a> :Tabularize /=><CR>
+
+  " }}}
 
 " }}}
 

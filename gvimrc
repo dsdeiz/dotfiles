@@ -9,6 +9,9 @@ let g:jellybeans_overrides = {
 \  'Comment': {
 \    'attr': 'none'
 \  },
+\  'Folded': {
+\    'attr': 'none'
+\  },
 \}
 
 colorscheme jellybeans
