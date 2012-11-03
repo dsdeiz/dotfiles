@@ -38,7 +38,8 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'rsync' \
   'history-substring-search' \
-  'python'
+  'python' \
+  'dpkg'
 
 #
 # Editor
@@ -56,6 +57,7 @@ zstyle ':prezto:module:editor' keymap 'emacs'
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
 # zstyle ':prezto:module:git:ignore' submodule 'all'
+zstyle ':prezto:module:git:status:ignore' submodules 'all'
 
 #
 # GNU Utility

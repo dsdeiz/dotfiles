@@ -2,11 +2,13 @@
 ! URxvt Settings
 ! ---------------------------------------------------------
 
-URxvt.font: xft:Termsyn:pixelsize=14
-URxvt.boldFont: xft:Termsyn:pixelsize=14
+URxvt.font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.boldFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+! URxvt.font: xft:Monaco:size=7.5
+! URxvt.boldFont: xft:Monaco:size=7.5:style=bold
 
 URxvt*transparent: 1
-URxvt*shading: 6
+URxvt*shading: 20
 URxvt*scrollBar: false
 URxvt*termName: rxvt-256color
 URxvt*cursorBlink: 1
@@ -21,7 +23,8 @@ URxvt*matcher.button:   1
 urxvt*cursorColor:      #fd971f
 
 ! terminal colours
-*foreground:#a0a0a0
+! *foreground:#a0a0a0
+*foreground:#ffffff
 *background:#1b1d1e
 
 !black
@@ -68,7 +71,8 @@ urxvt*cursorColor:      #fd971f
 ! ---------------------------------------------------------
 
 ! Xft.dpi:        96
-! Xft.antialias:  true
+! Xft.antialias:  1
 ! Xft.rgba:       rgb
-! Xft.hinting:    true
+! Xft.hinting:    1
 ! Xft.hintstyle:  hintslight
+! Xft.autohint:   1

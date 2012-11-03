@@ -341,3 +341,7 @@ hi phpBoolean ctermfg=58 cterm=NONE guifg=brown
 
 " 1}}}
 
+" 2}}}
+
+" 1}}}
+

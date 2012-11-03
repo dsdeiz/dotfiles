@@ -1,6 +1,6 @@
 # PHP snippets overrides
 snippet array "array" !
-$${1} = array(
+${1} = array(
   ${2}
 );${4}
 endsnippet
@@ -53,14 +53,14 @@ for ($${2:i} = 0; $$2 < ${1}; $$2${3:++}) {
 endsnippet
 
 snippet foreach "foreach" !
-foreach ($${1} as $${2}) {
+foreach (${1} as ${2}) {
   ${3}
 }
 endsnippet
 
 snippet function "function" !
 /**
- * ${1}
+ * ${1:TODO}
  */
 function ${2}(${3}) {
   ${4}
@@ -68,6 +68,6 @@ function ${2}(${3}) {
 endsnippet
 
 snippet block_comment "block comment"
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 // ${1}
 endsnippet

@@ -14,7 +14,7 @@ xsetroot -cursor_name left_ptr
 xset -b
 
 urxvtd -q -o -f
-xscreensaver -no-splash &
+# xscreensaver -no-splash &
 # $HOME/.dropbox-dist/dropboxd &
 
 # wbdrawer &

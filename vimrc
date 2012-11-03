@@ -1,5 +1,6 @@
 " Basic settings {{{
 set nocompatible
+filetype plugin off
 call pathogen#infect()
 
 set t_Co=256
@@ -31,16 +32,9 @@ set hidden
 
 " GUI vs Terminal version {{{
 
-colorscheme wombat256mod
-if has('gui_running')
-  colorscheme neverland2-darker
-  set guifont=Monaco\ 7.5
-  let NERDTreeDirArrows=1
-  " let Powerline_symbols='fancy'
-  set guioptions=Aci
-else
-  let Powerline_symbols='compatible'
-endif
+let g:zenburn_high_Contrast=1
+colorscheme jellybeans
+let Powerline_symbols='compatible'
 
 " }}}
 
@@ -72,7 +66,7 @@ set complete-=b
 set complete-=u
 set complete-=w
 set completeopt-=preview
-set path=.,,**
+set path=.,,$PWD/**
 set textwidth=80
 
 set so=5
@@ -101,10 +95,13 @@ nnoremap k gk
 
 map Y y$
 
-nnoremap <Leader>cd :cd /var/www<Enter>:cd
+nnoremap <Leader>cd :cd /var/www<Enter>:cd 
 
 " Load session
 nmap <Leader>ls :so $HOME/.vim/session.vim<CR>
+
+nnoremap <Leader>sp :sp <C-R>=expand('%:p:h') . '/'<CR>
+nnoremap <Leader>ee :e <C-R>=expand('%:p:h') . '/'<CR>
 
 " }}}
 
@@ -126,6 +123,7 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 " Hilight trailing whitespace
 hi BadWhitespace guibg=red
 match BadWhitespace /\s\+$/
+" match ErrorMsg '\%80v.\+'
 
 hi Normal ctermbg=NONE
 " hi CursorLine cterm=NONE
