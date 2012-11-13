@@ -1,17 +1,11 @@
-" set guifont=Monaco\ 9
 set guifont=Monaco\ 7.5
+" set guifont=DejaVu\ Sans\ Mono
 let NERDTreeDirArrows=1
 let Powerline_symbols='fancy'
 set guioptions=Aci
+" colorscheme ir_black
+" set background=light
+colorscheme badwolf
 
-" Jellybeans overrides.
-let g:jellybeans_overrides = {
-\  'Comment': {
-\    'attr': 'none'
-\  },
-\  'Folded': {
-\    'attr': 'none'
-\  },
-\}
-
-colorscheme jellybeans
+" Colorscheme changes
+hi Comment gui=NONE

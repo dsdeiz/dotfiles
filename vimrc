@@ -2,8 +2,6 @@
 set nocompatible
 call pathogen#infect()
 
-set t_Co=256
-
 set background=dark
 syntax on
 
@@ -32,6 +30,17 @@ set hidden
 " GUI vs Terminal version {{{
 
 let g:zenburn_high_Contrast=1
+
+" Jellybeans overrides.
+let g:jellybeans_overrides = {
+\  'Comment': {
+\    'attr': 'none'
+\  },
+\  'Folded': {
+\    'attr': 'none'
+\  },
+\}
+
 colorscheme jellybeans
 let Powerline_symbols='compatible'
 
@@ -96,6 +105,9 @@ map Y y$
 
 nnoremap <Leader>cd :cd /var/www<Enter>:cd 
 
+" A bit annoying.
+nnoremap q: <Nop>
+
 " Load session
 nmap <Leader>ls :so $HOME/.vim/session.vim<CR>
 
@@ -145,8 +157,10 @@ hi NonText ctermbg=NONE ctermfg=0
   let NERDTreeDirArrows=1
   let NERDTreeMouseMode=3
   let NERDChristmasTree=1
-  let NERDTreeHijackNetrw=0 " Allow 'traditional' way of file navigation
-  let NERDTreeChDirMode=2 " Set working directory when invoking NERDTree
+  " Allow 'traditional' way of file navigation
+  let NERDTreeHijackNetrw=0
+  " Set working directory when invoking NERDTree
+  let NERDTreeChDirMode=2
 
   map <Leader>n :NERDTreeToggle<CR>
   map <F10> :NERDTree<CR>

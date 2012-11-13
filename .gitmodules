@@ -97,3 +97,15 @@
 [submodule "vim/bundle/vim-indent-guides"]
 	path = vim/bundle/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "vim/bundle/Hemisu"]
+	path = vim/bundle/Hemisu
+	url = https://github.com/noahfrederick/Hemisu.git
+[submodule "vim/bundle/Jinja"]
+	path = vim/bundle/Jinja
+	url = https://github.com/vim-scripts/Jinja.git
+[submodule "vim/bundle/AfterColors"]
+	path = vim/bundle/AfterColors
+	url = https://github.com/vim-scripts/AfterColors.vim.git
+[submodule "xcolors/base16-xresources"]
+	path = xcolors/base16-xresources
+	url = https://github.com/chriskempson/base16-xresources.git

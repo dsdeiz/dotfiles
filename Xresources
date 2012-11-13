@@ -5,7 +5,9 @@
 ! URxvt.font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 ! URxvt.boldFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 URxvt.font: xft:Monaco:size=7.5
-URxvt.boldFont: xft:Monaco:size=7.5:style=bold
+URxvt.boldFont: xft:Monaco:style=bold:size=7.5
+! URxvt.font: xft:DejaVu Sans Mono:size=10
+! URxvt.boldFont: xft:DejaVu Sans Mono:style=bold:size=10
 
 ! URxvt.transparent: 1
 URxvt.shading: 20
@@ -20,49 +22,13 @@ URxvt.perl-ext-common:  default,matcher
 URxvt.urlLauncher:      /usr/bin/chromium-browser
 URxvt.matcher.button:   1
 
-URxvt*cursorColor:      #fd971f
+! URxvt.cursorColor:      #fd971f
 
 ! ---------------------------------------------------------
 ! Terminal Colors
 ! ---------------------------------------------------------
 
-! http://dotshare.it/dots/232/
-
-URxvt.background: #151515
-URxvt.foreground: #e8e8d3
-
-! Black
-URxvt.color0:  #1a1a1a
-URxvt.color8:  #404040
-
-! Red
-URxvt.color1:  #d75f5f
-URxvt.color9:  #EA8484
-
-! Green
-URxvt.color2:  #87af5f
-URxvt.color10: #C7F09F
-
-! Yellow
-URxvt.color3:  #ffaf5f
-URxvt.color11: #FFCC9A
-
-! Blue
-URxvt.color4:  #87afd7
-URxvt.color12: #a5caef
-
-! Magenta
-URxvt.color5:  #8787af
-URxvt.color13: #A6A6DE
-
-! Cyan
-URxvt.color6:  #5f8787
-URxvt.color14: #69b2b2
-
-! White
-URxvt.color7:  #808080
-URxvt.color15: #d7d7d7
-
+#include ".xcolors/archlinux/wolfcore.xresources"
 
 ! ---------------------------------------------------------
 ! Vim Settings
@@ -76,9 +42,10 @@ URxvt.color15: #d7d7d7
 ! Xft Settings
 ! ---------------------------------------------------------
 
-! Xft.dpi:        96
-! Xft.antialias:  1
-! Xft.rgba:       rgb
-! Xft.hinting:    1
-! Xft.hintstyle:  hintslight
-! Xft.autohint:   1
+Xft.autohint: 1
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.dpi: 96
+Xft.rgba: rgb

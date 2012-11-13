@@ -1,4 +1,9 @@
-xrandr --output LVDS1 --auto --left-of VGA1 --auto
+# Determine if there are two monitors.
+CONNECTED=$( xrandr | grep -w connected -c )
+if [ $CONNECTED -eq 2 ]; then
+  xrandr --output LVDS1 --auto --left-of VGA1 --auto
+fi
+
 sh ~/.fehbg &
 xrdb -merge ~/.Xresources
 
@@ -25,3 +30,4 @@ urxvtd -q -o -f
 exec i3
 # exec ck-launch-session /usr/bin/jwm
 # exec openbox-session
+# vim: ft=sh
