@@ -1,4 +1,5 @@
 " Basic settings {{{
+
 set nocompatible
 call pathogen#infect()
 
@@ -200,6 +201,20 @@ hi NonText ctermbg=NONE ctermfg=0
 
   " }}}
 
+  " Sparkup {{{
+
+  let g:sparkupNextMapping=',<c-n>'
+
+  " }}}
+
+  " Indent Guides {{{
+
+  let g:indent_guides_guide_size=1
+  let g:indent_guides_enable_on_startup=0
+  let g:indent_guides_auto_colors=1
+
+  " }}}
+
 " }}}
 
 " Sessions {{{
@@ -214,6 +229,7 @@ set ssop-=blank
 " Drupal helpers {{{
 
 inoremap <Leader>fn <C-R>=expand("%:t:r:r")<CR>
+nnoremap <Leader>fn "=expand("%:t:r:r")<CR>p
 
 " }}}
 
