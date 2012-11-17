@@ -20,3 +20,5 @@ alias drupaltags='ctags --langmap=php:.engine.inc.module.theme.php.test --php-ki
 alias reboot="sudo reboot"
 alias poweroff="sudo poweroff"
 alias halt="sudo halt"
+
+fortune -s -a | octocatsay
