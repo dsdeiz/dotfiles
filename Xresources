@@ -9,8 +9,8 @@ URxvt.boldFont: xft:Monaco:style=bold:size=7.5
 ! URxvt.font: xft:DejaVu Sans Mono:size=10
 ! URxvt.boldFont: xft:DejaVu Sans Mono:style=bold:size=10
 
-! URxvt.transparent: 1
-URxvt.shading: 20
+URxvt.transparent: 1
+URxvt.shading: 14
 URxvt.scrollBar: false
 URxvt.termName: rxvt-256color
 URxvt.cursorBlink: 1

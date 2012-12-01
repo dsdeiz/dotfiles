@@ -49,7 +49,7 @@ let Powerline_symbols='compatible'
 
 " Layout settings {{{
 
-" set formatoptions=tcroq
+set formatoptions=croq
 
 set laststatus=2
 set list
@@ -127,6 +127,9 @@ autocmd VimLeave * mks! ~/.vim/session.vim
 " For haskell files.
 autocmd FileType haskell set tabstop=4 shiftwidth=4 softtabstop=4
 autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
+
+" Twig files.
+autocmd BufRead,BufNewFile *.twig set filetype=htmldjango
 
 " }}}
 
@@ -212,6 +215,12 @@ hi NonText ctermbg=NONE ctermfg=0
   let g:indent_guides_guide_size=1
   let g:indent_guides_enable_on_startup=0
   let g:indent_guides_auto_colors=1
+
+  " }}}
+
+  " CtrlP {{{
+
+  let g:ctrlp_working_path_mod='rw'
 
   " }}}
 

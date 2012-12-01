@@ -21,4 +21,4 @@ alias reboot="sudo reboot"
 alias poweroff="sudo poweroff"
 alias halt="sudo halt"
 
-fortune -s -a | octocatsay
+fortune -s -a

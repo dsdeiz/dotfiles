@@ -1,8 +1,11 @@
 snippet mod_start "Starting lines for creating modules"
 <?php
-//$Id$ by Arnold
+/**
+ * @file
+ * ${1:Some description...}
+ */
 
-${1}
+${2}
 endsnippet
 
 snippet t "Drupal t()" !
@@ -24,7 +27,6 @@ function `!v Filename()`_block_info() {
 
   return $blocks;
 }
-
 endsnippet
 
 snippet hook_block_info_alter "hook_block_info_alter"
@@ -34,21 +36,19 @@ snippet hook_block_info_alter "hook_block_info_alter"
 function `!v Filename()`_block_info_alter(&$blocks, $theme, $code_blocks) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_block_configure "hook_block_configure"
 /**
  * Implements hook_block_configure().
  */
-function `!v Filename()`_configure($delta = '') {
+function `!v Filename()`_block_configure($delta = '') {
   $form = array();
 
   ${1}
 
   return $form;
 }
-
 endsnippet
 
 snippet hook_block_save "hook_block_save"
@@ -58,7 +58,6 @@ snippet hook_block_save "hook_block_save"
 function `!v Filename()`_block_save($delta = '', $edit = array()) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_block_view "hook_block_view"
@@ -72,7 +71,6 @@ function `!v Filename()`_block_view($delta = '') {
 
   return $block;
 }
-
 endsnippet
 
 snippet hook_block_view_alter "hook_block_view_alter"
@@ -82,17 +80,15 @@ snippet hook_block_view_alter "hook_block_view_alter"
 function `!v Filename()`_block_view_alter(&$data, $block) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_block_view_module_delta_alter "hook_block_view_module_delta_alter"
 /**
  * Implements hook_block_view_module_delta_alter().
  */
-function `!v Filename()`_${1}_alter(&$data, $block) {
+function `!v Filename()`_block_view_${1:module_delta}_alter(&$data, $block) {
   ${2}
 }
-
 endsnippet
 
 snippet hook_block_list_alter "hook_block_list_alter"
@@ -102,7 +98,6 @@ snippet hook_block_list_alter "hook_block_list_alter"
 function `!v Filename()`_block_list_alter(&$blocks) {
   ${1}
 }
-
 endsnippet
 
 # modules/comment/comment.api.php
@@ -114,7 +109,6 @@ snippet hook_comment_presave "hook_comment_presave"
 function `!v Filename()`_comment_presave($comment) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_comment_insert "hook_comment_insert"
@@ -124,7 +118,6 @@ snippet hook_comment_insert "hook_comment_insert"
 function `!v Filename`_comment_insert($comment) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_comment_update "hook_comment_update"
@@ -134,7 +127,6 @@ snippet hook_comment_update "hook_comment_update"
 function `!v Filename`_comment_update($comment) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_comment_load "hook_comment_load"
@@ -144,7 +136,6 @@ snippet hook_comment_load "hook_comment_load"
 function `!v Filename`_comment_load($comments) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_comment_view "hook_comment_view"
@@ -154,7 +145,6 @@ snippet hook_comment_view "hook_comment_view"
 function `!v Filename`_comment_view($comment, $view_mode, $langcode) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_comment_view_alter "hook_comment_view_alter"
@@ -164,7 +154,6 @@ snippet hook_comment_view_alter "hook_comment_view_alter"
 function `!v Filename`_comment_view_alter(&$build) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_comment_view_alter "hook_comment_view_alter"
@@ -174,7 +163,6 @@ snippet hook_comment_view_alter "hook_comment_view_alter"
 function `!v Filename`_comment_view_alter(&$build) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_comment_publish "hook_comment_publish"
@@ -184,7 +172,6 @@ snippet hook_comment_publish "hook_comment_publish"
 function `!v Filename()`_comment_publish($comment) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_comment_unpublish "hook_comment_unpublish"
@@ -194,7 +181,6 @@ snippet hook_comment_unpublish "hook_comment_unpublish"
 function `!v Filename()`_comment_unpublish($comment) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_comment_delete "hook_comment_delete"
@@ -204,7 +190,6 @@ snippet hook_comment_delete "hook_comment_delete"
 function `!v Filename()`_comment_delete($comment) {
   ${1}
 }
-
 endsnippet
 
 # modules/contextual/contextual.api.php
@@ -216,7 +201,6 @@ snippet hook_contextual_links_view_alter "hook_contextual_links_view_alter"
 function `!v Filename()`_contextual_links_view_alter(&$element, $items) {
   ${1}
 }
-
 endsnippet
 
 # modules/dashboard/dashboard.api.php
@@ -228,7 +212,6 @@ snippet hook_dashboard_regions "hook_dashboard_regions"
 function `!v Filename()`_dashboard_regions() {
   ${1}
 }
-
 endsnippet
 
 snippet hook_dashboard_regions_alter "hook_dashboard_regions_alter"
@@ -239,7 +222,6 @@ function `!v Filename()`_dashboard_regions_alter($regions) {
   // Remove the sidebar region defined by the core dashboard module.
   unset($regions['dashboard_sidebar']);
 }
-
 endsnippet
 
 # modules/field/field.api.php
@@ -253,7 +235,6 @@ function `!v Filename()`_field_extra_fields() {
 
   return $extra;
 }
-
 endsnippet
 
 snippet hook_field_extra_fields_alter "hook_field_extra_fields_alter"
@@ -263,7 +244,6 @@ snippet hook_field_extra_fields_alter "hook_field_extra_fields_alter"
 function `!v Filename()`_field_extra_fields_alter(&$info) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_info "hook_field_info"
@@ -274,7 +254,6 @@ function `!v Filename()`_field_info() {
     ${1}
   );
 }
-
 endsnippet
 
 snippet hook_field_info_alter "hook_field_info_alter"
@@ -284,7 +263,6 @@ snippet hook_field_info_alter "hook_field_info_alter"
 function `!v Filename()`_field_info_alter(&$info) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_schema "hook_field_schema"
@@ -294,7 +272,6 @@ snippet hook_field_schema "hook_field_schema"
 function `!v Filename()`_field_schema($field) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_load "hook_field_load"
@@ -304,7 +281,6 @@ snippet hook_field_load "hook_field_load"
 function `!v Filename()`_field_load($entity_type, $entities, $field, $instances, $langcode, &$items, $age) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_prepare_view "hook_field_prepare_view"
@@ -314,7 +290,6 @@ snippet hook_field_prepare_view "hook_field_prepare_view"
 function `!v Filename()`_field_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_validate "hook_field_validate"
@@ -324,7 +299,6 @@ snippet hook_field_validate "hook_field_validate"
 function `!v Filename()`_field_validate($entity_type, $entity, $field, $instance, $langcode, $items, &$errors) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_presave "hook_field_presave"
@@ -334,7 +308,6 @@ snippet hook_field_presave "hook_field_presave"
 function `!v Filename()`_field_presave($entity_type, $entity, $field, $instance, $langcode, &$items) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_insert "hook_field_insert"
@@ -344,7 +317,6 @@ snippet hook_field_insert "hook_field_insert"
 function `!v Filename()`_field_insert($entity_type, $entity, $field, $instance, $langcode, &$items) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_update "hook_field_update"
@@ -354,7 +326,6 @@ snippet hook_field_update "hook_field_update"
 function `!v Filename()`_field_update($entity_type, $entity, $field, $instance, $langcode, &$items) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_update_field "hook_field_storage_update_field"
@@ -364,7 +335,6 @@ snippet hook_field_storage_update_field "hook_field_storage_update_field"
 function `!v Filename()`_field_storage_update_field($field, $prior_field, $has_data) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_delete "hook_field_delete"
@@ -374,7 +344,6 @@ snippet hook_field_delete "hook_field_delete"
 function `!v Filename()`_field_delete($entity_type, $entity, $field, $instance, $langcode, &$items) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_delete_revision "hook_field_delete_revision"
@@ -384,7 +353,6 @@ snippet hook_field_delete_revision "hook_field_delete_revision"
 function `!v Filename()`_field_delete_revision($entity_type, $entity, $field, $instance, $langcode, &$items) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_prepare_translation "hook_field_prepare_translation"
@@ -394,7 +362,6 @@ snippet hook_field_prepare_translation "hook_field_prepare_translation"
 function `!v Filename()`_field_prepare_translation($entity_type, $entity, $field, $instance, $langcode, &$items, $source_entity, $source_langcode) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_is_empty "hook_field_is_empty"
@@ -404,7 +371,6 @@ snippet hook_field_is_empty "hook_field_is_empty"
 function `!v Filename()`_field_is_empty($item, $field) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_widget_info "hook_field_widget_info"
@@ -416,7 +382,6 @@ function `!v Filename()`_field_widget_info() {
     ${1}
   );
 }
-
 endsnippet
 
 snippet hook_field_widget_info_alter "hook_field_widget_info_alter"
@@ -426,7 +391,6 @@ snippet hook_field_widget_info_alter "hook_field_widget_info_alter"
 function `!v Filename()`_field_widget_info_alter(&$info) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_widget_form "hook_field_widget_form"
@@ -438,7 +402,6 @@ function `!v Filename()`_field_widget_form(&$form, &$form_state, $field, $instan
 
   return $element;
 }
-
 endsnippet
 
 snippet hook_field_widget_form_alter "hook_field_widget_form_alter"
@@ -448,7 +411,6 @@ snippet hook_field_widget_form_alter "hook_field_widget_form_alter"
 function `!v Filename()`_field_widget_form_alter(&$element, &$form_state, $context) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_widget_widget_type_form_alter "hook_field_widget_widget_type_form_alter"
@@ -458,7 +420,6 @@ snippet hook_field_widget_widget_type_form_alter "hook_field_widget_widget_type_
 function `!v Filename()`_field_widget_${1}_form_alter(&$element, &$form_state, $context) {
   ${2}
 }
-
 endsnippet
 
 snippet hook_field_widget_properties_alter "hook_field_widget_properties_alter"
@@ -468,7 +429,6 @@ snippet hook_field_widget_properties_alter "hook_field_widget_properties_alter"
 function `!v Filename()`_field_widget_properties_alter(&$widget, $context) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_widget_error "hook_field_widget_error"
@@ -478,7 +438,6 @@ snippet hook_field_widget_error "hook_field_widget_error"
 function `!v Filename()`_field_widget_error($element, $error, $form, &$form_state) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_formatter_info "hook_field_formatter_info"
@@ -490,7 +449,6 @@ function `!v Filename()`_field_formatter_info() {
     ${1}
   );
 }
-
 endsnippet
 
 snippet hook_field_formatter_prepare_view "hook_field_formatter_prepare_view"
@@ -500,7 +458,6 @@ snippet hook_field_formatter_prepare_view "hook_field_formatter_prepare_view"
 function `!v Filename()`_field_formatter_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items, $displays) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_formatter_view "hook_field_formatter_view"
@@ -514,7 +471,6 @@ function `!v Filename()`_field_formatter_view($entity_type, $entity, $field, $in
 
   return $element;
 }
-
 endsnippet
 
 snippet hook_field_attach_form "hook_field_attach_form"
@@ -524,7 +480,6 @@ snippet hook_field_attach_form "hook_field_attach_form"
 function `!v Filename()`_field_attach_form($entity_type, $entity, &$form, &$form_state, $langcode) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_load "hook_field_attach_load"
@@ -534,7 +489,6 @@ snippet hook_field_attach_load "hook_field_attach_load"
 function `!v Filename()`_field_attach_load($entity_type, $entities, $age, $options) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_validate "hook_field_attach_validate"
@@ -544,7 +498,6 @@ snippet hook_field_attach_validate "hook_field_attach_validate"
 function `!v Filename()`_field_attach_validate($entity_type, $entity, &$errors) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_submit "hook_field_attach_submit"
@@ -554,7 +507,6 @@ snippet hook_field_attach_submit "hook_field_attach_submit"
 function `!v Filename()`_field_attach_submit($entity_type, $entity, $form, &$form_state) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_presave "hook_field_attach_presave"
@@ -564,14 +516,12 @@ snippet hook_field_attach_presave "hook_field_attach_presave"
 function `!v Filename()`_field_attach_presave($entity_type, $entity) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_insert "hook_field_attach_insert"
 function `!v Filename()`_field_attach_insert($entity_type, $entity) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_update "hook_field_attach_update"
@@ -581,7 +531,6 @@ snippet hook_field_attach_update "hook_field_attach_update"
 function `!v Filename()`_field_attach_update($entity_type, $entity) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_preprocess_alter "hook_field_attach_preprocess_alter"
@@ -591,7 +540,6 @@ snippet hook_field_attach_preprocess_alter "hook_field_attach_preprocess_alter"
 function `!v Filename()`_field_attach_preprocess_alter(&$variables, $context) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_delete "hook_field_attach_delete"
@@ -601,7 +549,6 @@ snippet hook_field_attach_delete "hook_field_attach_delete"
 function `!v Filename()`_field_attach_delete($entity_type, $entity) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_delete_revision "hook_field_attach_delete_revision"
@@ -611,7 +558,6 @@ snippet hook_field_attach_delete_revision "hook_field_attach_delete_revision"
 function `!v Filename()`_field_attach_delete_revision($entity_type, $entity) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_purge "hook_field_attach_purge"
@@ -621,7 +567,6 @@ snippet hook_field_attach_purge "hook_field_attach_purge"
 function `!v Filename()`_field_attach_purge($entity_type, $entity, $field, $instance) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_view_alter "hook_field_attach_view_alter"
@@ -631,7 +576,6 @@ snippet hook_field_attach_view_alter "hook_field_attach_view_alter"
 function `!v Filename()`_field_attach_view_alter(&$output, $context) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_prepare_translation_alter "hook_field_attach_prepare_translation_alter"
@@ -641,7 +585,6 @@ snippet hook_field_attach_prepare_translation_alter "hook_field_attach_prepare_t
 function `!v Filename()`_field_attach_prepare_translation_alter(&$entity, $context) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_language_alter "hook_field_language_alter"
@@ -651,7 +594,6 @@ snippet hook_field_language_alter "hook_field_language_alter"
 function `!v Filename()`_field_language_alter(&$display_language, $context) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_available_languages_alter "hook_field_available_languages_alter"
@@ -661,7 +603,6 @@ snippet hook_field_available_languages_alter "hook_field_available_languages_alt
 function `!v Filename()`_field_available_languages_alter(&$languages, $context) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_create_bundle "hook_field_attach_create_bundle"
@@ -671,7 +612,6 @@ snippet hook_field_attach_create_bundle "hook_field_attach_create_bundle"
 function `!v Filename()`_field_attach_create_bundle($entity_type, $bundle) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_rename_bundle "hook_field_attach_rename_bundle"
@@ -681,7 +621,6 @@ snippet hook_field_attach_rename_bundle "hook_field_attach_rename_bundle"
 function `!v Filename()`_field_attach_rename_bundle($entity_type, $bundle_old, $bundle_new) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_attach_delete_bundle "hook_field_attach_delete_bundle"
@@ -691,7 +630,6 @@ snippet hook_field_attach_delete_bundle "hook_field_attach_delete_bundle"
 function `!v Filename()`_field_attach_delete_bundle($entity_type, $bundle, $instances) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_info "hook_field_storage_info"
@@ -703,7 +641,6 @@ function `!v Filename()`_field_storage_info() {
     ${1}
   );
 }
-
 endsnippet
 
 snippet hook_field_storage_info_alter "hook_field_storage_info_alter"
@@ -713,7 +650,6 @@ snippet hook_field_storage_info_alter "hook_field_storage_info_alter"
 function `!v Filename()`_field_storage_info_alter(&$info) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_details "hook_field_storage_details"
@@ -723,7 +659,6 @@ snippet hook_field_storage_details "hook_field_storage_details"
 function `!v Filename()`_field_storage_details($field) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_details_alter "hook_field_storage_details_alter"
@@ -733,7 +668,6 @@ snippet hook_field_storage_details_alter "hook_field_storage_details_alter"
 function `!v Filename()`_field_storage_details_alter(&$details, $field) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_load "hook_field_storage_load"
@@ -743,7 +677,6 @@ snippet hook_field_storage_load "hook_field_storage_load"
 function `!v Filename()`_field_storage_load($entity_type, $entities, $age, $fields, $options) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_write "hook_field_storage_write"
@@ -753,7 +686,6 @@ snippet hook_field_storage_write "hook_field_storage_write"
 function `!v Filename()`_field_storage_write($entity_type, $entity, $op, $fields) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_delete "hook_field_storage_delete"
@@ -763,7 +695,6 @@ snippet hook_field_storage_delete "hook_field_storage_delete"
 function `!v Filename()`_field_storage_delete($entity_type, $entity, $fields) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_delete_revision "hook_field_storage_delete_revision"
@@ -773,7 +704,6 @@ snippet hook_field_storage_delete_revision "hook_field_storage_delete_revision"
 function `!v Filename()`_field_storage_delete_revision($entity_type, $entity, $fields) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_query "hook_field_storage_query"
@@ -783,7 +713,6 @@ snippet hook_field_storage_query "hook_field_storage_query"
 function `!v Filename()`_field_storage_query($query) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_create_field "hook_field_storage_create_field"
@@ -793,7 +722,6 @@ snippet hook_field_storage_create_field "hook_field_storage_create_field"
 function `!v Filename()`_field_storage_create_field($field) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_delete_field "hook_field_storage_delete_field"
@@ -803,7 +731,6 @@ snippet hook_field_storage_delete_field "hook_field_storage_delete_field"
 function `!v Filename()`_field_storage_delete_field($field) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_delete_instance "hook_field_storage_delete_instance"
@@ -813,7 +740,6 @@ snippet hook_field_storage_delete_instance "hook_field_storage_delete_instance"
 function `!v Filename()`_field_storage_delete_instance($instance) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_pre_load "hook_field_storage_pre_load"
@@ -823,7 +749,6 @@ snippet hook_field_storage_pre_load "hook_field_storage_pre_load"
 function `!v Filename()`_field_storage_pre_load($entity_type, $entities, $age, &$skip_fields, $options) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_pre_insert "hook_field_storage_pre_insert"
@@ -833,7 +758,6 @@ snippet hook_field_storage_pre_insert "hook_field_storage_pre_insert"
 function `!v Filename()`_field_storage_pre_insert($entity_type, $entity, &$skip_fields) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_pre_update "hook_field_storage_pre_update"
@@ -843,7 +767,6 @@ snippet hook_field_storage_pre_update "hook_field_storage_pre_update"
 function `!v Filename()`_field_storage_pre_update($entity_type, $entity, &$skip_fields) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_info_max_weight "hook_field_info_max_weight"
@@ -853,7 +776,6 @@ snippet hook_field_info_max_weight "hook_field_info_max_weight"
 function `!v Filename()`_field_info_max_weight($entity_type, $bundle, $context) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_display_alter "hook_field_display_alter"
@@ -863,7 +785,6 @@ snippet hook_field_display_alter "hook_field_display_alter"
 function `!v Filename()`_field_display_alter(&$display, $context) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_display_entity_type_alter "hook_field_display_entity_type_alter"
@@ -873,7 +794,6 @@ snippet hook_field_display_entity_type_alter "hook_field_display_entity_type_alt
 function `!v Filename()`_field_display_${1}_alter(&$display, $context) {
   ${2}
 }
-
 endsnippet
 
 snippet hook_field_extra_fields_display_alter "hook_field_extra_fields_display_alter"
@@ -883,7 +803,6 @@ snippet hook_field_extra_fields_display_alter "hook_field_extra_fields_display_a
 function `!v Filename()`_field_extra_fields_display_alter(&$displays, $context) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_widget_properties_entity_type_alter "hook_field_widget_properties_entity_type_alter"
@@ -893,7 +812,6 @@ snippet hook_field_widget_properties_entity_type_alter "hook_field_widget_proper
 function `!v Filename()`_field_widget_properties_${1}_alter(&$widget, $context) {
   ${2}
 }
-
 endsnippet
 
 snippet hook_field_create_field "hook_field_create_field"
@@ -903,7 +821,6 @@ snippet hook_field_create_field "hook_field_create_field"
 function `!v Filename()`_field_create_field($field) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_create_instance "hook_field_create_instance"
@@ -913,7 +830,6 @@ snippet hook_field_create_instance "hook_field_create_instance"
 function `!v Filename()`_field_create_instance($instance) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_update_forbid "hook_field_update_forbid"
@@ -923,7 +839,6 @@ snippet hook_field_update_forbid "hook_field_update_forbid"
 function `!v Filename()`_field_update_forbid($field, $prior_field, $has_data) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_update_field "hook_field_update_field"
@@ -933,7 +848,6 @@ snippet hook_field_update_field "hook_field_update_field"
 function `!v Filename()`_field_update_field($field, $prior_field, $has_data) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_delete_field "hook_field_delete_field"
@@ -943,7 +857,6 @@ snippet hook_field_delete_field "hook_field_delete_field"
 function `!v Filename()`_field_delete_field($field) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_update_instance "hook_field_update_instance"
@@ -953,7 +866,6 @@ snippet hook_field_update_instance "hook_field_update_instance"
 function `!v Filename()`_field_update_instance($instance, $prior_instance) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_delete_instance "hook_field_delete_instance"
@@ -963,7 +875,6 @@ snippet hook_field_delete_instance "hook_field_delete_instance"
 function `!v Filename()`_field_delete_instance($instance) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_read_field "hook_field_read_field"
@@ -973,7 +884,6 @@ snippet hook_field_read_field "hook_field_read_field"
 function `!v Filename()`_field_read_field($field) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_read_instance "hook_field_read_instance"
@@ -983,7 +893,6 @@ snippet hook_field_read_instance "hook_field_read_instance"
 function `!v Filename()`_field_read_instance($instance) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_purge_field "hook_field_purge_field"
@@ -993,7 +902,6 @@ snippet hook_field_purge_field "hook_field_purge_field"
 function `!v Filename()`_field_purge_field($field) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_purge_instance "hook_field_purge_instance"
@@ -1003,7 +911,6 @@ snippet hook_field_purge_instance "hook_field_purge_instance"
 function `!v Filename()`_field_purge_instance($instance) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_purge_field "hook_field_storage_purge_field"
@@ -1013,7 +920,6 @@ snippet hook_field_storage_purge_field "hook_field_storage_purge_field"
 function `!v Filename()`_field_storage_purge_field($field) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_purge_field_instance "hook_field_storage_purge_field_instance"
@@ -1023,7 +929,6 @@ snippet hook_field_storage_purge_field_instance "hook_field_storage_purge_field_
 function `!v Filename()`_field_storage_purge_field_instance($instance) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_storage_purge "hook_field_storage_purge"
@@ -1033,7 +938,6 @@ snippet hook_field_storage_purge "hook_field_storage_purge"
 function `!v Filename()`_field_storage_purge($entity_type, $entity, $field, $instance) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_access "hook_field_access"
@@ -1043,7 +947,6 @@ snippet hook_field_access "hook_field_access"
 function `!v Filename()`_field_access($op, $field, $entity_type, $entity, $account) {
   ${1}
 }
-
 endsnippet
 
 # modules/field_ui/field_ui.api.php
@@ -1055,7 +958,6 @@ snippet hook_field_settings_form "hook_field_settings_form"
 function `!v Filename()`_field_settings_form($field, $instance, $has_data) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_instance_settings_form "hook_field_instance_settings_form"
@@ -1065,7 +967,6 @@ snippet hook_field_instance_settings_form "hook_field_instance_settings_form"
 function `!v Filename()`_field_instance_settings_form($field, $instance) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_widget_settings_form "hook_field_widget_settings_form"
@@ -1075,7 +976,6 @@ snippet hook_field_widget_settings_form "hook_field_widget_settings_form"
 function `!v Filename()`_field_widget_settings_form($field, $instance) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_formatter_settings_form "hook_field_formatter_settings_form"
@@ -1085,7 +985,6 @@ snippet hook_field_formatter_settings_form "hook_field_formatter_settings_form"
 function `!v Filename()`_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_field_formatter_settings_summary "hook_field_formatter_settings_summary"
@@ -1095,7 +994,6 @@ snippet hook_field_formatter_settings_summary "hook_field_formatter_settings_sum
 function `!v Filename()`_field_formatter_settings_summary($field, $instance, $view_mode) {
   ${1}
 }
-
 endsnippet
 
 # modules/file/file.api.php
@@ -1107,7 +1005,6 @@ snippet hook_file_download_access "hook_file_download_access"
 function `!v Filename()`_file_download_access($file_item, $entity_type, $entity) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_file_download_access_alter "hook_file_download_access_alter"
@@ -1117,7 +1014,6 @@ snippet hook_file_download_access_alter "hook_file_download_access_alter"
 function `!v Filename()`_file_download_access_alter(&$grants, $file_item, $entity_type, $entity) {
   ${1}
 }
-
 endsnippet
 
 # modules/filter/filter.api.php
@@ -1129,7 +1025,6 @@ snippet hook_filter_info "hook_filter_info"
 function `!v Filename()`_filter_info() {
   ${1}
 }
-
 endsnippet
 
 snippet hook_filter_info_alter "hook_filter_info_alter"
@@ -1139,7 +1034,6 @@ snippet hook_filter_info_alter "hook_filter_info_alter"
 function `!v Filename()`_filter_info_alter(&$info) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_filter_FILTER_settings "hook_filter_FILTER_settings"
@@ -1149,7 +1043,6 @@ snippet hook_filter_FILTER_settings "hook_filter_FILTER_settings"
 function `!v Filename()`_filter_${1}_settings($form, &$form_state, $filter, $format, $defaults, $filters) {
   ${2}
 }
-
 endsnippet
 
 snippet hook_filter_FILTER_prepare "hook_filter_FILTER_prepare"
@@ -1159,7 +1052,6 @@ snippet hook_filter_FILTER_prepare "hook_filter_FILTER_prepare"
 function `!v Filename()`_filter_${1}_prepare($text, $filter, $format, $langcode, $cache, $cache_id) {
   ${2}
 }
-
 endsnippet
 
 snippet hook_filter_FILTER_process "hook_filter_FILTER_process"
@@ -1169,7 +1061,6 @@ snippet hook_filter_FILTER_process "hook_filter_FILTER_process"
 function `!v Filename()`_filter_${1}_process($text, $filter, $format, $langcode, $cache, $cache_id) {
   ${2}
 }
-
 endsnippet
 
 snippet hook_filter_FILTER_tips "hook_filter_FILTER_tips"
@@ -1179,7 +1070,6 @@ snippet hook_filter_FILTER_tips "hook_filter_FILTER_tips"
 function `!v Filename()`_filter_${1}_tips($filter, $format, $long) {
   ${2}
 }
-
 endsnippet
 
 snippet hook_filter_format_insert "hook_filter_format_insert"
@@ -1189,7 +1079,6 @@ snippet hook_filter_format_insert "hook_filter_format_insert"
 function `!v Filename()`_filter_format_insert($format) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_filter_format_update "hook_filter_format_update"
@@ -1199,7 +1088,6 @@ snippet hook_filter_format_update "hook_filter_format_update"
 function `!v Filename()`_filter_format_update($format) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_filter_format_disable "hook_filter_format_disable"
@@ -1209,7 +1097,6 @@ snippet hook_filter_format_disable "hook_filter_format_disable"
 function `!v Filename()`_filter_format_disable($format) {
   ${1}
 }
-
 endsnippet
 
 # modules/image/image.api.php
@@ -1221,7 +1108,6 @@ snippet hook_image_effect_info "hook_image_effect_info"
 function `!v Filename()`_image_effect_info() {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_effect_info_alter "hook_image_effect_info_alter"
@@ -1231,7 +1117,6 @@ snippet hook_image_effect_info_alter "hook_image_effect_info_alter"
 function `!v Filename()`_image_effect_info_alter(&$effects) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_style_save "hook_image_style_save"
@@ -1241,7 +1126,6 @@ snippet hook_image_style_save "hook_image_style_save"
 function `!v Filename()`_image_style_save($style) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_style_delete "hook_image_style_delete"
@@ -1251,7 +1135,6 @@ snippet hook_image_style_delete "hook_image_style_delete"
 function `!v Filename()`_image_style_delete($style) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_style_flush "hook_image_style_flush"
@@ -1261,7 +1144,6 @@ snippet hook_image_style_flush "hook_image_style_flush"
 function `!v Filename()`_image_style_flush($style) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_styles_alter "hook_image_styles_alter"
@@ -1271,7 +1153,6 @@ snippet hook_image_styles_alter "hook_image_styles_alter"
 function `!v Filename()`_image_styles_alter(&$styles) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_default_styles "hook_image_default_styles"
@@ -1281,7 +1162,6 @@ snippet hook_image_default_styles "hook_image_default_styles"
 function `!v Filename()`_image_default_styles() {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_effect_info "hook_image_effect_info"
@@ -1291,7 +1171,6 @@ snippet hook_image_effect_info "hook_image_effect_info"
 function `!v Filename()`_image_effect_info() {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_effect_info_alter "hook_image_effect_info_alter"
@@ -1301,7 +1180,6 @@ snippet hook_image_effect_info_alter "hook_image_effect_info_alter"
 function `!v Filename()`_image_effect_info_alter(&$effects) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_style_save "hook_image_style_save"
@@ -1311,7 +1189,6 @@ snippet hook_image_style_save "hook_image_style_save"
 function `!v Filename()`_image_style_save($style) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_style_delete "hook_image_style_delete"
@@ -1321,7 +1198,6 @@ snippet hook_image_style_delete "hook_image_style_delete"
 function `!v Filename()`_image_style_delete($style) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_style_flush "hook_image_style_flush"
@@ -1331,7 +1207,6 @@ snippet hook_image_style_flush "hook_image_style_flush"
 function `!v Filename()`_image_style_flush($style) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_styles_alter "hook_image_styles_alter"
@@ -1341,7 +1216,6 @@ snippet hook_image_styles_alter "hook_image_styles_alter"
 function `!v Filename()`_image_styles_alter(&$styles) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_image_default_styles "hook_image_default_styles"
@@ -1351,7 +1225,6 @@ snippet hook_image_default_styles "hook_image_default_styles"
 function `!v Filename()`_image_default_styles() {
   ${1}
 }
-
 endsnippet
 
 # modules/menu/menu.api.php
@@ -1363,7 +1236,6 @@ snippet hook_menu_insert "hook_menu_insert"
 function `!v Filename()`_menu_insert($menu) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_menu_update "hook_menu_update"
@@ -1373,7 +1245,6 @@ snippet hook_menu_update "hook_menu_update"
 function `!v Filename()`_menu_update($menu) {
   ${1}
 }
-
 endsnippet
 
 snippet hook_menu_delete "hook_menu_delete"
@@ -1383,7 +1254,312 @@ snippet hook_menu_delete "hook_menu_delete"
 function `!v Filename()`_menu_delete($menu) {
   ${1}
 }
-
 endsnippet
 
 # modules/node/node.api.php
+
+snippet hook_node_grants "hook_node_grants"
+/**
+ * Implements hook_node_grants().
+ */
+function `!v Filename()`_node_grants($account, $op) {
+  ${1}
+
+  return $grants;
+}
+endsnippet
+
+snippet hook_node_access_records "hook_node_access_records"
+/**
+ * Implements hook_node_access_records().
+ */
+function `!v Filename()`_node_access_records($node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_access_records_alter "hook_node_access_records_alter"
+/**
+ * Implements hook_node_access_records_alter().
+ */
+function `!v Filename()`_node_access_records_alter(&$grants, $node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_grants_alter "hook_node_grants_alter"
+/**
+ * Implements hook_node_grants_alter().
+ */
+function `!v Filename()`_node_grants_alter(&$grants, $account, $op) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_operations "hook_node_operations"
+/**
+ * Implements hook_node_operations().
+ */
+function `!v Filename()`_node_operations() {
+  $operations = array(
+    ${1}
+  );
+
+  return $operations;
+}
+endsnippet
+
+snippet hook_node_delete "hook_node_delete"
+/**
+ * Implements hook_node_delete().
+ */
+function `!v Filename()`_node_delete($node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_revision_delete "hook_node_revision_delete"
+/**
+ * Implements hook_node_revision_delete().
+ */
+function `!v Filename()`_node_revision_delete($node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_insert "hook_node_insert"
+/**
+ * Implements hook_node_insert().
+ */
+function `!v Filename()`_node_insert($node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_load "hook_node_load"
+/**
+ * Implements hook_node_load().
+ */
+function `!v Filename()`_node_load($nodes, $types) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_access "hook_node_access"
+/**
+ * Implements hook_node_access().
+ */
+function `!v Filename()`_node_access($node, $op, $account) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_prepare "hook_node_prepare"
+/**
+ * Implements hook_node_prepare().
+ */
+function `!v Filename()`_node_prepare($node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_search_result "hook_node_search_result"
+/**
+ * Implements hook_node_search_result().
+ */
+function `!v Filename()`_node_search_result($node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_presave "hook_node_presave"
+/**
+ * Implements hook_node_presave().
+ */
+function `!v Filename()`_node_presave($node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_update "hook_node_update"
+/**
+ * Implements hook_node_update().
+ */
+function `!v Filename()`_node_update($node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_update_index "hook_node_update_index"
+/**
+ * Implements hook_node_update_index().
+ */
+function `!v Filename()`_node_update_index($node) {
+  $text = '';
+
+  ${1}
+
+  return $text;
+}
+endsnippet
+
+snippet hook_node_validate "hook_node_validate"
+/**
+ * Implements hook_node_validate().
+ */
+function `!v Filename()`_node_validate($node, $form, &$form_state) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_submit "hook_node_submit"
+/**
+ * Implements hook_node_submit().
+ */
+function `!v Filename()`_node_submit($node, $form, &$form_state) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_view "hook_node_view"
+/**
+ * Implements hook_node_view().
+ */
+function `!v Filename()`_node_view($node, $view_mode, $langcode) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_view_alter "hook_node_view_alter"
+/**
+ * Implements hook_node_view_alter().
+ */
+function `!v Filename()`_node_view_alter(&$build) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_info "hook_node_info"
+/**
+ * Implements hook_node_info().
+ */
+function `!v Filename()`_node_info() {
+  return array(
+    ${1}
+  );
+}
+endsnippet
+
+snippet hook_ranking "hook_ranking"
+/**
+ * Implements hook_ranking().
+ */
+function `!v Filename()`_ranking() {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_type_insert "hook_node_type_insert"
+/**
+ * Implements hook_node_type_insert().
+ */
+function `!v Filename()`_node_type_insert($info) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_type_update "hook_node_type_update"
+/**
+ * Implements hook_node_type_update().
+ */
+function `!v Filename()`_node_type_update($info) {
+  ${1}
+}
+endsnippet
+
+snippet hook_node_type_delete "hook_node_type_delete"
+/**
+ * Implements hook_node_type_delete().
+ */
+function `!v Filename()`_node_type_delete($info) {
+  ${1}
+}
+endsnippet
+
+snippet hook_delete "hook_delete"
+/**
+ * Implements hook_delete().
+ */
+function `!v Filename()`_delete($node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_prepare "hook_prepare"
+/**
+ * Implements hook_prepare().
+ */
+function `!v Filename()`_prepare($node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_form "hook_form"
+/**
+ * Implements hook_form().
+ */
+function `!v Filename()`_form($node, &$form_state) {
+  ${1}
+
+  return $form;
+}
+endsnippet
+
+snippet hook_insert "hook_insert"
+/**
+ * Implements hook_insert().
+ */
+function `!v Filename()`_insert($node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_load "hook_load"
+/**
+ * Implements hook_load().
+ */
+function `!v Filename()`_load($nodes) {
+  ${1}
+}
+endsnippet
+
+snippet hook_update "hook_update"
+/**
+ * Implements hook_update().
+ */
+function `!v Filename()`_update($node) {
+  ${1}
+}
+endsnippet
+
+snippet hook_validate "hook_validate"
+/**
+ * Implements hook_validate().
+ */
+function `!v Filename()`_validate($node, $form, &$form_state) {
+  ${1}
+}
+endsnippet
+
+snippet hook_view "hook_view"
+/**
+ * Implements hook_view().
+ */
+function `!v Filename()`_view($node, $view_mode) {
+  ${1}
+
+  return $node;
+}
+endsnippet
+
+# modules/system/system.api.php
