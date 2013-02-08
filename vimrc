@@ -75,7 +75,7 @@ set complete-=b
 set complete-=u
 set complete-=w
 set completeopt-=preview
-set path=.,,$PWD/**
+exec "set path=.,," . getcwd() . "/**"
 set textwidth=80
 
 set so=5
@@ -96,8 +96,12 @@ set foldcolumn=0
 let mapleader=","
 let maplocalleader=","
 
-inoremap jj <esc>
-cnoremap jj <esc>
+inoremap jk <esc>
+" cnoremap jk <esc>
+
+" Train self to avoid <Esc> key.
+inoremap <esc> <nop>
+" cnoremap <esc> <nop>
 
 nnoremap j gj
 nnoremap k gk
@@ -115,6 +119,9 @@ nmap <Leader>ls :so $HOME/.vim/session.vim<CR>
 nnoremap <Leader>sp :sp <C-R>=expand('%:p:h') . '/'<CR>
 nnoremap <Leader>ee :e <C-R>=expand('%:p:h') . '/'<CR>
 
+nnoremap <Leader>eg :e $MYGVIMRC<CR>
+nnoremap <Leader>ev :e $MYVIMRC<CR>
+
 " }}}
 
 " Autocommand settings {{{
@@ -130,6 +137,10 @@ autocmd BufRead,BufNewFile *.hs set tabstop=4 shiftwidth=4 softtabstop=4
 
 " Twig files.
 autocmd BufRead,BufNewFile *.twig set filetype=htmldjango
+
+autocmd FileType php setl suffixesadd=.inc,.module,.install,.engine,.theme
+
+autocmd BufRead,BufNewFile *.md setl fo-=t
 
 " }}}
 
@@ -202,11 +213,14 @@ hi NonText ctermbg=NONE ctermfg=0
   nmap <Leader>a> :Tabularize /=><CR>
   vmap <Leader>a> :Tabularize /=><CR>
 
+  " Format the text as 4 fields with <Space> as the delimiter.
+  " :Tabularize /\s*\$\w*\s*
+
   " }}}
 
-  " Sparkup {{{
+  " Zencoding {{{
 
-  let g:sparkupNextMapping=',<c-n>'
+  let g:user_zen_leader_key='<c-y>'
 
   " }}}
 
@@ -221,6 +235,18 @@ hi NonText ctermbg=NONE ctermfg=0
   " CtrlP {{{
 
   let g:ctrlp_working_path_mod='rw'
+
+  " }}}
+
+  " RSense {{{
+
+  let g:rsenseHome="/opt/rsense"
+
+  " }}}
+
+  " Vdebug {{{
+
+  let g:vdebug_options = {"break_on_open":0}
 
   " }}}
 
