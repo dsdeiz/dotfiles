@@ -1,7 +1,7 @@
 ## Installation
 
 1. Go to `$HOME`.
-2. `git clone https://github.com/dsdeiz/dotfiles-toshiba.git dotfiles`
+2. `git clone https://github.com/dsdeiz/dotfiles.git dotfiles`
 3. `cd dotfiles`
 4. `git submodule update --init --recursive`
 5. `mkdir vim/{backup,temp}`
