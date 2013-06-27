@@ -11,6 +11,7 @@
 # Notes
 
 * Install [powerline] [1]. Install `python2.7` via `brew install python`. In case of encountering an error about user scheme, do [this] [2]. Also see [this] [3].
+* Install [MacVim] [4] via `brew install macvim --env-std --override-system-vim`.
 
 [1]: https://powerline.readthedocs.org/en/latest/installation/osx.html#installation-osx
 [2]: https://github.com/Lokaltog/powerline/issues/552#issuecomment-20093421
