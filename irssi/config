@@ -265,7 +265,12 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "dsdeiz"; user_name = "dsdeiz"; nick = "dsdeiz"; };
+  core = {
+    real_name = "dsdeiz";
+    user_name = "dsdeiz";
+    nick = "dsdeiz";
+    proxy_password = "dsdeiz:dsd3iz:dsdeiz";
+  };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
     theme = "xchat2";

@@ -13,6 +13,6 @@ fi
 # Customize to your needs...
 
 # Source drush_zsh.
-alias drupaltags='ctags --langmap=php:.engine.inc.module.theme.php.test --php-kinds=cdfi --languages=php --recurse --fields=+aimS'
+alias drupaltags='ctags --langmap=php:.engine.inc.module.theme.php.test --php-kinds=cdfi --languages=php --recurse --fields=+laimS'
 alias dr='drush'
-alias tmux-dev="tmux new-session -s tmux -n irc 'irssi -c irc.freenode.net' \; split-window -h 'ssh arch' \; new-window -n ncmpcpp ncmpcpp \; new-window"
+alias tmux-dev="tmux new-session -s tmux -n irc 'irssi -c irc.freenode.net' \; split-window -h 'ssh droplet-arnold' \; new-window -n ncmpcpp ncmpcpp \; new-window"
