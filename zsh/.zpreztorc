@@ -40,7 +40,9 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'python' \
   'ruby' \
-  'fasd'
+  'fasd' \
+  'homebrew' \
+  'node'
 
 #
 # Editor
@@ -50,7 +52,7 @@ zstyle ':prezto:load' pmodule \
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Auto convert .... to ../..
-# zstyle ':prezto:module:editor' dot-expansion 'yes'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 #
 # Git

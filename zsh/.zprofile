@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -49,6 +49,7 @@ path=(
   $HOME/Library/Haskell/bin
   /usr/local/mysql/bin
   /usr/local/{bin,sbin}
+  $HOME/.composer/vendor/bin
   $path
 )
 
@@ -80,3 +81,4 @@ if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
 
+export FZF_TMUX=0
