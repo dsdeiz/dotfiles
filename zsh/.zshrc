@@ -15,7 +15,7 @@ fi
 
 # Customize to your needs...
 
-alias drupaltags='ctags --langmap=php:.engine.inc.module.theme.php.test --php-kinds=cdfi --languages=php --recurse --fields=+laimS'
+alias drupaltags='ctags --links=yes --langmap=php:.engine.inc.module.theme.php.test --php-kinds=cdfi --languages=php --recurse --fields=+laimS'
 alias dr='drush'
 alias tmux-dev="tmux new-session -s tmux -n irc 'irssi -c irc.freenode.net' \; split-window -h 'ssh feral' \; new-window -n ncmpcpp ncmpcpp \; new-window"
 source ~/.fzf.zsh
@@ -36,7 +36,7 @@ function git-checkout-feature {
   fi
 
   TICKET=$1
-  BRANCH_NAME="feature-$2"
+  BRANCH_NAME="feature-$1-$2"
   FILE="$( git-root )/.branches"
 
   git checkout -b "$BRANCH_NAME"
@@ -49,3 +49,5 @@ function git-checkout-feature {
 }
 
 alias gbc-f=git-checkout-feature
+
+eval "$(docker-machine env development)"

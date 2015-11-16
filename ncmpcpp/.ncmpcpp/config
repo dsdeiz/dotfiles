@@ -11,7 +11,8 @@ mpd_host = "localhost"
 #
 #mpd_port = "6600"
 #
-mpd_music_dir = "~/Music"
+# mpd_music_dir = "/Volumes/arnold/Music"
+mpd_music_dir = "/Volumes/data/Music"
 #
 #mpd_connection_timeout = "5"
 #
@@ -279,7 +280,7 @@ header_visibility = "no"
 #
 #header_text_scrolling = "yes"
 #
-fancy_scrolling = "yes"
+#fancy_scrolling = "yes"
 #
 #cyclic_scrolling = "no"
 #
