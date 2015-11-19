@@ -1,6 +1,6 @@
-[submodule "zsh/.zprezto"]
-	path = zsh/.zprezto
-	url = https://github.com/sorin-ionescu/prezto.git
 [submodule "vim"]
 	path = vim
 	url = git@github.com:dsdeiz/vimfiles.git
+[submodule "zsh/.zprezto"]
+	path = zsh/.zprezto
+	url = git@github.com:dsdeiz/prezto.git
