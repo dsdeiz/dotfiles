@@ -82,3 +82,5 @@ if [[ ! -d "$TMPPREFIX" ]]; then
 fi
 
 export FZF_TMUX=0
+
+exec zsh
