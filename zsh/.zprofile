@@ -48,8 +48,8 @@ path=(
   /usr/local/opt/gnu-tar/libexec/gnubin
   $HOME/Library/Haskell/bin
   /usr/local/mysql/bin
-  /usr/local/{bin,sbin}
   $HOME/.composer/vendor/bin
+  /usr/local/{bin,sbin}
   $path
 )
 
@@ -82,5 +82,3 @@ if [[ ! -d "$TMPPREFIX" ]]; then
 fi
 
 export FZF_TMUX=0
-
-exec zsh
