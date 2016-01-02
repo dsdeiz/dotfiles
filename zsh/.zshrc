@@ -18,7 +18,7 @@ fi
 alias drupaltags='ctags --links=yes --langmap=php:.engine.inc.module.theme.php.test --php-kinds=cdfi --languages=php --recurse --fields=+laimS'
 alias dr='drush'
 alias tmux-dev="tmux new-session -s tmux -n irc 'irssi -c irc.freenode.net' \; split-window -h 'ssh feral' \; new-window -n ncmpcpp ncmpcpp \; new-window"
-source ~/.fzf.zsh
+# source ~/.fzf.zsh
 
 # added by travis gem
 [ -f /Users/arnoldfrench/.travis/travis.sh ] && source /Users/arnoldfrench/.travis/travis.sh
