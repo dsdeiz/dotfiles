@@ -51,3 +51,4 @@ function git-checkout-feature {
 alias gbc-f=git-checkout-feature
 
 eval "$(docker-machine env development)"
+chruby ruby-2.2.0
