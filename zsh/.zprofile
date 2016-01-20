@@ -44,6 +44,7 @@ cdpath=(
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  $HOME/bin
   $(brew --prefix homebrew/php/php54)/bin
   /usr/local/opt/gnu-tar/libexec/gnubin
   $HOME/Library/Haskell/bin
