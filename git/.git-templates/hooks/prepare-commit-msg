@@ -1,0 +1,21 @@
+#!/usr/bin/env dash
+#
+# Prepend the JIRA issue number to the commit message.
+#
+# See
+# http://blog.bartoszmajsak.com/blog/2012/11/07/lazy-developers-toolbox-number-1-prepend-git-commit-messages/.
+#
+
+# Skip if the message has "fixup" or "squash" init.
+grep -q '^\(fixup\|squash\)!' "$1" && exit
+
+branch_name=$( git symbolic-ref --short head )
+branch_name="${branch_name##*/}"
+
+# Grab the issue number. Most likely the format will always be in the form
+# FOO-123.
+issue=$( echo $branch_name | grep -o -E "[A-Z]+-[0-9]+" )
+
+sed -i '' "1s/^/$issue: /" $1
+
+# vim: set ft=sh ts=4 sw=4 :
