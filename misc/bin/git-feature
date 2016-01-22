@@ -1,0 +1,54 @@
+#!/usr/bin/env dash
+#
+# Create a branch named `feature-[OPTIONAL-VERSION]-[ISSUE-KEY]-[DESCRIPTION]`.
+#
+
+show_help() {
+cat << EOF
+Usage: ${0##*/} [-a ALIAS] [-s SEPARATOR] [-v VERSION] [ISSUE-KEY] [DESCRIPTION]
+
+Create a hotfix, feature, release, or release update branch.
+
+    -a   Alias of the feature whether it's a feature, hotfix, or release. Defaults to "feature".
+    -s   Separator between the alias and the actual branch name. Defaults to "-".
+    -v   Version number.
+    -h   Display this help.
+EOF
+}
+
+# Initialize variables.
+alias="feature"
+separator="-"
+version=""
+
+OPTIND=1
+
+while getopts ":a:s:v:h" opt; do
+    case "$opt" in
+        h)
+            show_help
+            exit 0
+            ;;
+        a) alias=$OPTARG
+            ;;
+        s) separator=$OPTARG
+            ;;
+        v) version=$OPTARG
+            ;;
+    esac
+done
+
+shift "$((OPTIND-1))"
+
+branch="$alias$separator"
+
+! [ -z "$version" ] && branch="$branch$version-"
+
+[ -z "$1" ] && echo "Issue key is required." 1>&2 && exit 1
+[ -z "$2" ] && echo "Description is required." 1>&2 && exit 1
+
+branch="$branch$1-$2"
+
+git checkout -b $branch
+
+# vim: set ft=sh ts=4 sw=4 :
