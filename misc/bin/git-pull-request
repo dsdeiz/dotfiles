@@ -20,11 +20,11 @@ $issue:
 $url
 
 ## Details
-
-
 EOT
 )
 
-echo "$template" | vipe | hub pull-request -F - "$@"
+message=$(echo "$template" | vipe)
+
+! [ -z "$message" ] && echo "$message" | hub pull-request -F - "$@"
 
 # vim: set ft=sh ts=4 sw=4 :
