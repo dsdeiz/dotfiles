@@ -1,0 +1,30 @@
+#!/usr/bin/env dash
+#
+# Create a new pull request from feature branches and stuffs. Unfortunately,
+# this doesn't support multiple issues.
+#
+# TODO: Provide a template and configuration file.
+#
+
+branch_name=$(git symbolic-ref --short head)
+branch_name="${branch_name##*/}"
+
+issue=$(echo $branch_name | grep -o -E "[A-Z]+-[0-9]+")
+
+url="https://prometprojects.atlassian.net/browse/$issue"
+
+template=$(cat <<EOT
+$issue: 
+
+## Jira
+$url
+
+## Details
+
+
+EOT
+)
+
+echo "$template" | vipe | hub pull-request -F - "$@"
+
+# vim: set ft=sh ts=4 sw=4 :

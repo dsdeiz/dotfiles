@@ -9,12 +9,12 @@
 # Skip if the message has "fixup" or "squash" init.
 grep -q '^\(fixup\|squash\)!' "$1" && exit
 
-branch_name=$( git symbolic-ref --short head )
+branch_name=$(git symbolic-ref --short head)
 branch_name="${branch_name##*/}"
 
 # Grab the issue number. Most likely the format will always be in the form
 # FOO-123.
-issue=$( echo $branch_name | grep -o -E "[A-Z]+-[0-9]+" )
+issue=$(echo $branch_name | grep -o -E "[A-Z]+-[0-9]+")
 
 sed -i '' "1s/^/$issue: /" $1
 
