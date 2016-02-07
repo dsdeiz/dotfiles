@@ -16,6 +16,8 @@ branch_name="${branch_name##*/}"
 # FOO-123.
 issue=$(echo $branch_name | grep -o -E "[A-Z]+-[0-9]+")
 
+[ -z "$issue" ] && exit
+
 sed -i '' "1s/^/$issue: /" $1
 
 # vim: set ft=sh ts=4 sw=4 :
