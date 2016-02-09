@@ -5,23 +5,30 @@
 #
 # TODO: Provide a template and configuration file.
 #
+# NOTE: Works with BSD tools only.
+#
 
 branch_name=$(git symbolic-ref --short head)
 branch_name="${branch_name##*/}"
 
-issue=$(echo $branch_name | grep -o -E "[A-Z]+-[0-9]+")
+issue=$(echo "$branch_name" | grep -o -E "[A-Z]+-[0-9]+")
+
+# Fetch the substring after the issue, convert dashes to spaces, and finally
+# `ucfirst` each word.
+#
+# See http://stackoverflow.com/a/1541178.
+title=$(echo "$branch_name" | sed -E "s/.*[^A-Z][A-Z]+-[0-9]+-(.*)$/\\1/" | tr "-" " ")
+title=$(echo "$title" | awk "{for(i=1;i<=NF;i++){ \$i=toupper(substr(\$i,1,1)) substr(\$i,2) }}1")
 
 url="https://prometprojects.atlassian.net/browse/$issue"
 
 template=$(cat <<EOT
-$issue: 
+$issue: $title
 
 ## Jira
 $url
 
 ## Details
-
-[//]: # ( vim: set ft=markdown : )
 EOT
 )
 
