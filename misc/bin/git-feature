@@ -1,6 +1,6 @@
 #!/usr/bin/env dash
 #
-# Create a branch named `feature-[OPTIONAL-VERSION]-[ISSUE-KEY]-[DESCRIPTION]`.
+# Create a branch named `[alias][separator][optional-version]-[issue-key]-[description]`.
 #
 
 show_help() {

@@ -1,2 +1,3 @@
 - [ ] Clean up Git configuration.
 - [ ] Clean up `ncmpcpp` configuration.
+- [ ] Add script to install dependencies.
