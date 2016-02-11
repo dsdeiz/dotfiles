@@ -1,35 +1,36 @@
 [user]
-	name = Arnold French
-	email = arnold@prometsource.com
+  name = Arnold French
+  email = arnold@prometsource.com
 [color]
-	ui = true
+  ui = always
 [merge]
   summary = true
   verbosity = 1
-	tool = mvimdiff
-	conflictstyle = diff3
+  tool = mvimdiff
+  conflictstyle = diff3
 [mergetool]
   prompt = false
 [mergetool "mvimdiff"]
-  cmd="mvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
+  cmd="mvim -c 'Gdiff' $MERGED"
   keepbackup=false
 [push]
-	default = simple
+  default = simple
 [diff]
-	algorithm = patience
-	renames = copies
+  algorithm = patience
+  renames = copies
 [core]
-	filemode = false
-	autocrlf = input
-	excludesfile = ~/.global_ignore
-	trustctime = false
+  filemode = false
+  autocrlf = input
+  excludesfile = ~/.global_ignore
+  trustctime = false
+  pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
 [rerere]
-	enabled = true
+  enabled = true
 [pager]
-  diff = diff-highlight | less
-  show = diff-highlight | less
-  log = diff-highlight | less
+  diff = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
+  show = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
+  log = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
 [rebase]
-	autosquash = true
+  autosquash = true
 [init]
   templatedir = ~/.git-templates
