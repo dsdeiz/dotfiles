@@ -11,4 +11,29 @@ To install the configurations for each 'application', use `stow [application]` e
 * [Stow][1]
 * Zsh
 
+# Dependencies
+
+## NPM
+
+* `diff-so-fancy`
+
+## Brew
+
+### Packages
+
+* `ag`
+
+### Taps
+
+`caskroom/cask`
+`caskroom/versions`
+`homebrew/binary`
+`homebrew/dupes`
+`homebrew/fuse`
+`homebrew/games`
+`homebrew/php`
+`homebrew/versions`
+`mopidy/mopidy`
+`mpv-player/mpv`
+
 [1]: http://www.gnu.org/software/stow/
