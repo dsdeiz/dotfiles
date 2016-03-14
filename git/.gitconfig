@@ -2,7 +2,7 @@
   name = Arnold French
   email = arnold@prometsource.com
 [color]
-  ui = always
+  ui = true
 [merge]
   summary = true
   verbosity = 1
@@ -23,13 +23,13 @@
   autocrlf = input
   excludesfile = ~/.global_ignore
   trustctime = false
-  pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
+  pager = diff-so-fancy | less --tabs=1,5 -R
 [rerere]
   enabled = true
 [pager]
-  diff = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
-  show = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
-  log = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
+  diff = diff-so-fancy | less --tabs=1,5 -R
+  show = diff-so-fancy | less --tabs=1,5 -R
+  log = diff-so-fancy | less --tabs=1,5 -R
 [rebase]
   autosquash = true
 [init]
