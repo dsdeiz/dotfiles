@@ -24,5 +24,6 @@ alias tmux-dev="tmux new-session -s tmux -n irc 'irssi -c irc.freenode.net' \; s
 
 alias gbc-f=git-feature
 
-eval "$(docker-machine env development)"
+# eval "$(docker-machine env development)"
 chruby ruby-2.2.0
+source $HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh
