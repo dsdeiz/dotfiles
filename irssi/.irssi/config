@@ -29,6 +29,13 @@ servers = (
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
+  },
+  {
+    address = "irc.freenode.net";
+    chatnet = "Freenode";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
   }
 );
 
@@ -100,7 +107,10 @@ chatnets = {
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; }
+  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
+  { name = "#vim"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#zsh"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#git"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -269,7 +279,7 @@ settings = {
     real_name = "dsdeiz";
     user_name = "dsdeiz";
     nick = "dsdeiz";
-    proxy_password = "dsdeiz:dsd3iz:dsdeiz";
+    proxy_password = "";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
