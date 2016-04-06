@@ -49,6 +49,7 @@ branch="$alias$separator"
 
 branch="$branch$1-$2"
 
-git checkout -B $branch
+git branch $branch 2> /dev/null
+git checkout $branch
 
 # vim: set ft=sh ts=4 sw=4 :
