@@ -10,3 +10,4 @@ These are a combination of tools that makes up the whole mail client. `mutt` is 
 * [`w3m`](http://w3m.sourceforge.net/)
 * [`pass`](https://www.passwordstore.org/)
 * [`abook`](http://abook.sourceforge.net/)
+* [`msmtp`](http://msmtp.sourceforge.net/)
