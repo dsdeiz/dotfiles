@@ -44,7 +44,8 @@ zstyle ':prezto:load' pmodule \
   'homebrew' \
   'node' \
   'gpg' \
-  'docker'
+  'docker' \
+  'custom'
 
 #
 # Editor
