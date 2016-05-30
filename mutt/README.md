@@ -11,3 +11,4 @@ These are a combination of tools that makes up the whole mail client. `mutt` is 
 * [`pass`](https://www.passwordstore.org/)
 * [`abook`](http://abook.sourceforge.net/)
 * [`msmtp`](http://msmtp.sourceforge.net/)
+* [`view_attachment.sh`](https://gist.github.com/xxx/2942855)
