@@ -1,3 +1,14 @@
 .*.s[a-w][a-z]
 irssi/*/saved_colors
 ncmpcpp/*/error.log
+
+# GnuPG
+secring.*
+
+# Not sure if should be ignored.
+*.gpg*
+random_seed
+
+# Mutt
+mutt/.mutt/tmp
+mutt/.mutt/cache

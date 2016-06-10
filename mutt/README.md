@@ -12,3 +12,7 @@ This is a combination of tools that makes up the whole mail client. `mutt` is th
 * [`abook`](http://abook.sourceforge.net/)
 * [`msmtp`](http://msmtp.sourceforge.net/)
 * [`view_attachment.sh`](https://gist.github.com/xxx/2942855)
+
+**TODO:**
+
+`notmuch`'s `post-new` hook.
