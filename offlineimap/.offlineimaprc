@@ -8,7 +8,7 @@
 #
 
 [general]
-accounts = Personal, Work, Real
+accounts = Personal,Work,Real
 pythonfile = ~/.offlineimap.py
 ui = ttyui
 
@@ -18,7 +18,7 @@ remoterepository = PersonalServer
 synclabels = yes
 maxage = 2016-01-01
 status_backend = sqlite
-postsynchook = notmuch new
+postsynchook = notmuch new; maildir-notifier ~/Mail/Personal/archive
 
 [Account Work]
 localrepository = WorkLocal
@@ -26,7 +26,7 @@ remoterepository = WorkServer
 synclabels = yes
 maxage = 2016-01-01
 status_backend = sqlite
-postsynchook = notmuch new
+postsynchook = notmuch new; maildir-notifier ~/Mail/Work/archive
 
 [Account Real]
 localrepository = RealLocal
@@ -34,7 +34,7 @@ remoterepository = RealServer
 synclabels = yes
 maxage = 2016-01-01
 status_backend = sqlite
-postsynchook = notmuch new
+postsynchook = notmuch new; maildir-notifier ~/Mail/Real/archive
 
 [Repository PersonalLocal]
 type = GmailMaildir
@@ -61,8 +61,6 @@ remoteuser = arnold@prometsource.com
 remotepasseval = subprocess.check_output("pass prometsource/mail/arnold", shell=True).strip()
 ssl = true
 sslcacertfile = /usr/local/etc/openssl/cert.pem
-ssl = true
-sslcacertfile = /usr/local/etc/openssl/cert.pem
 nametrans = lambda folder: { '[Gmail]/All Mail': 'archive' }.get(folder, folder)
 folderfilter = lambda folder: folder == '[Gmail]/All Mail'
 
@@ -75,8 +73,6 @@ nametrans = lambda folder: { 'archive': '[Gmail]/All Mail' }.get(folder, folder)
 type = Gmail
 remoteuser = arn.french
 remotepasseval = subprocess.check_output("pass gmail/arn.french", shell=True).strip()
-ssl = true
-sslcacertfile = /usr/local/etc/openssl/cert.pem
 ssl = true
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 nametrans = lambda folder: { '[Gmail]/All Mail': 'archive' }.get(folder, folder)

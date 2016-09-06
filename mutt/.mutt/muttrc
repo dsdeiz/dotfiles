@@ -44,7 +44,7 @@ hdr_order from: to: cc: date: subject:
 
 # Notmuch related configurations.
 set nm_record = yes
-set nm_record_tags = "-inbox"
+set nm_record_tags = "-inbox,archive,me"
 set nm_default_uri = "notmuch:///Users/arnoldfrench/Mail"
 set virtual_spoolfile = yes
 
@@ -59,17 +59,22 @@ macro index,pager A "<pipe-message>abook --add-email<return>" "add the sender ad
 
 virtual-mailboxes \
   "Work/inbox" "notmuch://?query=tag:inbox and path:Work/**" \
+  "Work/unread" "notmuch://?query=tag:unread and path:Work/**" \
   "Personal/inbox" "notmuch://?query=tag:inbox and path:Personal/**" \
+  "Personal/unread" "notmuch://?query=tag:unread and path:Personal/**" \
   "Real/inbox" "notmuch://?query=tag:inbox and path:Real/**" \
-  "Personal/sent" "notmuch://?query=not tag:inbox and not tag:archive and folder:Personal/sent-mail" \
-  "Personal/draft" "notmuch://?query=not tag:inbox and not tag:archive and folder:Personal/draft" \
+  "Real/unread" "notmuch://?query=tag:unread and path:Real/**" \
+  # "Personal/draft" "notmuch://?query=not tag:inbox and not tag:archive and folder:Personal/draft" \
   "Personal/vim" "notmuch://?query=tag:vim and not tag:archive" \
   "Personal/openbsd" "notmuch://?query=tag:openbsd and not tag:archive" \
-  "Personal/haskell" "notmuch://?query=tag:haskell and not tag:archive"
+  "Personal/haskell" "notmuch://?query=tag:haskell and not tag:archive" \
+  "Sent" "notmuch://?query=not tag:inbox and tag:me"
 
 folder-hook Personal/* source ~/.mutt/personal.muttrc
 folder-hook Work/* source ~/.mutt/work.muttrc
 folder-hook Real/* source ~/.mutt/real.muttrc
+folder-hook . 'push "<collapse-all>"'
+folder-hook . 'push ":set collapse\_unread=no<enter>"'
 
 # }}}
 
@@ -102,9 +107,13 @@ bind index,pager R  group-reply
 
 macro pager \Cu "|urlview<enter>" "call urlview to open links"
 macro compose \eh "F pandoc -s -f markdown -t html \ny^T^Utext/html; charset=us-ascii\n"
-macro index ,w "<change-vfolder>Work/inbox<Enter>" "change accounts"
-macro index ,p "<change-vfolder>Personal/inbox<Enter>" "change accounts"
-macro index ,r "<change-vfolder>Real/inbox<Enter>" "change accounts"
+macro index ,wi "<change-vfolder>Work/inbox<Enter>" "change accounts"
+macro index ,wu "<change-vfolder>Work/unread<Enter>" "change accounts"
+macro index ,pi "<change-vfolder>Personal/inbox<Enter>" "change accounts"
+macro index ,pu "<change-vfolder>Personal/unread<Enter>" "change accounts"
+macro index ,ri "<change-vfolder>Real/inbox<Enter>" "change accounts"
+macro index ,ru "<change-vfolder>Real/unread<Enter>" "change accounts"
+macro index <space> "<collapse-thread>"
 
 # }}}
 

@@ -11,7 +11,7 @@
 branch_name=$(git symbolic-ref --short head)
 branch_name="${branch_name##*/}"
 
-issue=$(echo "$branch_name" | grep -o -E "[A-Z]+-[0-9]+")
+issue=$(echo "$branch_name" | grep -o -E "[A-Z0-9]+-[0-9]+")
 
 # Fetch the substring after the issue, convert dashes to spaces, and finally
 # `ucfirst` each word.

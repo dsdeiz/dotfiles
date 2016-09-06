@@ -13,8 +13,8 @@ branch_name=$(git symbolic-ref --short head)
 branch_name="${branch_name##*/}"
 
 # Grab the issue number. Most likely the format will always be in the form
-# FOO-123.
-issue=$(echo $branch_name | grep -o -E "[A-Z]+-[0-9]+")
+# FOO123-123.
+issue=$(echo $branch_name | grep -o -E "[A-Z0-9]+-[0-9]+")
 
 [ -z "$issue" ] && exit
 

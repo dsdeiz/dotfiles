@@ -18,6 +18,7 @@
 [diff]
   algorithm = patience
   renames = copies
+	compactionHeuristic = true
 [core]
   filemode = false
   autocrlf = input
