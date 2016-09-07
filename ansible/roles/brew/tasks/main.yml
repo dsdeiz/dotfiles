@@ -1,0 +1,169 @@
+---
+
+- homebrew: update_homebrew=yes
+
+# Some of these are actually part of core and are automatically tapped.
+- homebrew_tap: name={{ item }} state=present
+  with_items:
+    - caskroom/cask
+    - caskroom/versions
+    - hhvm/hhvm
+    - homebrew/binary
+    - homebrew/boneyard
+    - homebrew/core
+    - homebrew/dupes
+    - homebrew/fuse
+    - homebrew/games
+    - homebrew/php
+    - homebrew/services
+    - homebrew/versions
+    - mopidy/mopidy
+    - mpv-player/mpv
+    - universal-ctags/universal-ctags
+
+# Not everything is required.
+- homebrew: name={{ item }} state=present
+  with_items:
+    - abook
+    - ansible
+    - aria2
+    - bash
+    - chromedriver
+    - chruby
+    - cppunit
+    - ctags
+    - ctags-better-php
+    - curl
+    - dash
+    - dasht
+    - emacs
+    - entr
+    - fasd
+    - ffmpeg
+    - fish
+    - flac
+    - fortune
+    - gawk
+    - git
+    - git-extras
+    - git-flow
+    - glog
+    - gnu-getopt
+    - gnu-sed
+    - gnu-tar
+    - gnupg
+    - gnupg2
+    - grep
+    - hub
+    - irssi
+    - jq
+    - lame
+    - lftp
+    - lua
+    - mercurial
+    - mmv
+    - mopidy
+    - mopidy-soundcloud
+    - mopidy-spotify
+    - moreutils
+    - mpc
+    - mpd
+    - mpdscribble
+    - mpv
+    - msmtp
+    - muttkz
+    - namebench
+    - ncmpcpp
+    - nmap
+    - notmuch
+    - ntfs-3g
+    - nvm
+    - offlineimap
+    - openssl
+    - pandoc
+    - patchutils
+    - php56
+    - php56-opcache
+    - python
+    - python3
+    - q
+    - readline
+    - reattach-to-user-namespace
+    - redis
+    - rtorrent
+    - ruby-install
+    - scala
+    - selenium-server-standalone
+    - siege
+    - spark
+    - speedtest_cli
+    - sqlite
+    - sshfs
+    - sshuttle
+    - stow
+    - syncthing
+    - terminal-notifier
+    - the_platinum_searcher
+    - the_silver_searcher
+    - theora
+    - tig
+    - tmux
+    - tor
+    - tree
+    - universal-ctags
+    - urlview
+    - vegeta
+    - w3m
+    - watchman
+    - wget
+    - wrk
+    - youtube-dl
+
+- homebrew_cask: name={{ item }} state=present
+  with_items:
+    - airmail-beta
+    - alfred
+    - appzapper
+    - caffeine
+    - deluge
+    - disk-inventory-x
+    - dropbox
+    - filezilla
+    - firefox
+    - firefoxdeveloperedition
+    - firefoxnightly
+    - flux
+    - gitter
+    - google-chrome
+    - google-chrome-canary
+    - hipchat
+    - hyperterm
+    - insomnia
+    - iterm2-beta
+    - java
+    - jing
+    - karabiner
+    - macgdbp
+    - mactex
+    - mattr-slate
+    - mosh
+    - ngrok
+    - osxfuse
+    - postman
+    - qbittorrent
+    - screenflick
+    - seil
+    - sequel-pro
+    - slack
+    - spectacle
+    - spotify
+    - strongvpn-client
+    - sublime-text
+    - superbeam
+    - tunnelblick
+    - vagrant
+    - virtualbox
+
+- homebrew: name=protobuf install_options=devel
+
+- homebrew: name=macvim install_options=with-override-system-vim
