@@ -32,7 +32,7 @@
     - chruby
     - cppunit
     - ctags
-    - ctags-better-php
+    # - ctags-better-php
     - curl
     - dash
     - dasht
@@ -62,16 +62,16 @@
     - lua
     - mercurial
     - mmv
-    - mopidy
-    - mopidy-soundcloud
-    - mopidy-spotify
+    # - mopidy
+    # - mopidy-soundcloud
+    # - mopidy-spotify
     - moreutils
     - mpc
     - mpd
     - mpdscribble
     - mpv
     - msmtp
-    - muttkz
+    # - muttkz
     - namebench
     - ncmpcpp
     - nmap
