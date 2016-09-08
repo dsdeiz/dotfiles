@@ -23,6 +23,11 @@
 # Not everything is required.
 - homebrew: name={{ item }} state=present
   with_items:
+    # - ctags-better-php
+    # - mopidy
+    # - mopidy-soundcloud
+    # - mopidy-spotify
+    # - muttkz
     - abook
     - ansible
     - aria2
@@ -31,7 +36,6 @@
     - chruby
     - cppunit
     - ctags
-    # - ctags-better-php
     - curl
     - dash
     - dasht
@@ -43,6 +47,7 @@
     - flac
     - fortune
     - gawk
+    - gcc
     - git
     - git-extras
     - git-flow
@@ -61,16 +66,12 @@
     - lua
     - mercurial
     - mmv
-    # - mopidy
-    # - mopidy-soundcloud
-    # - mopidy-spotify
     - moreutils
     - mpc
     - mpd
     - mpdscribble
     - mpv
     - msmtp
-    # - muttkz
     - namebench
     - ncmpcpp
     - nmap
@@ -107,7 +108,6 @@
     - tmux
     - tor
     - tree
-    - universal-ctags
     - urlview
     - vegeta
     - w3m
@@ -164,3 +164,5 @@
 - homebrew: name=protobuf install_options=devel
 
 - homebrew: name=macvim install_options=with-override-system-vim
+
+- homebrew: name=universal-ctags install_options=HEAD
