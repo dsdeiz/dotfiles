@@ -14,7 +14,6 @@
     - homebrew/dupes
     - homebrew/fuse
     - homebrew/games
-    - homebrew/php
     - homebrew/services
     - homebrew/versions
     - mopidy/mopidy
@@ -82,8 +81,6 @@
     - openssl
     - pandoc
     - patchutils
-    - php56
-    - php56-opcache
     - python
     - python3
     - q
