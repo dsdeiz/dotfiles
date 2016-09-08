@@ -35,7 +35,6 @@
     - chromedriver
     - chruby
     - cppunit
-    - ctags
     - curl
     - dash
     - dasht
@@ -77,7 +76,6 @@
     - nmap
     - notmuch
     - ntfs-3g
-    - nvm
     - offlineimap
     - openssl
     - pandoc
