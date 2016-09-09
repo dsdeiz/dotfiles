@@ -1,0 +1,3 @@
+---
+
+- synchronize: src=files/dotfiles/ dest=~/

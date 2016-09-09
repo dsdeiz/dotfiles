@@ -45,7 +45,7 @@
     - fish
     - flac
     - fortune
-    - gawk
+    # - gawk
     - gcc
     - git
     - git-extras
@@ -113,6 +113,7 @@
     - wget
     - wrk
     - youtube-dl
+    - zsh
 
 - homebrew_cask: name={{ item }} state=present
   with_items:

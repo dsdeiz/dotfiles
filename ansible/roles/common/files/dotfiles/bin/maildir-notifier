@@ -1,0 +1,108 @@
+#!/bin/sh
+#
+# Checks Maildir directories for new mail. For each new mail, it invokes
+# terminal-notifier to show a notification with the message From and Subject
+# header.
+#
+# The script can execute an arbitrary command when clicking on a notification,
+# e.g., open mutt:
+#
+#   % cat open-mutt
+#   #!/bin/sh
+#   osascript -e 'tell application "Terminal" to do script "mutt"'
+#   % maildir-notifier -e open-mutt MAILBOXES...
+#
+# It comes in handy in conjunction with tools that write new mail in Maildir
+# mailboxes. For example, OfflineIMAP can execute maildir-notifier as post-sync
+# hook. This requires adding the following entry to your .offlineimaprc:
+#
+#   [Account Test]
+#   postsynchook = maildir-notifier ~/.mail/INBOX
+#
+
+age=86400 # purge cache once a day
+cache=~/.maildir-notifier-cache
+sound=Submarine
+delay=1
+cmd=
+
+usage()
+{
+  printf "usage: %s [options] <maildir...>\n" $(basename $0)
+  echo ''
+  echo 'options:'
+  echo "    -a <age>    number of seconds a cache entry remains fresh [$age]"
+  echo "    -c <cache>  message cache [$cache]"
+  echo "    -e <cmd>    command to execute when clicking notification [$cmd]"
+  echo "    -s <sound>  name of sound to play for each new message [$sound]"
+  echo "    -d <delay>  seconds to wait between each mail [$delay]"
+  echo ''
+}
+
+while getopts "a:c:d:e:hs:?" opt; do
+  case "$opt" in
+    a)
+      age="$OPTARG"
+      ;;
+    c)
+      cache="$OPTARG"
+      ;;
+    d)
+      delay=$OPTARG
+      ;;
+    e)
+      cmd="$OPTARG"
+      ;;
+    s)
+      sound="$OPTARG"
+      ;;
+    h|\?)
+      usage
+      exit 0
+    ;;
+  esac
+done
+
+shift $(expr $OPTIND - 1)
+maildirs=$*
+
+if [ -z "$maildirs" ]; then
+  usage
+  exit 1
+fi
+
+tm=$(which terminal-notifier 2> /dev/null)
+if [ ! -x "$tm" ] ; then
+  echo could not find terminal-notifier in PATH
+  exit 1
+fi
+
+now=$(date +%s)
+if [ -f $cache ]; then
+  tmp=/tmp/.maildir-notifier-cache-$$
+  # Weed out old cache entries first.
+  awk -F $'\t' "\$1 > $now - $age" < $cache > $tmp
+  # Deregister all evicted cache entries.
+  sort $cache $tmp | uniq -u | cut -d $'\t' -f 2 | xargs -o -n 1 $tm -remove
+  mv $tmp $cache
+fi
+
+for maildir in $maildirs; do
+  for new in $(find "$maildir/new" -type f); do
+    from=$(formail -X 'From:' < $new | cut -d ':' -f 2-)
+    subj=$(formail -X 'Subject:' < $new | cut -d ':' -f 2-)
+    id=$(formail -X 'Message-ID:' < $new | shasum | cut -d ' ' -f 1)
+    grep -q $id $cache 2> /dev/null
+    if [ $? != 0 ] ; then
+      printf "%s\t%s\n" $now $id >> $cache
+      # Piping the message instead of using -message avoids escaping hassles.
+      echo $subj | $tm \
+        -sender com.apple.mail \
+        -title "$from" \
+        -sound "$sound" \
+        -group "$id" \
+        -execute "$cmd"
+      sleep $delay
+    fi
+  done
+done

@@ -1,0 +1,4 @@
+set from = arn.french@gmail.com
+set sendmail = "msmtp -a real"
+set record = "+Real/sent-mail"
+set postponed = "+Real/draft"

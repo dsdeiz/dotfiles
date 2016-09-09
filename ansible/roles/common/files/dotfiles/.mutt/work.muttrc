@@ -1,0 +1,4 @@
+set from = arnold@prometsource.com
+set sendmail = "msmtp -a work"
+set record = "+Work/sent-mail"
+set postponed = "+Work/sent-mail"

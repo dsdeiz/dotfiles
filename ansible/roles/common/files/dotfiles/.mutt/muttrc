@@ -1,0 +1,121 @@
+# {{{
+
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+set tmpdir = "~/.mutt/tmp"
+set signature = "~/.mutt/signature"
+set mailcap_path = "~/.mutt/mailcap"
+
+# }}}
+
+# General options {{{
+
+set mbox_type = Maildir
+# set editor = "/usr/local/bin/vim"
+set folder = "~/Mail"
+set sort = threads
+set sort_browser = reverse-date
+set sort_aux = reverse-last-date-received
+set fast_reply
+set forward_format = "Fwd: %s"
+set pipe_decode
+set mime_forward = 'ask-no'
+set reply_to
+set tilde
+set thorough_search
+set mail_check = 0
+set timeout = 3
+
+unset markers
+unset mark_old
+
+auto_view text/html 
+alternative_order text/plain text/enriched text/html
+
+# Formats
+set status_format='-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---'
+set index_format='%?M?+& ?%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s'
+# set index_format="%?M?+& ?%2M %2e %Z %D %-20.20F (%4c) %s"
+
+# Only show the following fields.
+ignore *
+unignore from: to: cc: date: subject:
+hdr_order from: to: cc: date: subject:
+
+# Notmuch related configurations.
+set nm_record = yes
+set nm_record_tags = "-inbox,archive,me"
+set nm_default_uri = "notmuch:///Users/arnoldfrench/Mail"
+set virtual_spoolfile = yes
+
+# Use `abook` for aliases.
+set query_command = "abook --mutt-query '%s'"
+macro generic,index,pager \ca "<shell-escape>abook<return>" "launch abook"
+macro index,pager A "<pipe-message>abook --add-email<return>" "add the sender address to abook"
+
+# }}}
+
+# Mailboxes {{{
+
+virtual-mailboxes \
+  "Work/inbox" "notmuch://?query=tag:inbox and path:Work/**" \
+  "Work/unread" "notmuch://?query=tag:unread and path:Work/**" \
+  "Personal/inbox" "notmuch://?query=tag:inbox and path:Personal/**" \
+  "Personal/unread" "notmuch://?query=tag:unread and path:Personal/**" \
+  "Real/inbox" "notmuch://?query=tag:inbox and path:Real/**" \
+  "Real/unread" "notmuch://?query=tag:unread and path:Real/**" \
+  # "Personal/draft" "notmuch://?query=not tag:inbox and not tag:archive and folder:Personal/draft" \
+  "Personal/vim" "notmuch://?query=tag:vim and not tag:archive" \
+  "Personal/openbsd" "notmuch://?query=tag:openbsd and not tag:archive" \
+  "Personal/haskell" "notmuch://?query=tag:haskell and not tag:archive" \
+  "Sent" "notmuch://?query=not tag:inbox and tag:me"
+
+folder-hook Personal/* source ~/.mutt/personal.muttrc
+folder-hook Work/* source ~/.mutt/work.muttrc
+folder-hook Real/* source ~/.mutt/real.muttrc
+folder-hook . 'push "<collapse-all>"'
+folder-hook . 'push ":set collapse\_unread=no<enter>"'
+
+# }}}
+
+# Sources {{{
+
+source ~/.mutt/badwolf.muttrc
+source ~/.mutt/index-color.muttrc
+# source ~/.mutt/status-color.muttrc
+
+# }}}
+
+# Bindings {{{
+
+bind pager j next-line
+bind pager k previous-line
+bind pager k previous-line
+bind attach,index,pager \cD next-page
+bind attach,index,pager \cU previous-page
+bind pager g top
+bind pager G bottom
+bind attach,index g first-entry
+bind attach,index G last-entry
+bind index,pager B sidebar-toggle-visible
+bind attach <Return> view-mailcap
+bind index,pager R  group-reply
+
+# }}}
+
+# Macros {{{
+
+macro pager \Cu "|urlview<enter>" "call urlview to open links"
+macro compose \eh "F pandoc -s -f markdown -t html \ny^T^Utext/html; charset=us-ascii\n"
+macro index ,wi "<change-vfolder>Work/inbox<Enter>" "change accounts"
+macro index ,wu "<change-vfolder>Work/unread<Enter>" "change accounts"
+macro index ,pi "<change-vfolder>Personal/inbox<Enter>" "change accounts"
+macro index ,pu "<change-vfolder>Personal/unread<Enter>" "change accounts"
+macro index ,ri "<change-vfolder>Real/inbox<Enter>" "change accounts"
+macro index ,ru "<change-vfolder>Real/unread<Enter>" "change accounts"
+macro index <space> "<collapse-thread>"
+
+# }}}
+
+# vim: foldmethod=marker
