@@ -1,6 +1,0 @@
---recurse
---links=yes
-
---langmap=php:.engine.inc.module.theme.php.test
---php-kinds=cdfi
---fields=+laimS

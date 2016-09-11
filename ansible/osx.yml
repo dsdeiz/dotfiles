@@ -1,9 +1,0 @@
----
-
-- hosts: all
-  roles:
-    - brew
-    - php
-    - ruby
-    - node
-    - common

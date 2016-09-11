@@ -1,9 +1,0 @@
-.*.s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-*~
-.DS_Store
-.tmp_staging
-tags
-*.retry

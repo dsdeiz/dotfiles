@@ -1,4 +1,0 @@
-set from = qwertyuiop123ph@gmail.com
-set sendmail = "msmtp -a personal"
-set record = "+Personal/sent-mail"
-set postponed = "+Personal/draft"
