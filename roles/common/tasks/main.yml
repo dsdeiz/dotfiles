@@ -1,3 +1,5 @@
 ---
 
 - synchronize: src=files/dotfiles/ dest=~/
+  tags:
+    - dotfiles

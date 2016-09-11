@@ -1,6 +1,6 @@
-[submodule "vim"]
-	path = vim
-	url = git@github.com:dsdeiz/vimfiles.git
-[submodule "zsh/.zprezto"]
-	path = zsh/.zprezto
+[submodule "roles/common/files/dotfiles/.zprezto"]
+	path = roles/common/files/dotfiles/.zprezto
 	url = git@github.com:dsdeiz/prezto.git
+[submodule "roles/common/files/dotfiles/.vim"]
+	path = roles/common/files/dotfiles/.vim
+	url = git@github.com:dsdeiz/vimfiles.git
