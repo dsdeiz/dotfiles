@@ -3,117 +3,117 @@
 - homebrew: update_homebrew=yes
 
 # Some of these are actually part of core and are automatically tapped.
-# - homebrew_tap: name={{ item }} state=present
-#   with_items:
-#     - caskroom/cask
-#     - caskroom/versions
-#     - hhvm/hhvm
-#     - homebrew/binary
-#     - homebrew/boneyard
-#     - homebrew/core
-#     - homebrew/dupes
-#     - homebrew/fuse
-#     - homebrew/games
-#     - homebrew/services
-#     - homebrew/versions
-#     - mopidy/mopidy
-#     - mpv-player/mpv
-#     - universal-ctags/universal-ctags
-# 
-# # Not everything is required.
-# - homebrew: name={{ item }} state=present
-#   with_items:
-#     # - ctags-better-php
-#     # - mopidy
-#     # - mopidy-soundcloud
-#     # - mopidy-spotify
-#     # - muttkz
-#     - abook
-#     - ansible
-#     - aria2
-#     - bash
-#     - chromedriver
-#     - chruby
-#     - cppunit
-#     - curl
-#     - dash
-#     - dasht
-#     - emacs
-#     - entr
-#     - fasd
-#     - ffmpeg
-#     - fish
-#     - flac
-#     - fortune
-#     # - gawk
-#     - gcc
-#     - git
-#     - git-extras
-#     - git-flow
-#     - glog
-#     - gnu-getopt
-#     - gnu-sed
-#     - gnu-tar
-#     - gnupg
-#     - gnupg2
-#     - grep
-#     - hub
-#     - irssi
-#     - jq
-#     - lame
-#     - lftp
-#     - lua
-#     - mercurial
-#     - mmv
-#     - moreutils
-#     - mpc
-#     - mpd
-#     - mpdscribble
-#     - mpv
-#     - msmtp
-#     - namebench
-#     - ncmpcpp
-#     - nmap
-#     - notmuch
-#     - ntfs-3g
-#     - offlineimap
-#     - openssl
-#     - pandoc
-#     - patchutils
-#     - python
-#     - python3
-#     - q
-#     - readline
-#     - reattach-to-user-namespace
-#     - redis
-#     - rtorrent
-#     - ruby-install
-#     - scala
-#     - selenium-server-standalone
-#     - siege
-#     - spark
-#     - speedtest_cli
-#     - sqlite
-#     - sshfs
-#     - sshuttle
-#     - stow
-#     - syncthing
-#     - terminal-notifier
-#     - the_platinum_searcher
-#     - the_silver_searcher
-#     - theora
-#     - tig
-#     - tmux
-#     - tor
-#     - tree
-#     - urlview
-#     - vegeta
-#     - w3m
-#     - watchman
-#     - wget
-#     - wrk
-#     - youtube-dl
-#     - zsh
+- homebrew_tap: name={{ item }} state=present
+  with_items:
+    - caskroom/cask
+    - caskroom/versions
+    - hhvm/hhvm
+    - homebrew/binary
+    - homebrew/boneyard
+    - homebrew/core
+    - homebrew/dupes
+    - homebrew/fuse
+    - homebrew/games
+    - homebrew/services
+    - homebrew/versions
+    - mopidy/mopidy
+    - mpv-player/mpv
+    - universal-ctags/universal-ctags
+
+# Not everything is required.
+- homebrew: name={{ item }} state=present
+  with_items:
+    # - ctags-better-php
+    # - mopidy
+    # - mopidy-soundcloud
+    # - mopidy-spotify
+    # - muttkz
+    - abook
+    - ansible
+    - aria2
+    - bash
+    - chromedriver
+    - chruby
+    - cppunit
+    - curl
+    - dash
+    - dasht
+    - emacs
+    - entr
+    - fasd
+    - ffmpeg
+    - fish
+    - flac
+    - fortune
+    - gawk
+    - gcc
+    - git
+    - git-extras
+    - git-flow
+    - glog
+    - gnu-getopt
+    - gnu-sed
+    - gnu-tar
+    - gnupg
+    - gnupg2
+    - grep
+    - hub
+    - irssi
+    - jq
+    - lame
+    - lftp
+    - lua
+    - mercurial
+    - mmv
+    - moreutils
+    - mpc
+    - mpd
+    - mpdscribble
+    - mpv
+    - msmtp
+    - namebench
+    - ncmpcpp
+    - nmap
+    - notmuch
+    - ntfs-3g
+    - offlineimap
+    - openssl
+    - pandoc
+    - patchutils
+    - python
+    - python3
+    - q
+    - readline
+    - reattach-to-user-namespace
+    - redis
+    - rtorrent
+    - ruby-install
+    - scala
+    - selenium-server-standalone
+    - siege
+    - spark
+    - speedtest_cli
+    - sqlite
+    - sshfs
+    - sshuttle
+    - stow
+    - syncthing
+    - terminal-notifier
+    - the_platinum_searcher
+    - the_silver_searcher
+    - theora
+    - tig
+    - tmux
+    - tor
+    - tree
+    - urlview
+    - vegeta
+    - w3m
+    - watchman
+    - wget
+    - wrk
+    - youtube-dl
+    - zsh
 
 - homebrew_cask: name={{ item }} state=present
   with_items:
@@ -123,6 +123,7 @@
     - caffeine
     - deluge
     - disk-inventory-x
+    - docker
     - dropbox
     - filezilla
     - firefox
@@ -135,7 +136,7 @@
     - hipchat
     - hyperterm
     - insomnia
-    - iterm2-beta
+    - iterm2
     - java
     - jing
     - karabiner
@@ -150,6 +151,7 @@
     - screenflick
     - seil
     - sequel-pro
+    - skype
     - slack
     - spectacle
     - spotify
