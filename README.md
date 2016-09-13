@@ -1,6 +1,6 @@
 Uses [homebrew][1] and [ansible][2].
 
-Mostly taken from `geerlingguy/ansible-*``.
+Mostly taken from `geerlingguy/ansible-*`.
 
 # Installation
 
