@@ -7,5 +7,5 @@ song_columns_list_format = " (5)[black]{n} (6)[magenta]{lr} (35)[blue]{t} (30)[c
 playlist_display_mode = classic
 progressbar_look = ─░─
 user_interface = alternative
-header_visibility = no
+header_visibility = yes
 display_volume_level = yes
