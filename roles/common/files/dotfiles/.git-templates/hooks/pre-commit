@@ -70,12 +70,15 @@ OUTPUT=$( $PHPCS_BIN --standard=Drupal --extensions="php,module,inc,install,test
 
 if [ $? -ne 0 ]; then
     echo "$OUTPUT" | less
+    exit 1
 fi
 
-OUTPUT=$( phpmd --extensions="php,module,inc,install,test,profile,theme" $STAGED_FILES )
+COMMA_SEPARATED_FILES=$( echo $STAGED_FILES | sed 's/ /,/g' )
+OUTPUT=$( phpmd $COMMA_SEPARATED_FILES text codesize,unusedcode --suffixes="php,module,inc,install,test,profile,theme" )
 
 if [ $? -ne 0 ]; then
     echo "$OUTPUT" | less
+    exit 1
 fi
 
 OUTPUT=$( phpcpd --names="*.php,*.module,*.inc,*.install,*.test,*.profile,*.theme" $STAGED_FILES )
@@ -83,4 +86,4 @@ OUTPUT=$( phpcpd --names="*.php,*.module,*.inc,*.install,*.test,*.profile,*.them
 # delete temporary copy of staging area
 rm -rf $TMP_STAGING
 
-exit $?
+exit 0
