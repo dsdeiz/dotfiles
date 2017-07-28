@@ -2,8 +2,8 @@
 
 - hosts: all
   roles:
-    # - brew
-    # - php
-    # - ruby
-    # - node
+    - brew
+    - php
+    - ruby
+    - node
     - common

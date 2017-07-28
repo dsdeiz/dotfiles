@@ -3,31 +3,32 @@
 - homebrew: update_homebrew=yes
 
 # Some of these are actually part of core and are automatically tapped.
-- homebrew_tap: name={{ item }} state=present
-  with_items:
-    - caskroom/cask
-    - caskroom/versions
-    - hhvm/hhvm
-    - homebrew/binary
-    - homebrew/boneyard
-    - homebrew/core
-    - homebrew/dupes
-    - homebrew/fuse
-    - homebrew/games
-    - homebrew/services
-    - homebrew/versions
-    - mopidy/mopidy
-    - mpv-player/mpv
-    - universal-ctags/universal-ctags
+ homebrew_tap: name={{ item }} state=present
+ with_items:
+   - caskroom/cask
+   - caskroom/versions
+   - hhvm/hhvm
+   - homebrew/binary
+   - homebrew/boneyard
+   - homebrew/core
+   - homebrew/dupes
+   - homebrew/fuse
+   - homebrew/games
+   - homebrew/services
+   - homebrew/versions
+   - mopidy/mopidy
+   - mpv-player/mpv
+   - universal-ctags/universal-ctags
+   - neomutt/neomutt
 
 # Not everything is required.
 - homebrew: name={{ item }} state=present
   with_items:
     # - ctags-better-php
-    # - mopidy
+    - mopidy
     # - mopidy-soundcloud
-    # - mopidy-spotify
-    # - muttkz
+    - mopidy-spotify
+    - neomutt
     - abook
     - ansible
     - aria2
@@ -37,7 +38,7 @@
     - cppunit
     - curl
     - dash
-    - dasht
+    # - dasht
     - emacs
     - entr
     - fasd
@@ -75,7 +76,7 @@
     - ncmpcpp
     - nmap
     - notmuch
-    - ntfs-3g
+    # - ntfs-3g
     - offlineimap
     - openssl
     - pandoc
@@ -86,15 +87,15 @@
     - readline
     - reattach-to-user-namespace
     - redis
-    - rtorrent
+    # - rtorrent
     - ruby-install
-    - scala
+    # - scala
     - selenium-server-standalone
     - siege
     - spark
     - speedtest_cli
     - sqlite
-    - sshfs
+    # - sshfs
     - sshuttle
     - stow
     - syncthing
@@ -119,7 +120,7 @@
   with_items:
     - airmail-beta
     - alfred
-    - appzapper
+    # - appzapper
     - caffeine
     - deluge
     - disk-inventory-x
@@ -134,14 +135,14 @@
     - google-chrome
     - google-chrome-canary
     - hipchat
-    - hyperterm
+    # - hyperterm
     - insomnia
     - iterm2
     - java
     - jing
-    - karabiner
+    # - karabiner
     - macgdbp
-    - mactex
+    # - mactex
     - mattr-slate
     - mosh
     - ngrok
@@ -149,7 +150,7 @@
     - postman
     - qbittorrent
     - screenflick
-    - seil
+    # - seil
     - sequel-pro
     - skype
     - slack
@@ -162,7 +163,7 @@
     - vagrant
     - virtualbox
 
-- homebrew: name=protobuf install_options=devel
+# - homebrew: name=protobuf install_options=devel
 
 - homebrew: name=macvim install_options=with-override-system-vim
 
