@@ -3,4 +3,4 @@
 - include: nvm.yml
 - homebrew: name=nvm state=present
 
-- command: /usr/local/bin/nvm install node
+# - command: nvm install node
