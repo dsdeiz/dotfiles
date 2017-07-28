@@ -6,7 +6,7 @@ Mostly taken from `geerlingguy/ansible-*`.
 
 1. Install homebrew.
 2. `brew install ansible`
-3. `git clone https://github.com/dsdeiz/dotfiles ~/.dotfiles`
+3. `git clone --recursive https://github.com/dsdeiz/dotfiles ~/.dotfiles`
 4. `cd ~/.dotfiles`
 5. `ansible-playbook -i 'localhost,' -c local osx.yml`
 
